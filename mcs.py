@@ -79,6 +79,13 @@ class MarginalContributionSampling(shapiq.approximator.Approximator):
         budget: int,
         game: Callable[[np.ndarray], np.ndarray],
     ) -> InteractionValues:
+        return self.approximate_variants(budget, game)['mean']
+
+    def approximate_variants(
+        self,
+        budget: int,
+        game: Callable[[np.ndarray], np.ndarray],
+    ) -> dict[str, InteractionValues]:
         players = list(range(self.n))
 
         player_group_estimates: dict[int, dict[tuple[int], OnlineMeanVariance]] = {
@@ -128,31 +135,80 @@ class MarginalContributionSampling(shapiq.approximator.Approximator):
                 if used_budget >= budget:
                     break
 
+        group_player_estimates = {
+            group: {
+                player: player_group_estimates[player][group] for player in group
+            } for group in self._interaction_lookup.keys() if group != ()
+        }
 
-        result = self._init_result()
+        variant_group_interactions = {
+            'mean': {},
+            'inverse_variance_weighting': {},
+            # 'inverse_variance_weighting_optimal': {}
+        }
+        for player in players:
+            variant_group_interactions[f'player_{player}'] = {}
 
-        for group, group_index in self._interaction_lookup.items():
-            if group == ():
-                result[group_index] = empty_value
-                continue
+        # print('Estimated variances:')
 
-            group_estimate = 0.0
+        for group, player_estimates in group_player_estimates.items():
             for player in group:
-                group_estimate += player_group_estimates[player][group].mean or 0.0
+                variant_group_interactions[f'player_{player}'][group] = player_estimates[player].mean
 
-            result[group_index] = group_estimate / len(group)
+            estimates_with_mean = {player: estimate for player, estimate in player_estimates.items() if estimate.mean is not None}
 
-        return InteractionValues(
-            values=result,
-            index=self.approximation_index,
-            max_order=self.max_order,
-            n_players=self.n,
-            min_order=self.min_order,
-            baseline_value=empty_value,
-            interaction_lookup=self._interaction_lookup,
-            estimated=True,
-            estimation_budget=used_budget,
-        )
+            estimates_sum = sum([estimate.mean for estimate in estimates_with_mean.values()])
+            estimates_count = len(estimates_with_mean)
+            variant_group_interactions['mean'][group] = estimates_sum / estimates_count if estimates_count > 0 else None
+
+            estimates_with_variance = {player: estimate for player, estimate in estimates_with_mean.items() if estimate.variance is not None}
+
+            # for player, estimate in estimates_with_variance.items():
+            #     print(f'> Group {group}, player {player}: {estimate.variance:.6f} (n = {estimate.n})')
+
+            zero_variance_estimates = [estimate for estimate in estimates_with_variance.values() if estimate.variance == 0]
+            if len(zero_variance_estimates) > 0:
+                variant_group_interactions['inverse_variance_weighting'][group] = sum([estimate.mean for estimate in zero_variance_estimates]) / len(zero_variance_estimates)
+            elif len(estimates_with_variance) > 0:
+                variant_group_interactions['inverse_variance_weighting'][group] = sum([estimate.mean / (estimate.variance / estimate.n) for estimate in estimates_with_variance.values()]) / sum([1 / (estimate.variance / estimate.n) for estimate in estimates_with_variance.values()])
+            else:
+                variant_group_interactions['inverse_variance_weighting'][group] = None
+
+            # if exact_variances is not None:
+            #     zero_variance_estimates = [estimate for player, estimate in estimates_with_mean.items() if exact_variances[group][player] == 0]
+            #     if len(zero_variance_estimates) > 0:
+            #         variant_group_interactions['inverse_variance_weighting_optimal'][group] = sum([estimate.mean for estimate in zero_variance_estimates]) / len(zero_variance_estimates)
+            #     elif len(estimates_with_mean) > 0:
+            #         variant_group_interactions['inverse_variance_weighting_optimal'][group] = sum([estimate.mean / (exact_variances[group][player] / estimate.n) for player, estimate in estimates_with_mean.items()]) / sum([1 / (exact_variances[group][player] / estimate.n) for player, estimate in estimates_with_mean.items()])
+            #     else:
+            #         variant_group_interactions['inverse_variance_weighting_optimal'][group] = None
+
+        variant_interaction_values = {}
+
+        for variant, group_interactions in variant_group_interactions.items():
+            result = self._init_result()
+
+            for group, group_index in self._interaction_lookup.items():
+                if group == ():
+                    result[group_index] = empty_value
+                    continue
+
+                result[group_index] = group_interactions.get(group)
+
+            variant_interaction_values[variant] = InteractionValues(
+                values=result,
+                index=self.approximation_index,
+                max_order=self.max_order,
+                n_players=self.n,
+                min_order=self.min_order,
+                baseline_value=empty_value,
+                interaction_lookup=self._interaction_lookup,
+                estimated=True,
+                estimation_budget=used_budget,
+            )
+        
+        return variant_interaction_values
+
 
     def _shuffle(self, arr: list) -> list:
         """in-place Fisher-Yates shuffle, see https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle"""
