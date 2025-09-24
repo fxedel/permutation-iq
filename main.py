@@ -66,7 +66,7 @@ def benchmark_approximators(
     ]
 
     df_results = pd.DataFrame(
-        columns=['Game', 'Iteration', 'Approximator', 'Variant', 'Budget', 'MSE', 'Prec@10', 'Runtime']
+        columns=['Game', 'k', 'Iteration', 'Approximator', 'Variant', 'Budget', 'MSE', 'Prec@10', 'Runtime']
     )
     current_df_index = 0
     
@@ -100,19 +100,29 @@ def benchmark_approximators(
                     if variant.startswith('player_'):
                         continue  # skip per-player variants for now
 
-                    metrics = shapiq.benchmark.metrics.get_all_metrics(ground_truth=exact_values, estimated=approx_values)
+                    for order in range(1, max_order + 1):
+                        metrics = shapiq.benchmark.metrics.get_all_metrics(
+                            ground_truth=exact_values.get_n_order(order),
+                            estimated=approx_values.get_n_order(order),
+                        )
 
-                    df_results.loc[current_df_index] = {
-                        'Game': game_name,
-                        'Iteration': i + 1,
-                        'Approximator': approximator.__class__.__name__,
-                        'Variant': variant,
-                        'Budget': budget,
-                        'MSE': metrics['MSE'],
-                        'Prec@10': metrics['Precision@10'],
-                        'Runtime': elapsed_time,
-                    }
-                    current_df_index += 1
+                        row = {
+                            'Game': game_name,
+                            'k': order,
+                            'Iteration': i + 1,
+                            'Approximator': approximator.__class__.__name__,
+                            'Variant': variant,
+                            'Budget': budget,
+                            'MSE': metrics['MSE'],
+                            'Prec@10': metrics['Precision@10'],
+                        }
+
+                        if order == max_order:
+                            row['Runtime'] = elapsed_time
+
+
+                        df_results.loc[current_df_index] = row
+                        current_df_index += 1
 
                 print(f"Budget: {budget}, Runtime: {elapsed_time:.2f} seconds")
         print()
