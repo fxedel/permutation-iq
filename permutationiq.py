@@ -38,7 +38,7 @@ class OnlineMeanVariance:
         if self.n > 1:
             self.variance = self.m2 / (self.n - 1)
 
-class MarginalContributionSampling(shapiq.approximator.Approximator):
+class PermutationIQ(shapiq.approximator.Approximator):
 
     def __init__(
         self,

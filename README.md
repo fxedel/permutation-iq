@@ -1,4 +1,4 @@
-# shapiq-mcs
+# shapiq-permutation-iq
 
 
 

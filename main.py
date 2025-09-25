@@ -1,10 +1,11 @@
 import sys
 import time
 
+import numpy as np
 import pandas as pd
 import shapiq
 
-import mcs
+import permutationiq
 
 def command_debug():
     start_time = time.time()
@@ -40,10 +41,10 @@ def command_debug():
     print(f"--- Computed SVARMIQ values in {time.time() - start_time} seconds ---")
 
     start_time = time.time()
-    approximator = mcs.MarginalContributionSampling(n=game.n_players, max_order=max_order, index="SII")
+    approximator = permutationiq.PermutationIQ(n=game.n_players, max_order=max_order, index="SII")
     approx_values = approximator(budget=budget, game=game)
-    print("MCS values:", approx_values)
-    print(f"--- Computed MCS values in {time.time() - start_time} seconds ---")
+    print("PermtationIQ values:", approx_values)
+    print(f"--- Computed PermtationIQ values in {time.time() - start_time} seconds ---")
 
 
 def benchmark_approximators(
@@ -54,15 +55,15 @@ def benchmark_approximators(
     game_configuration: dict,
     game_num_instances: int = 30,
     iterations: int = 50,
-):
+) -> pd.DataFrame:
     index = "SII"
 
     approximators = [
         shapiq.PermutationSamplingSII(n=n, max_order=max_order, index=index),
-        # shapiq.SHAPIQ(n=n, max_order=max_order, index=index),
-        # shapiq.SVARMIQ(n=n, max_order=max_order, index=index),
-        # shapiq.KernelSHAPIQ(n=n, max_order=max_order, index=index),
-        mcs.MarginalContributionSampling(n=n, max_order=max_order, index=index),
+        shapiq.SHAPIQ(n=n, max_order=max_order, index=index),
+        shapiq.SVARMIQ(n=n, max_order=max_order, index=index),
+        shapiq.KernelSHAPIQ(n=n, max_order=max_order, index=index),
+        permutationiq.PermutationIQ(n=n, max_order=max_order, index=index),
     ]
 
     df_results = pd.DataFrame(
@@ -78,7 +79,9 @@ def benchmark_approximators(
             iteration=(i % game_num_instances) + 1,
         )
         exact_computer = shapiq.ExactComputer(n_players=game.n_players, game=game)
+        start_time = time.time()
         exact_values = exact_computer(index, order=max_order)
+        print(f"Computed exact values in {time.time() - start_time} seconds")
 
         for approximator in approximators:
             print(f"--- Approximator: {approximator.__class__.__name__} ---")
@@ -127,10 +130,38 @@ def benchmark_approximators(
                 print(f"Budget: {budget}, Runtime: {elapsed_time:.2f} seconds")
         print()
 
-    print(df_results)
+    def se(x):
+        return x.std(ddof=1) / np.sqrt(x.count())
+
+    agg_funcs = {
+        'MSE': ['mean', 'std', 'min', 'max', se],
+        'Prec@10': ['mean', 'std', 'min', 'max', se],
+        'Runtime': ['mean', 'std', 'min', 'max', se],
+    }
+
+    # perform aggregation
+    df_summary = (
+        df_results
+        .groupby(['Game', 'k', 'Approximator', 'Variant', 'Budget'], dropna=False)
+        .agg(agg_funcs)
+    )
+
+    # flatten MultiIndex columns
+    df_summary.columns = [
+        f"{metric}_{stat}"
+        for metric, stat in df_summary.columns
+    ]
+
+    df_summary = df_summary.reset_index()
+
+    return df_summary
 
 
-def command_benchmark():
+def benchmark_approximators_adultcensus():
+    print("===============")
+    print("Benchmark: approximators_adultcensus")
+    print("===============")
+
     benchmark_approximators(
         n=14,
         max_order=2,
@@ -142,7 +173,12 @@ def command_benchmark():
         },
         game_num_instances=30,
         iterations=2,
-    )
+    ).to_csv('results/approximators_adultcensus.csv', index=False)
+
+
+def command_benchmark(config: str):
+    if config == "all" or config == "approximators_adultcensus":
+        benchmark_approximators_adultcensus()
 
 
 
@@ -161,6 +197,6 @@ if __name__ == "__main__":
     elif sys.argv[1] == "debug":
         command_debug()
     elif sys.argv[1] == "benchmark":
-        command_benchmark()
+        command_benchmark(sys.argv[2] if len(sys.argv) >= 3 else "all")
     else:
         print_help()
