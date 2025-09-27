@@ -302,12 +302,32 @@ def benchmark_permutationiq_variants_development():
         iterations=2,
     ).to_csv('results/permutationiq_variants_development.csv', index=False)
 
+def benchmark_permutationiq_variants_localexplanation_adultcensus():
+    print("===============")
+    print("Benchmark: permutationiq_variants_localexplanation_adultcensus")
+    print("===============")
+
+    benchmark_permutationiq_variants(
+        min_order=2,
+        max_order=3,
+        budget_steps=[16, 50, 100, 250, 500, 750, 1_000, 2_000, 3_500, 5_000, 7_500, 10_000],
+        game_name='AdultCensusLocalXAI',
+        game_configuration={
+            'model_name': 'gradient_boosting',
+            'imputer': 'marginal'
+        },
+        game_instance=1,
+        iterations=50,
+    ).to_csv('results/permutationiq_variants_localexplanation_adultcensus.csv', index=False)
+
 
 def command_benchmark(config: str):
     if config == "all" or config == "approximators_development":
         benchmark_approximators_development()
     if config == "all" or config == "permutationiq_variants_development":
         benchmark_permutationiq_variants_development()
+    if config == "all" or config == "permutationiq_variants_localexplanation_adultcensus":
+        benchmark_permutationiq_variants_localexplanation_adultcensus()
 
 
 
