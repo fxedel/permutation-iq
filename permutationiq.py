@@ -43,6 +43,7 @@ class PermutationIQ(shapiq.approximator.Approximator):
     def __init__(
         self,
         n: int,
+        min_order: int = 0,
         max_order: int = 2,
         index: ValidIndices = "SII",
         *,
@@ -65,8 +66,9 @@ class PermutationIQ(shapiq.approximator.Approximator):
 
         """
         super().__init__(
-            n,
-            max_order,
+            n=n,
+            min_order=min_order,
+            max_order=max_order,
             index=index,
             top_order=top_order,
             random_state=random_state,
@@ -85,6 +87,7 @@ class PermutationIQ(shapiq.approximator.Approximator):
         self,
         budget: int,
         game: Callable[[np.ndarray], np.ndarray],
+        exact_variances: dict[tuple, dict[int, float]] | None = None,
     ) -> dict[str, InteractionValues]:
         players = list(range(self.n))
 
@@ -144,7 +147,7 @@ class PermutationIQ(shapiq.approximator.Approximator):
         variant_group_interactions = {
             'mean': {},
             'inverse_variance_weighting': {},
-            # 'inverse_variance_weighting_optimal': {}
+            'inverse_variance_weighting_optimal': {}
         }
         for player in players:
             variant_group_interactions[f'player_{player}'] = {}
@@ -174,14 +177,14 @@ class PermutationIQ(shapiq.approximator.Approximator):
             else:
                 variant_group_interactions['inverse_variance_weighting'][group] = None
 
-            # if exact_variances is not None:
-            #     zero_variance_estimates = [estimate for player, estimate in estimates_with_mean.items() if exact_variances[group][player] == 0]
-            #     if len(zero_variance_estimates) > 0:
-            #         variant_group_interactions['inverse_variance_weighting_optimal'][group] = sum([estimate.mean for estimate in zero_variance_estimates]) / len(zero_variance_estimates)
-            #     elif len(estimates_with_mean) > 0:
-            #         variant_group_interactions['inverse_variance_weighting_optimal'][group] = sum([estimate.mean / (exact_variances[group][player] / estimate.n) for player, estimate in estimates_with_mean.items()]) / sum([1 / (exact_variances[group][player] / estimate.n) for player, estimate in estimates_with_mean.items()])
-            #     else:
-            #         variant_group_interactions['inverse_variance_weighting_optimal'][group] = None
+            if exact_variances is not None:
+                zero_variance_estimates = [estimate for player, estimate in estimates_with_mean.items() if exact_variances[group][player] == 0]
+                if len(zero_variance_estimates) > 0:
+                    variant_group_interactions['inverse_variance_weighting_optimal'][group] = sum([estimate.mean for estimate in zero_variance_estimates]) / len(zero_variance_estimates)
+                elif len(estimates_with_mean) > 0:
+                    variant_group_interactions['inverse_variance_weighting_optimal'][group] = sum([estimate.mean / (exact_variances[group][player] / estimate.n) for player, estimate in estimates_with_mean.items()]) / sum([1 / (exact_variances[group][player] / estimate.n) for player, estimate in estimates_with_mean.items()])
+                else:
+                    variant_group_interactions['inverse_variance_weighting_optimal'][group] = None
 
         variant_interaction_values = {}
 
@@ -208,6 +211,65 @@ class PermutationIQ(shapiq.approximator.Approximator):
             )
         
         return variant_interaction_values
+    
+    def exact_variances(
+        self,
+        game: Callable[[np.ndarray], np.ndarray],
+        exact_values: InteractionValues,
+    ) -> dict[tuple, dict[int, float]]:
+        players = list(range(self.n))
+
+        player_group_variances: dict[int, dict[tuple[int, ...], float]] = {player: {} for player in players}
+        for group in self._interaction_lookup.keys():
+            for player in group:
+                player_group_variances[player][group] = 0.0
+
+        for player in players:
+            for bitvector in range(2**self.n):
+                coalition = np.zeros(self.n, dtype=bool)
+                for i in players:
+                    if bitvector & (1 << i):
+                        coalition[i] = True
+
+                if coalition[player]:
+                    continue
+
+                coalition_value = game(coalition)[0]
+                # print(coalition, coalition_value)
+                coalition_len = len([x for x in coalition if x])
+
+                coalition[player] = True
+                marginal_contribution = game([coalition])[0] - coalition_value
+                # print(coalition, game([coalition]))
+                # print(marginal_contribution)
+
+                sample_probability = (1 / self.n) * (1 / math.comb(self.n - 1, coalition_len))
+
+                for group in player_group_variances[player]:
+                    group_subset_len = 0
+                    for x in group:
+                        if x != player and coalition[x]:
+                            group_subset_len += 1
+
+                    basis_coalition_len = coalition_len - group_subset_len
+
+                    # print(coalition, coalition_len, group, group_subset_len, basis_coalition_len, self.n, len(group))
+
+                    sign = 1 if (len(group) - group_subset_len - 1) % 2 == 0 else -1
+                    weight = shapley_weight(n = self.n, k = len(group), l = basis_coalition_len)
+
+                    # print(group, player_group_variances[player][group], sample_probability, sign, weight, marginal_contribution, exact_values[group])
+
+                    player_group_variances[player][group] += sample_probability * (sign * weight/sample_probability * marginal_contribution - exact_values[group])**2
+
+
+        group_player_variances = {
+            group: {
+                player: player_group_variances[player][group] for player in group
+            } for group in self._interaction_lookup.keys() if group != ()
+        }
+
+        return group_player_variances
 
 
     def _shuffle(self, arr: list) -> list:
@@ -225,3 +287,25 @@ class PermutationIQ(shapiq.approximator.Approximator):
 
 def shapley_weight(n: int, k: int, l: int) -> float:
     return 1 / (n - k + 1) / math.comb(n - k, l)
+
+class Subsets:
+    '''
+    Iterator over all subsets of a list
+    '''
+
+    def __init__(self, set: list):
+        self.set = set
+        self.current = 0
+        self.limit = 2**(len(set))
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.current >= self.limit:
+            raise StopIteration
+
+        subset = [item for (i, item) in enumerate(self.set) if self.current & (1 << i)]
+
+        self.current += 1
+        return subset

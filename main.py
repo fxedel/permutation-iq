@@ -1,3 +1,4 @@
+import math
 import sys
 import time
 
@@ -55,15 +56,16 @@ def benchmark_approximators(
     game_configuration: dict,
     game_num_instances: int = 30,
     iterations: int = 50,
+    random_state: int = 1,
 ) -> pd.DataFrame:
     index = "SII"
 
     approximators = [
-        shapiq.PermutationSamplingSII(n=n, max_order=max_order, index=index),
-        shapiq.SHAPIQ(n=n, max_order=max_order, index=index),
-        shapiq.SVARMIQ(n=n, max_order=max_order, index=index),
-        shapiq.KernelSHAPIQ(n=n, max_order=max_order, index=index),
-        permutationiq.PermutationIQ(n=n, max_order=max_order, index=index),
+        shapiq.PermutationSamplingSII(n=n, max_order=max_order, index=index, random_state=random_state),
+        shapiq.SHAPIQ(n=n, max_order=max_order, index=index, random_state=random_state),
+        shapiq.SVARMIQ(n=n, max_order=max_order, index=index, random_state=random_state),
+        shapiq.KernelSHAPIQ(n=n, max_order=max_order, index=index, random_state=random_state),
+        permutationiq.PermutationIQ(n=n, max_order=max_order, index=index, random_state=random_state),
     ]
 
     df_results = pd.DataFrame(
@@ -152,14 +154,121 @@ def benchmark_approximators(
         for metric, stat in df_summary.columns
     ]
 
-    df_summary = df_summary.reset_index()
+    df_summary.reset_index(inplace=True)
+
+    return df_summary
+
+def benchmark_permutationiq_variants(
+    min_order: int,
+    max_order: int,
+    budget_steps: list[int],
+    game_name: str,
+    game_configuration: dict,
+    game_instance: int,
+    iterations: int = 50,
+    random_state: int = 1,
+) -> pd.DataFrame:
+    index = "SII"
+
+    game = shapiq.load_game_data(
+        game_class=shapiq.GAME_NAME_TO_CLASS_MAPPING[game_name],
+        configuration=game_configuration,
+        iteration=game_instance,
+    )
+
+    exact_computer = shapiq.ExactComputer(n_players=game.n_players, game=game)
+    start_time = time.time()
+    exact_values = exact_computer(index, order=max_order)
+    print(f"Computed exact values in {time.time() - start_time} seconds")
+
+    approximator = permutationiq.PermutationIQ(n=game.n_players, min_order=min_order, max_order=max_order, index=index, random_state=random_state)
+
+    start_time = time.time()
+    exact_variances = approximator.exact_variances(game=game, exact_values=exact_values)
+    print(f"Computed exact variances in {time.time() - start_time} seconds")
+
+    df_results = pd.DataFrame(
+        columns=['Game', 'k', 'Group', 'Iteration', 'Approximator', 'Variant', 'Budget', 'Error', 'ErrorSquared']
+    )
+    current_df_index = 0
+    
+    for i in range(iterations):
+        print(f"--- Iteration {i + 1}/{iterations} ---")
+
+        for budget in budget_steps:
+            try:
+                start_time = time.time()
+                approx_values_by_variant = approximator.approximate_variants(budget=budget, game=game, exact_variances=exact_variances)
+                elapsed_time = time.time() - start_time
+            except AttributeError:
+                start_time = time.time()
+                approx_values = approximator.approximate(budget=budget, game=game)
+                elapsed_time = time.time() - start_time
+
+                approx_values_by_variant = {
+                    '': approx_values
+                }
+
+            for variant, approx_values in approx_values_by_variant.items():
+
+                for group, group_index in approx_values.interaction_lookup.items():
+                    value = approx_values.values[group_index]
+                    error = exact_values.values[group_index] - value
+
+                    if math.isnan(value):
+                        continue
+
+                    row = {
+                        'Game': game_name,
+                        'k': len(group),
+                        'Group': group,
+                        'Iteration': i + 1,
+                        'Approximator': approximator.__class__.__name__,
+                        'Variant': variant,
+                        'Budget': budget,
+                        'Error': error,
+                        'ErrorSquared': error ** 2,
+                    }
+
+                    df_results.loc[current_df_index] = row
+                    current_df_index += 1
+
+            print(f"Budget: {budget}, Runtime: {elapsed_time:.2f} seconds")
+
+        print()
+
+    df_results.sort_values(by=['Group', 'Iteration', 'Approximator', 'Variant', 'Budget'], inplace=True)
+    df_results.reset_index(inplace=True)
+
+    def se(x):
+        return x.std(ddof=1) / np.sqrt(x.count())
+
+    agg_funcs = {
+        'ErrorSquared': ['mean', 'std', 'min', 'max', se],
+        'Error': ['mean', 'std', 'min', 'max', se],
+    }
+
+    # perform aggregation
+    df_summary = (
+        df_results
+        .groupby(['Game', 'k', 'Group', 'Approximator', 'Variant', 'Budget'], dropna=False)
+        .agg(agg_funcs)
+    )
+
+    # flatten MultiIndex columns
+    df_summary.columns = [
+        f"{metric}_{stat}"
+        for metric, stat in df_summary.columns
+    ]
+
+    df_summary.reset_index(inplace=True)
 
     return df_summary
 
 
-def benchmark_approximators_adultcensus():
+def benchmark_approximators_development():
     print("===============")
-    print("Benchmark: approximators_adultcensus")
+    print("Benchmark: approximators_development")
     print("===============")
 
     benchmark_approximators(
@@ -173,12 +282,32 @@ def benchmark_approximators_adultcensus():
         },
         game_num_instances=30,
         iterations=2,
-    ).to_csv('results/approximators_adultcensus.csv', index=False)
+    ).to_csv('results/approximators_development.csv', index=False)
+
+def benchmark_permutationiq_variants_development():
+    print("===============")
+    print("Benchmark: permutationiq_variants_development")
+    print("===============")
+
+    benchmark_permutationiq_variants(
+        min_order=2,
+        max_order=2,
+        budget_steps=[100, 1000, 10000],
+        game_name='AdultCensusLocalXAI',
+        game_configuration={
+            'model_name': 'random_forest',
+            'imputer': 'marginal'
+        },
+        game_instance=1,
+        iterations=2,
+    ).to_csv('results/permutationiq_variants_development.csv', index=False)
 
 
 def command_benchmark(config: str):
-    if config == "all" or config == "approximators_adultcensus":
-        benchmark_approximators_adultcensus()
+    if config == "all" or config == "approximators_development":
+        benchmark_approximators_development()
+    if config == "all" or config == "permutationiq_variants_development":
+        benchmark_permutationiq_variants_development()
 
 
 
