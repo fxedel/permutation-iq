@@ -4,11 +4,11 @@
 # https://doku.lrz.de/running-serial-jobs-on-the-linux-cluster-11484000.html
 # https://doku.lrz.de/job-processing-on-the-linux-cluster-10745970.html
 
-#SBATCH -J samplejob
-#SBATCH -D /dss/dsshome1/03/ru48miy3/master-thesis/code
+#SBATCH -J permutationiq_variants_localexplanation_adultcensus
+#SBATCH -D /dss/dsshome1/03/ru48miy3/shapiq-mcs
 
-#SBATCH -o /dss/dsshome1/03/ru48miy3/master-thesis/code/jobs/%x_lrz_%j.log
-#SBATCH -e /dss/dsshome1/03/ru48miy3/master-thesis/code/jobs/%x_lrz_%j.log
+#SBATCH -o /dss/dsshome1/03/ru48miy3/shapiq-mcs/results/%x_lrz_%j.log
+#SBATCH -e /dss/dsshome1/03/ru48miy3/shapiq-mcs/results/%x_lrz_%j.log
 
 #SBATCH --mail-type=END
 #SBATCH --mail-user=felix.edelmann@campus.lmu.de
@@ -23,7 +23,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 
-#SBATCH --time=00:10:00
+#SBATCH --time=24:00:00
 
 module load slurm_setup
 
@@ -39,12 +39,9 @@ cat /etc/os-release
 uname -srvmpio
 #inxi -C
 
-module load python/3.10.12-base
+uv sync
 
-# pip install uv
-# uv sync
-
-echo "Run benchmarkjob.py at `date`"
+echo "Run main.py at `date`"
 uv run main.py benchmark ${SLURM_JOB_NAME}
 
 end=`date +%s`
