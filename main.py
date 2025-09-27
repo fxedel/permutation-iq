@@ -53,8 +53,9 @@ def benchmark_approximators(
     max_order: int,
     budget_steps: list[int],
     game_name: str,
-    game_configuration: dict,
-    game_num_instances: int = 30,
+    game_n_player_id: int = 0, # zero-indexed
+    game_config_id: int = 1, # not zero-indexed
+    game_precomputed: bool = True,
     iterations: int = 50,
     random_state: int = 1,
 ) -> pd.DataFrame:
@@ -72,17 +73,25 @@ def benchmark_approximators(
         columns=['Game', 'k', 'Iteration', 'Approximator', 'Variant', 'Budget', 'MSE', 'Prec@10', 'Runtime']
     )
     current_df_index = 0
+
+    configuration = shapiq.BENCHMARK_CONFIGURATIONS[shapiq.GAME_NAME_TO_CLASS_MAPPING[game_name]][game_n_player_id]['configurations'][game_config_id - 1]
+    print("Game configuration:", configuration)
+
+    games = [game for game in shapiq.load_games_from_configuration(
+        game_class=shapiq.GAME_NAME_TO_CLASS_MAPPING[game_name],
+        config_id=game_config_id,
+        n_games=iterations,
+        n_player_id=game_n_player_id,
+        check_pre_computed=game_precomputed,
+        only_pre_computed=game_precomputed,
+    )]
     
     for i in range(iterations):
         print(f"--- Iteration {i + 1}/{iterations} ---")
-        game = shapiq.load_game_data(
-            game_class=shapiq.GAME_NAME_TO_CLASS_MAPPING[game_name],
-            configuration=game_configuration,
-            iteration=(i % game_num_instances) + 1,
-        )
-        exact_computer = shapiq.ExactComputer(n_players=game.n_players, game=game)
+        game = games[i % len(games)]
+
         start_time = time.time()
-        exact_values = exact_computer(index, order=max_order)
+        exact_values = game.exact_values(index, order=max_order)
         print(f"Computed exact values in {time.time() - start_time} seconds")
 
         for approximator in approximators:
@@ -158,27 +167,139 @@ def benchmark_approximators(
 
     return df_summary
 
+def benchmark_approximators_development():
+    print("===============")
+    print("Benchmark: approximators_development")
+    print("===============")
+
+    benchmark_approximators(
+        n=14,
+        max_order=2,
+        budget_steps=[100, 1000, 10000],
+        game_name='AdultCensusLocalXAI',
+        game_n_player_id=0,
+        game_config_id=2,
+        iterations=2,
+    ).to_csv('results/approximators_development.csv', index=False)
+
+def benchmark_approximators_localexplanation_adultcensus():
+    print("===============")
+    print("Benchmark: approximators_localexplanation_adultcensus")
+    print("===============")
+
+    benchmark_approximators(
+        n=14,
+        max_order=4,
+        budget_steps=[16, 50, 100, 250, 500, 750, 1_000, 2_000, 3_500, 5_000],
+        game_name='AdultCensusLocalXAI',
+        game_n_player_id=0,
+        game_config_id=3,
+        iterations=50,
+    ).to_csv('results/approximators_localexplanation_adultcensus.csv', index=False)
+
+def benchmark_approximators_globalexplanation_adultcensus():
+    print("===============")
+    print("Benchmark: approximators_globalexplanation_adultcensus")
+    print("===============")
+
+    benchmark_approximators(
+        n=14,
+        max_order=4,
+        budget_steps=[16, 50, 100, 250, 500, 750, 1_000, 2_000, 3_500, 5_000],
+        game_name='AdultCensusGlobalXAI',
+        game_n_player_id=0,
+        game_config_id=3,
+        iterations=50,
+    ).to_csv('results/approximators_globalexplanation_adultcensus.csv', index=False)
+
+def benchmark_approximators_imageclassifier_n14():
+    print("===============")
+    print("Benchmark: approximators_imageclassifier_n14")
+    print("===============")
+
+    benchmark_approximators(
+        n=14,
+        max_order=4,
+        budget_steps=[16, 50, 100, 250, 500, 750, 1_000, 2_000, 3_500, 5_000],
+        game_name='ImageClassifierLocalXAI',
+        game_n_player_id=0,
+        game_config_id=1,
+        iterations=50,
+    ).to_csv('results/approximators_imageclassifier_n14.csv', index=False)
+
+def benchmark_approximators_imageclassifier_n16():
+    print("===============")
+    print("Benchmark: approximators_imageclassifier_n16")
+    print("===============")
+
+    benchmark_approximators(
+        n=14,
+        max_order=4,
+        budget_steps=[16, 50, 100, 250, 500, 750, 1_000, 2_000, 3_500, 5_000],
+        game_name='ImageClassifierLocalXAI',
+        game_n_player_id=2,
+        game_config_id=1,
+        iterations=50,
+    ).to_csv('results/approximators_imageclassifier_n16.csv', index=False)
+
+def benchmark_approximators_unsupervisedfeatureimportance_adultcensus():
+    print("===============")
+    print("Benchmark: approximators_unsupervisedfeatureimportance_adultcensus")
+    print("===============")
+
+    benchmark_approximators(
+        n=14,
+        max_order=4,
+        budget_steps=[16, 50, 100, 250, 500, 750, 1_000, 2_000, 3_500, 5_000],
+        game_name='AdultCensusUnsupervisedData',
+        game_n_player_id=0,
+        game_config_id=1,
+        iterations=50,
+    ).to_csv('results/approximators_unsupervisedfeatureimportance_adultcensus.csv', index=False)
+
+def benchmark_approximators_datasetvaluation_californiahousing():
+    print("===============")
+    print("Benchmark: approximators_datasetvaluation_californiahousing")
+    print("===============")
+
+    benchmark_approximators(
+        n=14,
+        max_order=4,
+        budget_steps=[16, 50, 100, 250, 500, 750, 1_000, 2_000, 3_500, 5_000],
+        game_name='CaliforniaHousingDatasetValuation',
+        game_n_player_id=1,
+        game_config_id=1,
+        iterations=50,
+    ).to_csv('results/approximators_datasetvaluation_californiahousing.csv', index=False)
+
+
 def benchmark_permutationiq_variants(
     min_order: int,
     max_order: int,
     budget_steps: list[int],
     game_name: str,
-    game_configuration: dict,
-    game_instance: int,
+    game_n_player_id: int = 0,
+    game_config_id: int = 1,
+    game_precomputed: bool = True,
     iterations: int = 50,
     random_state: int = 1,
 ) -> pd.DataFrame:
     index = "SII"
 
-    game = shapiq.load_game_data(
+    configuration = shapiq.BENCHMARK_CONFIGURATIONS[shapiq.GAME_NAME_TO_CLASS_MAPPING[game_name]][game_n_player_id]['configurations'][game_config_id - 1]
+    print("Game configuration:", configuration)
+
+    [game] = shapiq.load_games_from_configuration(
         game_class=shapiq.GAME_NAME_TO_CLASS_MAPPING[game_name],
-        configuration=game_configuration,
-        iteration=game_instance,
+        config_id=game_config_id,
+        n_games=1,
+        n_player_id=game_n_player_id,
+        check_pre_computed=game_precomputed,
+        only_pre_computed=game_precomputed,
     )
 
-    exact_computer = shapiq.ExactComputer(n_players=game.n_players, game=game)
     start_time = time.time()
-    exact_values = exact_computer(index, order=max_order)
+    exact_values = game.exact_values(index, order=max_order)
     print(f"Computed exact values in {time.time() - start_time} seconds")
 
     approximator = permutationiq.PermutationIQ(n=game.n_players, min_order=min_order, max_order=max_order, index=index, random_state=random_state)
@@ -265,25 +386,6 @@ def benchmark_permutationiq_variants(
 
     return df_summary
 
-
-def benchmark_approximators_development():
-    print("===============")
-    print("Benchmark: approximators_development")
-    print("===============")
-
-    benchmark_approximators(
-        n=14,
-        max_order=2,
-        budget_steps=[100, 1000, 10000],
-        game_name='AdultCensusLocalXAI',
-        game_configuration={
-            'model_name': 'random_forest',
-            'imputer': 'marginal'
-        },
-        game_num_instances=30,
-        iterations=2,
-    ).to_csv('results/approximators_development.csv', index=False)
-
 def benchmark_permutationiq_variants_development():
     print("===============")
     print("Benchmark: permutationiq_variants_development")
@@ -294,11 +396,8 @@ def benchmark_permutationiq_variants_development():
         max_order=2,
         budget_steps=[100, 1000, 10000],
         game_name='AdultCensusLocalXAI',
-        game_configuration={
-            'model_name': 'random_forest',
-            'imputer': 'marginal'
-        },
-        game_instance=1,
+        game_n_player_id=0,
+        game_config_id=2,
         iterations=2,
     ).to_csv('results/permutationiq_variants_development.csv', index=False)
 
@@ -312,22 +411,67 @@ def benchmark_permutationiq_variants_localexplanation_adultcensus():
         max_order=3,
         budget_steps=[16, 50, 100, 250, 500, 750, 1_000, 2_000, 3_500, 5_000, 7_500, 10_000],
         game_name='AdultCensusLocalXAI',
-        game_configuration={
-            'model_name': 'gradient_boosting',
-            'imputer': 'marginal'
-        },
-        game_instance=1,
+        game_n_player_id=0,
+        game_config_id=3,
         iterations=50,
     ).to_csv('results/permutationiq_variants_localexplanation_adultcensus.csv', index=False)
+
+def benchmark_permutationiq_variants_globalexplanation_adultcensus():
+    print("===============")
+    print("Benchmark: permutationiq_variants_globalexplanation_adultcensus")
+    print("===============")
+
+    benchmark_permutationiq_variants(
+        min_order=2,
+        max_order=3,
+        budget_steps=[16, 50, 100, 250, 500, 750, 1_000, 2_000, 3_500, 5_000, 7_500, 10_000],
+        game_name='AdultCensusGlobalXAI',
+        game_n_player_id=0,
+        game_config_id=3,
+        iterations=50,
+    ).to_csv('results/permutationiq_variants_globalexplanation_adultcensus.csv', index=False)
+
+def benchmark_permutationiq_variants_soum():
+    print("===============")
+    print("Benchmark: permutationiq_variants_soum")
+    print("===============")
+
+    benchmark_permutationiq_variants(
+        min_order=2,
+        max_order=3,
+        budget_steps=[16, 50, 100, 250, 500, 750, 1_000, 2_000, 3_500, 5_000, 7_500, 10_000],
+        game_name='SOUM',
+        game_n_player_id=0,
+        game_config_id=4,
+        game_precomputed=False,
+        iterations=50,
+    ).to_csv('results/permutationiq_variants_soug.csv', index=False)
 
 
 def command_benchmark(config: str):
     if config == "all" or config == "approximators_development":
         benchmark_approximators_development()
+    if config == "all" or config == "approximators_localexplanation_adultcensus":
+        benchmark_approximators_localexplanation_adultcensus()
+    if config == "all" or config == "approximators_globalexplanation_adultcensus":
+        benchmark_approximators_globalexplanation_adultcensus()
+    if config == "all" or config == "approximators_imageclassifier_n14":
+        benchmark_approximators_imageclassifier_n14()
+    if config == "all" or config == "approximators_imageclassifier_n16":
+        benchmark_approximators_imageclassifier_n16()
+    if config == "all" or config == "approximators_unsupervisedfeatureimportance_adultcensus":
+        benchmark_approximators_unsupervisedfeatureimportance_adultcensus()
+    if config == "all" or config == "approximators_datasetvaluation_californiahousing":
+        benchmark_approximators_datasetvaluation_californiahousing()
+
     if config == "all" or config == "permutationiq_variants_development":
         benchmark_permutationiq_variants_development()
     if config == "all" or config == "permutationiq_variants_localexplanation_adultcensus":
         benchmark_permutationiq_variants_localexplanation_adultcensus()
+    if config == "all" or config == "permutationiq_variants_globalexplanation_adultcensus":
+        benchmark_permutationiq_variants_globalexplanation_adultcensus()
+    if config == "all" or config == "permutationiq_variants_soum":
+        benchmark_permutationiq_variants_soum()
 
 
 
