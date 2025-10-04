@@ -4,7 +4,7 @@
 # https://doku.lrz.de/running-serial-jobs-on-the-linux-cluster-11484000.html
 # https://doku.lrz.de/job-processing-on-the-linux-cluster-10745970.html
 
-#SBATCH -J permutationiq_variants_localexplanation_adultcensus
+#SBATCH -J permutationiq_variants_soum
 #SBATCH -D /dss/dsshome1/03/ru48miy3/shapiq-mcs
 
 #SBATCH -o /dss/dsshome1/03/ru48miy3/shapiq-mcs/results/%x_lrz_%j.log
@@ -18,12 +18,12 @@
 #SBATCH --export=NONE
 
 #SBATCH --clusters=serial
-#SBATCH --partition=serial_std
+#SBATCH --partition=serial_long
 
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 
-#SBATCH --time=24:00:00
+#SBATCH --time=48:00:00
 
 module load slurm_setup
 
