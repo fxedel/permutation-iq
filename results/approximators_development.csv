@@ -1,4 +1,4 @@
-Game,k,Approximator,Variant,Budget,MSE_mean,MSE_std,MSE_min,MSE_max,MSE_se,Prec@10_mean,Prec@10_std,Prec@10_min,Prec@10_max,Prec@10_se,Runtime_mean,Runtime_std,Runtime_min,Runtime_max,Runtime_se
+Game,k,Approximator,Variant,Budget,MSE_mean,MSE_std,MSE_min,MSE_max,MSE_se,Prec10_mean,Prec10_std,Prec10_min,Prec10_max,Prec10_se,Runtime_mean,Runtime_std,Runtime_min,Runtime_max,Runtime_se
 AdultCensusLocalXAI,1,KernelSHAPIQ,,100,0.00032094602696731273,0.00011161868179863506,0.00024201970016039445,0.00039987235377423106,7.89263268069183e-05,0.8,0.0,0.8,0.8,0.0,,,,,
 AdultCensusLocalXAI,1,KernelSHAPIQ,,1000,1.88623855631719e-05,6.787920274811481e-06,1.406260110669905e-05,2.3662170019644754e-05,4.799784456472851e-06,0.9,0.0,0.9,0.9,0.0,,,,,
 AdultCensusLocalXAI,1,KernelSHAPIQ,,10000,6.803431557927797e-07,2.220875741832829e-07,5.233035260705099e-07,8.373827855150494e-07,1.5703962972226974e-07,0.85,0.21213203435596428,0.7,1.0,0.15,,,,,

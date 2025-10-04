@@ -75,7 +75,7 @@ def benchmark_approximators(
     ]
 
     df_results = pd.DataFrame(
-        columns=['Game', 'k', 'Iteration', 'Approximator', 'Variant', 'Budget', 'MSE', 'Prec@10', 'Runtime']
+        columns=['Game', 'k', 'Iteration', 'Approximator', 'Variant', 'Budget', 'MSE', 'Prec10', 'Runtime']
     )
     current_df_index = 0
 
@@ -130,7 +130,7 @@ def benchmark_approximators(
                             'Variant': variant,
                             'Budget': budget,
                             'MSE': metrics['MSE'],
-                            'Prec@10': metrics['Precision@10'],
+                            'Prec10': metrics['Precision@10'],
                         }
 
                         if order == max_order:
@@ -148,7 +148,7 @@ def benchmark_approximators(
 
     agg_funcs = {
         'MSE': ['mean', 'std', 'min', 'max', se],
-        'Prec@10': ['mean', 'std', 'min', 'max', se],
+        'Prec10': ['mean', 'std', 'min', 'max', se],
         'Runtime': ['mean', 'std', 'min', 'max', se],
     }
 
