@@ -1,0 +1,723 @@
+Starting job at Sun Sep 28 12:06:16 AM CEST 2025
+Git commit: 51832e7ea3653ec3142f67693e0f8453942fcf63
+System information:
+NAME="SLES"
+VERSION="15-SP6"
+VERSION_ID="15.6"
+PRETTY_NAME="SUSE Linux Enterprise Server 15 SP6"
+ID="sles"
+ID_LIKE="suse"
+ANSI_COLOR="0;32"
+CPE_NAME="cpe:/o:suse:sles:15:sp6"
+DOCUMENTATION_URL="https://documentation.suse.com/"
+Linux 6.4.0-150600.23.25-default #1 SMP PREEMPT_DYNAMIC Tue Oct  1 10:54:01 UTC 2024 (ea7c56d) x86_64 x86_64 x86_64 GNU/Linux
+Resolved 35 packages in 1ms
+Audited 33 packages in 2ms
+Run main.py at Sun Sep 28 12:06:16 AM CEST 2025
+===============
+Benchmark: permutationiq_variants_globalexplanation_adultcensus
+===============
+Game configuration: {'model_name': 'gradient_boosting', 'loss_function': 'accuracy_score'}
+Computed exact values in 11.005715608596802 seconds
+Computed exact variances in 23.29216432571411 seconds
+--- Iteration 1/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.05 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.32 seconds
+Budget: 3500, Runtime: 0.56 seconds
+Budget: 5000, Runtime: 0.83 seconds
+Budget: 7500, Runtime: 1.28 seconds
+Budget: 10000, Runtime: 1.70 seconds
+
+--- Iteration 2/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.33 seconds
+Budget: 3500, Runtime: 0.57 seconds
+Budget: 5000, Runtime: 0.83 seconds
+Budget: 7500, Runtime: 1.25 seconds
+Budget: 10000, Runtime: 1.70 seconds
+
+--- Iteration 3/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.05 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.13 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.33 seconds
+Budget: 3500, Runtime: 0.57 seconds
+Budget: 5000, Runtime: 0.83 seconds
+Budget: 7500, Runtime: 1.26 seconds
+Budget: 10000, Runtime: 1.69 seconds
+
+--- Iteration 4/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.09 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.33 seconds
+Budget: 3500, Runtime: 0.57 seconds
+Budget: 5000, Runtime: 0.83 seconds
+Budget: 7500, Runtime: 1.28 seconds
+Budget: 10000, Runtime: 1.72 seconds
+
+--- Iteration 5/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.05 seconds
+Budget: 500, Runtime: 0.09 seconds
+Budget: 750, Runtime: 0.13 seconds
+Budget: 1000, Runtime: 0.17 seconds
+Budget: 2000, Runtime: 0.33 seconds
+Budget: 3500, Runtime: 0.57 seconds
+Budget: 5000, Runtime: 0.83 seconds
+Budget: 7500, Runtime: 1.27 seconds
+Budget: 10000, Runtime: 1.71 seconds
+
+--- Iteration 6/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.13 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.33 seconds
+Budget: 3500, Runtime: 0.57 seconds
+Budget: 5000, Runtime: 0.84 seconds
+Budget: 7500, Runtime: 1.28 seconds
+Budget: 10000, Runtime: 1.71 seconds
+
+--- Iteration 7/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.05 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.17 seconds
+Budget: 2000, Runtime: 0.33 seconds
+Budget: 3500, Runtime: 0.56 seconds
+Budget: 5000, Runtime: 0.84 seconds
+Budget: 7500, Runtime: 1.26 seconds
+Budget: 10000, Runtime: 1.70 seconds
+
+--- Iteration 8/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.05 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.33 seconds
+Budget: 3500, Runtime: 0.57 seconds
+Budget: 5000, Runtime: 0.83 seconds
+Budget: 7500, Runtime: 1.25 seconds
+Budget: 10000, Runtime: 1.70 seconds
+
+--- Iteration 9/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.05 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.17 seconds
+Budget: 2000, Runtime: 0.34 seconds
+Budget: 3500, Runtime: 0.57 seconds
+Budget: 5000, Runtime: 0.84 seconds
+Budget: 7500, Runtime: 1.27 seconds
+Budget: 10000, Runtime: 1.69 seconds
+
+--- Iteration 10/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.33 seconds
+Budget: 3500, Runtime: 0.57 seconds
+Budget: 5000, Runtime: 0.83 seconds
+Budget: 7500, Runtime: 1.28 seconds
+Budget: 10000, Runtime: 1.71 seconds
+
+--- Iteration 11/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.32 seconds
+Budget: 3500, Runtime: 0.57 seconds
+Budget: 5000, Runtime: 0.82 seconds
+Budget: 7500, Runtime: 1.25 seconds
+Budget: 10000, Runtime: 1.70 seconds
+
+--- Iteration 12/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.33 seconds
+Budget: 3500, Runtime: 0.57 seconds
+Budget: 5000, Runtime: 0.83 seconds
+Budget: 7500, Runtime: 1.27 seconds
+Budget: 10000, Runtime: 1.70 seconds
+
+--- Iteration 13/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.17 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.32 seconds
+Budget: 3500, Runtime: 0.56 seconds
+Budget: 5000, Runtime: 0.81 seconds
+Budget: 7500, Runtime: 1.25 seconds
+Budget: 10000, Runtime: 1.67 seconds
+
+--- Iteration 14/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.32 seconds
+Budget: 3500, Runtime: 0.56 seconds
+Budget: 5000, Runtime: 0.83 seconds
+Budget: 7500, Runtime: 1.26 seconds
+Budget: 10000, Runtime: 1.68 seconds
+
+--- Iteration 15/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.32 seconds
+Budget: 3500, Runtime: 0.56 seconds
+Budget: 5000, Runtime: 0.81 seconds
+Budget: 7500, Runtime: 1.25 seconds
+Budget: 10000, Runtime: 1.68 seconds
+
+--- Iteration 16/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.32 seconds
+Budget: 3500, Runtime: 0.57 seconds
+Budget: 5000, Runtime: 0.82 seconds
+Budget: 7500, Runtime: 1.23 seconds
+Budget: 10000, Runtime: 1.67 seconds
+
+--- Iteration 17/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.32 seconds
+Budget: 3500, Runtime: 0.56 seconds
+Budget: 5000, Runtime: 0.81 seconds
+Budget: 7500, Runtime: 1.24 seconds
+Budget: 10000, Runtime: 1.65 seconds
+
+--- Iteration 18/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.32 seconds
+Budget: 3500, Runtime: 0.57 seconds
+Budget: 5000, Runtime: 0.81 seconds
+Budget: 7500, Runtime: 1.25 seconds
+Budget: 10000, Runtime: 1.69 seconds
+
+--- Iteration 19/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.32 seconds
+Budget: 3500, Runtime: 0.56 seconds
+Budget: 5000, Runtime: 0.81 seconds
+Budget: 7500, Runtime: 1.23 seconds
+Budget: 10000, Runtime: 1.68 seconds
+
+--- Iteration 20/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.32 seconds
+Budget: 3500, Runtime: 0.56 seconds
+Budget: 5000, Runtime: 0.81 seconds
+Budget: 7500, Runtime: 1.26 seconds
+Budget: 10000, Runtime: 1.68 seconds
+
+--- Iteration 21/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.33 seconds
+Budget: 3500, Runtime: 0.56 seconds
+Budget: 5000, Runtime: 0.82 seconds
+Budget: 7500, Runtime: 1.24 seconds
+Budget: 10000, Runtime: 1.69 seconds
+
+--- Iteration 22/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.32 seconds
+Budget: 3500, Runtime: 0.56 seconds
+Budget: 5000, Runtime: 0.81 seconds
+Budget: 7500, Runtime: 1.25 seconds
+Budget: 10000, Runtime: 1.70 seconds
+
+--- Iteration 23/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.32 seconds
+Budget: 3500, Runtime: 0.56 seconds
+Budget: 5000, Runtime: 0.82 seconds
+Budget: 7500, Runtime: 1.26 seconds
+Budget: 10000, Runtime: 1.71 seconds
+
+--- Iteration 24/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.32 seconds
+Budget: 3500, Runtime: 0.56 seconds
+Budget: 5000, Runtime: 0.82 seconds
+Budget: 7500, Runtime: 1.25 seconds
+Budget: 10000, Runtime: 1.68 seconds
+
+--- Iteration 25/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.32 seconds
+Budget: 3500, Runtime: 0.56 seconds
+Budget: 5000, Runtime: 0.83 seconds
+Budget: 7500, Runtime: 1.24 seconds
+Budget: 10000, Runtime: 1.69 seconds
+
+--- Iteration 26/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.32 seconds
+Budget: 3500, Runtime: 0.56 seconds
+Budget: 5000, Runtime: 0.82 seconds
+Budget: 7500, Runtime: 1.26 seconds
+Budget: 10000, Runtime: 1.70 seconds
+
+--- Iteration 27/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.32 seconds
+Budget: 3500, Runtime: 0.56 seconds
+Budget: 5000, Runtime: 0.81 seconds
+Budget: 7500, Runtime: 1.25 seconds
+Budget: 10000, Runtime: 1.67 seconds
+
+--- Iteration 28/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.32 seconds
+Budget: 3500, Runtime: 0.56 seconds
+Budget: 5000, Runtime: 0.82 seconds
+Budget: 7500, Runtime: 1.25 seconds
+Budget: 10000, Runtime: 1.69 seconds
+
+--- Iteration 29/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.32 seconds
+Budget: 3500, Runtime: 0.55 seconds
+Budget: 5000, Runtime: 0.81 seconds
+Budget: 7500, Runtime: 1.22 seconds
+Budget: 10000, Runtime: 1.67 seconds
+
+--- Iteration 30/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.32 seconds
+Budget: 3500, Runtime: 0.55 seconds
+Budget: 5000, Runtime: 0.80 seconds
+Budget: 7500, Runtime: 1.24 seconds
+Budget: 10000, Runtime: 1.69 seconds
+
+--- Iteration 31/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.32 seconds
+Budget: 3500, Runtime: 0.55 seconds
+Budget: 5000, Runtime: 0.81 seconds
+Budget: 7500, Runtime: 1.22 seconds
+Budget: 10000, Runtime: 1.68 seconds
+
+--- Iteration 32/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.31 seconds
+Budget: 3500, Runtime: 0.55 seconds
+Budget: 5000, Runtime: 0.80 seconds
+Budget: 7500, Runtime: 1.21 seconds
+Budget: 10000, Runtime: 1.65 seconds
+
+--- Iteration 33/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.31 seconds
+Budget: 3500, Runtime: 0.55 seconds
+Budget: 5000, Runtime: 0.80 seconds
+Budget: 7500, Runtime: 1.22 seconds
+Budget: 10000, Runtime: 1.66 seconds
+
+--- Iteration 34/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.31 seconds
+Budget: 3500, Runtime: 0.55 seconds
+Budget: 5000, Runtime: 0.80 seconds
+Budget: 7500, Runtime: 1.23 seconds
+Budget: 10000, Runtime: 1.65 seconds
+
+--- Iteration 35/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.31 seconds
+Budget: 3500, Runtime: 0.55 seconds
+Budget: 5000, Runtime: 0.80 seconds
+Budget: 7500, Runtime: 1.22 seconds
+Budget: 10000, Runtime: 1.64 seconds
+
+--- Iteration 36/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.31 seconds
+Budget: 3500, Runtime: 0.54 seconds
+Budget: 5000, Runtime: 0.80 seconds
+Budget: 7500, Runtime: 1.21 seconds
+Budget: 10000, Runtime: 1.64 seconds
+
+--- Iteration 37/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.31 seconds
+Budget: 3500, Runtime: 0.55 seconds
+Budget: 5000, Runtime: 0.80 seconds
+Budget: 7500, Runtime: 1.23 seconds
+Budget: 10000, Runtime: 1.65 seconds
+
+--- Iteration 38/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.31 seconds
+Budget: 3500, Runtime: 0.55 seconds
+Budget: 5000, Runtime: 0.80 seconds
+Budget: 7500, Runtime: 1.21 seconds
+Budget: 10000, Runtime: 1.66 seconds
+
+--- Iteration 39/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.31 seconds
+Budget: 3500, Runtime: 0.54 seconds
+Budget: 5000, Runtime: 0.80 seconds
+Budget: 7500, Runtime: 1.21 seconds
+Budget: 10000, Runtime: 1.61 seconds
+
+--- Iteration 40/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.31 seconds
+Budget: 3500, Runtime: 0.54 seconds
+Budget: 5000, Runtime: 0.80 seconds
+Budget: 7500, Runtime: 1.22 seconds
+Budget: 10000, Runtime: 1.61 seconds
+
+--- Iteration 41/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.31 seconds
+Budget: 3500, Runtime: 0.55 seconds
+Budget: 5000, Runtime: 0.80 seconds
+Budget: 7500, Runtime: 1.22 seconds
+Budget: 10000, Runtime: 1.63 seconds
+
+--- Iteration 42/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.31 seconds
+Budget: 3500, Runtime: 0.55 seconds
+Budget: 5000, Runtime: 0.80 seconds
+Budget: 7500, Runtime: 1.22 seconds
+Budget: 10000, Runtime: 1.64 seconds
+
+--- Iteration 43/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.31 seconds
+Budget: 3500, Runtime: 0.54 seconds
+Budget: 5000, Runtime: 0.80 seconds
+Budget: 7500, Runtime: 1.21 seconds
+Budget: 10000, Runtime: 1.63 seconds
+
+--- Iteration 44/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.31 seconds
+Budget: 3500, Runtime: 0.55 seconds
+Budget: 5000, Runtime: 0.79 seconds
+Budget: 7500, Runtime: 1.21 seconds
+Budget: 10000, Runtime: 1.65 seconds
+
+--- Iteration 45/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.31 seconds
+Budget: 3500, Runtime: 0.55 seconds
+Budget: 5000, Runtime: 0.80 seconds
+Budget: 7500, Runtime: 1.23 seconds
+Budget: 10000, Runtime: 1.64 seconds
+
+--- Iteration 46/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.31 seconds
+Budget: 3500, Runtime: 0.55 seconds
+Budget: 5000, Runtime: 0.80 seconds
+Budget: 7500, Runtime: 1.22 seconds
+Budget: 10000, Runtime: 1.66 seconds
+
+--- Iteration 47/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.31 seconds
+Budget: 3500, Runtime: 0.55 seconds
+Budget: 5000, Runtime: 0.80 seconds
+Budget: 7500, Runtime: 1.20 seconds
+Budget: 10000, Runtime: 1.66 seconds
+
+--- Iteration 48/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.31 seconds
+Budget: 3500, Runtime: 0.54 seconds
+Budget: 5000, Runtime: 0.80 seconds
+Budget: 7500, Runtime: 1.22 seconds
+Budget: 10000, Runtime: 1.63 seconds
+
+--- Iteration 49/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.31 seconds
+Budget: 3500, Runtime: 0.54 seconds
+Budget: 5000, Runtime: 0.80 seconds
+Budget: 7500, Runtime: 1.20 seconds
+Budget: 10000, Runtime: 1.63 seconds
+
+--- Iteration 50/50 ---
+Budget: 16, Runtime: 0.01 seconds
+Budget: 50, Runtime: 0.01 seconds
+Budget: 100, Runtime: 0.02 seconds
+Budget: 250, Runtime: 0.04 seconds
+Budget: 500, Runtime: 0.08 seconds
+Budget: 750, Runtime: 0.12 seconds
+Budget: 1000, Runtime: 0.16 seconds
+Budget: 2000, Runtime: 0.31 seconds
+Budget: 3500, Runtime: 0.54 seconds
+Budget: 5000, Runtime: 0.79 seconds
+Budget: 7500, Runtime: 1.22 seconds
+Budget: 10000, Runtime: 1.65 seconds
+
+Ending job at Sun Sep 28 04:19:17 PM CEST 2025 (runtime: 58381s)
