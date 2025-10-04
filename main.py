@@ -49,7 +49,6 @@ def command_debug():
 
 
 def benchmark_approximators(
-    n: int,
     max_order: int,
     budget_steps: list[int],
     game_name: str,
@@ -60,6 +59,12 @@ def benchmark_approximators(
     random_state: int = 1,
 ) -> pd.DataFrame:
     index = "SII"
+
+    n = shapiq.BENCHMARK_CONFIGURATIONS[shapiq.GAME_NAME_TO_CLASS_MAPPING[game_name]][game_n_player_id]['n_players']
+    print("n =", n)
+
+    configuration = shapiq.BENCHMARK_CONFIGURATIONS[shapiq.GAME_NAME_TO_CLASS_MAPPING[game_name]][game_n_player_id]['configurations'][game_config_id - 1]
+    print("Game configuration:", configuration)
 
     approximators = [
         shapiq.PermutationSamplingSII(n=n, max_order=max_order, index=index, random_state=random_state),
@@ -73,9 +78,6 @@ def benchmark_approximators(
         columns=['Game', 'k', 'Iteration', 'Approximator', 'Variant', 'Budget', 'MSE', 'Prec@10', 'Runtime']
     )
     current_df_index = 0
-
-    configuration = shapiq.BENCHMARK_CONFIGURATIONS[shapiq.GAME_NAME_TO_CLASS_MAPPING[game_name]][game_n_player_id]['configurations'][game_config_id - 1]
-    print("Game configuration:", configuration)
 
     games = [game for game in shapiq.load_games_from_configuration(
         game_class=shapiq.GAME_NAME_TO_CLASS_MAPPING[game_name],
@@ -173,7 +175,6 @@ def benchmark_approximators_development():
     print("===============")
 
     benchmark_approximators(
-        n=14,
         max_order=2,
         budget_steps=[100, 1000, 10000],
         game_name='AdultCensusLocalXAI',
@@ -188,7 +189,6 @@ def benchmark_approximators_localexplanation_adultcensus():
     print("===============")
 
     benchmark_approximators(
-        n=14,
         max_order=4,
         budget_steps=[16, 50, 100, 250, 500, 750, 1_000, 2_000, 3_500, 5_000],
         game_name='AdultCensusLocalXAI',
@@ -203,7 +203,6 @@ def benchmark_approximators_globalexplanation_adultcensus():
     print("===============")
 
     benchmark_approximators(
-        n=14,
         max_order=4,
         budget_steps=[16, 50, 100, 250, 500, 750, 1_000, 2_000, 3_500, 5_000],
         game_name='AdultCensusGlobalXAI',
@@ -218,7 +217,6 @@ def benchmark_approximators_imageclassifier_n14():
     print("===============")
 
     benchmark_approximators(
-        n=14,
         max_order=4,
         budget_steps=[16, 50, 100, 250, 500, 750, 1_000, 2_000, 3_500, 5_000],
         game_name='ImageClassifierLocalXAI',
@@ -233,7 +231,6 @@ def benchmark_approximators_imageclassifier_n16():
     print("===============")
 
     benchmark_approximators(
-        n=14,
         max_order=4,
         budget_steps=[16, 50, 100, 250, 500, 750, 1_000, 2_000, 3_500, 5_000],
         game_name='ImageClassifierLocalXAI',
@@ -248,7 +245,6 @@ def benchmark_approximators_unsupervisedfeatureimportance_adultcensus():
     print("===============")
 
     benchmark_approximators(
-        n=14,
         max_order=4,
         budget_steps=[16, 50, 100, 250, 500, 750, 1_000, 2_000, 3_500, 5_000],
         game_name='AdultCensusUnsupervisedData',
@@ -263,7 +259,6 @@ def benchmark_approximators_datasetvaluation_californiahousing():
     print("===============")
 
     benchmark_approximators(
-        n=14,
         max_order=4,
         budget_steps=[16, 50, 100, 250, 500, 750, 1_000, 2_000, 3_500, 5_000],
         game_name='CaliforniaHousingDatasetValuation',
