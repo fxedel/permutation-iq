@@ -75,6 +75,12 @@ def command_debug():
     print("PermutationIQ values:", approx_values)
     print(f"--- Computed PermutationIQ values in {time.time() - start_time} seconds ---")
 
+    start_time = time.time()
+    approximator = permutationiq.PermutationIQStratified(n=game.n_players, max_order=max_order, index="SII")
+    approx_values = approximator(budget=budget, game=game)
+    print("PermutationIQ+Strat values:", approx_values)
+    print(f"--- Computed PermutationIQ+Strat values in {time.time() - start_time} seconds ---")
+
 
 def benchmark_approximators(
     max_order: int,
@@ -100,6 +106,7 @@ def benchmark_approximators(
         shapiq.SVARMIQ(n=n, max_order=max_order, index=index, random_state=random_state),
         shapiq.KernelSHAPIQ(n=n, max_order=max_order, index=index, random_state=random_state),
         permutationiq.PermutationIQ(n=n, max_order=max_order, index=index, random_state=random_state),
+        permutationiq.PermutationIQStratified(n=n, max_order=max_order, index=index, random_state=random_state),
     ]
 
     df_results = pd.DataFrame(
@@ -325,6 +332,7 @@ def _benchmark_runtime_soum_varying_n(
             shapiq.SVARMIQ: shapiq.SVARMIQ(n=n, max_order=max_order, index=index, random_state=random_state),
             shapiq.KernelSHAPIQ: shapiq.KernelSHAPIQ(n=n, max_order=max_order, index=index, random_state=random_state),
             permutationiq.PermutationIQ: permutationiq.PermutationIQ(n=n, max_order=max_order, index=index, random_state=random_state),
+            permutationiq.PermutationIQStratified: permutationiq.PermutationIQStratified(n=n, max_order=max_order, index=index, random_state=random_state),
         }
 
         for i in range(iterations):
