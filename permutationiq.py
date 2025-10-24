@@ -103,20 +103,34 @@ class PermutationIQ(shapiq.approximator.Approximator):
         empty_value = game(np.zeros(self.n, dtype=bool))[0]
         used_budget += 1
 
-        while used_budget < budget:
-            perm = players.copy()
-            self._shuffle(perm)
+        iterations = (budget-used_budget) // self.n
 
-            coalition = np.zeros(self.n, dtype=bool)
+        coalitions_base = np.tri(self.n, self.n, k=0, dtype=bool)
+        coalitions = np.empty((iterations * self.n, self.n), dtype=bool)
+        permutations = []
+
+        for j in range(iterations):
+            perm = players.copy()
+            self._rng.shuffle(perm)
+            permutations.append(perm)
+
+            coalitions[j*self.n:(j+1)*self.n] = coalitions_base[:, np.argsort(perm)]
+
+        coalition_values = game(coalitions)
+        used_budget += len(coalition_values)
+        if used_budget > budget:
+            raise RuntimeError('Exceeded budget!') # this shouldn't happen
+
+        for j in range(iterations):
+            perm = permutations[j]
+            iteration_coalitions = coalitions[j*self.n:(j+1)*self.n]
+            iteration_coalition_values = coalition_values[j*self.n:(j+1)*self.n]
+
             prev_value = empty_value
 
-            for (i, player) in enumerate(perm):
-                coalition[player] = True
-                value = game(coalition)[0]
-                used_budget += 1
-
-                marginal_contribution = value - prev_value
-                prev_value = value
+            for (i, (player, coalition, coalition_value)) in enumerate(zip(perm, iteration_coalitions, iteration_coalition_values)):
+                marginal_contribution = coalition_value - prev_value
+                prev_value = coalition_value
 
                 sample_probability = (1 / self.n) * (1 / math.comb(self.n - 1, i))
 
@@ -270,20 +284,6 @@ class PermutationIQ(shapiq.approximator.Approximator):
         }
 
         return group_player_variances
-
-
-    def _shuffle(self, arr: list) -> list:
-        """in-place Fisher-Yates shuffle, see https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle"""
-
-        for i in range(len(arr)-1):
-            j = self._rng.integers(i, len(arr))
-            self._swap(arr, i, j)
-
-        return arr
-    
-    def _swap(self, arr: list, i: int, j: int) -> list:
-        arr[i], arr[j] = arr[j], arr[i]
-        return arr
 
 def shapley_weight(n: int, k: int, l: int) -> float:
     return 1 / (n - k + 1) / math.comb(n - k, l)
