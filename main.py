@@ -110,7 +110,7 @@ def benchmark_approximators(
     ]
 
     df_results = pd.DataFrame(
-        columns=['Game', 'k', 'Iteration', 'Approximator', 'Variant', 'Budget', 'MSE', 'Prec10', 'Runtime']
+        columns=['Game', 'k', 'n', 'Iteration', 'Approximator', 'Variant', 'Budget', 'MSE', 'Prec10', 'Runtime']
     )
     current_df_index = 0
 
@@ -159,6 +159,7 @@ def benchmark_approximators(
 
                         row = {
                             'Game': game_name,
+                            'n': n,
                             'k': order,
                             'Iteration': i + 1,
                             'Approximator': approximator.__class__.__name__,
@@ -190,7 +191,7 @@ def benchmark_approximators(
     # perform aggregation
     df_summary = (
         df_results
-        .groupby(['Game', 'k', 'Approximator', 'Variant', 'Budget'], dropna=False)
+        .groupby(['Game', 'n', 'k', 'Approximator', 'Variant', 'Budget'], dropna=False)
         .agg(agg_funcs)
     )
 
@@ -415,6 +416,7 @@ def _benchmark_runtime_soum_varying_n(
         for metric, stat in df_summary.columns
     ]
 
+    df_summary['Iterations'] = df_results.groupby(['Game', 'n', 'k', 'Approximator', 'Budget'], dropna=False).size()
     df_summary.reset_index(inplace=True)
 
     return df_summary
@@ -427,10 +429,150 @@ def benchmark_runtime_soum_varying_n():
     _benchmark_runtime_soum_varying_n(
         max_order=2,
         budget=10_000,
-        n_steps=[30],
-        # n_steps=[15, 30, 50, 75, 100],
+        n_steps=[15, 30, 50, 75, 100],
         iterations=2,
     ).to_csv('results/runtime_soum_varying_n.csv', index=False)
+
+
+def _benchmark_runtime_varying_k(
+    max_order_steps: list[int],
+    budget: int,
+    game_name: str,
+    game_n_player_id: int = 0, # zero-indexed
+    game_config_id: int = 1, # not zero-indexed
+    game_precomputed: bool = True,
+    iterations: int = 50,
+    random_state: int = 1,
+    time_limit_secs: int = 3600,
+) -> pd.DataFrame:
+    index = "SII"
+
+    n = shapiq.BENCHMARK_CONFIGURATIONS[shapiq.GAME_NAME_TO_CLASS_MAPPING[game_name]][game_n_player_id]['n_players']
+    print("n =", n)
+
+    configuration = shapiq.BENCHMARK_CONFIGURATIONS[shapiq.GAME_NAME_TO_CLASS_MAPPING[game_name]][game_n_player_id]['configurations'][game_config_id - 1]
+    print("Game configuration:", configuration)
+
+    df_results = pd.DataFrame(
+        columns=['Game', 'k', 'n', 'Iteration', 'Approximator', 'Variant', 'Budget', 'MSE', 'Prec10', 'Runtime']
+    )
+    current_df_index = 0
+
+    timeouted_approximators = set()
+
+    games = [game for game in shapiq.load_games_from_configuration(
+        game_class=shapiq.GAME_NAME_TO_CLASS_MAPPING[game_name],
+        config_id=game_config_id,
+        n_games=iterations,
+        n_player_id=game_n_player_id,
+        check_pre_computed=game_precomputed,
+        only_pre_computed=game_precomputed,
+    )]
+
+    for max_order in max_order_steps:
+        print(f"--- k = {max_order} ---")
+
+        approximators = {
+            shapiq.PermutationSamplingSII: shapiq.PermutationSamplingSII(n=n, max_order=max_order, index=index, random_state=random_state),
+            shapiq.SHAPIQ: shapiq.SHAPIQ(n=n, max_order=max_order, index=index, random_state=random_state),
+            shapiq.SVARMIQ: shapiq.SVARMIQ(n=n, max_order=max_order, index=index, random_state=random_state),
+            shapiq.KernelSHAPIQ: shapiq.KernelSHAPIQ(n=n, max_order=max_order, index=index, random_state=random_state),
+            permutationiq.PermutationIQ: permutationiq.PermutationIQ(n=n, max_order=max_order, index=index, random_state=random_state),
+            permutationiq.PermutationIQStratified: permutationiq.PermutationIQStratified(n=n, max_order=max_order, index=index, random_state=random_state),
+        }
+
+        for i in range(iterations):
+            print(f"--- Iteration {i + 1}/{iterations} ---")
+            game = games[i % len(games)]
+
+            start_time = time.time()
+            exact_values = game.exact_values(index, order=max_order)
+            print(f"Computed exact values in {time.time() - start_time} seconds")
+
+            for (approximator_class, approximator) in approximators.items():
+                if approximator_class in timeouted_approximators:
+                    print(f"--- Approximator: {approximator_class.__name__} skipped due to previous timeout ---")
+                    continue
+
+                print(f"--- Approximator: {approximator_class.__name__} ---")
+
+                try:
+                    start_time = time.time()
+                    with time_limit(time_limit_secs):
+                        approx_values = approximator.approximate(budget=budget, game=game)
+                    elapsed_time = time.time() - start_time
+
+                except TimeoutException:
+                    elapsed_time = time.time() - start_time
+                    print(f"Timed out after {elapsed_time} seconds, approximator {approximator_class.__name__} will be skipped for further iterations.")
+                    timeouted_approximators.add(approximator_class)
+                    continue
+
+                metrics = shapiq.benchmark.metrics.get_all_metrics(
+                    ground_truth=exact_values.get_n_order(max_order),
+                    estimated=approx_values.get_n_order(max_order),
+                )
+
+                row = {
+                    'Game': 'SOUM',
+                    'n': n,
+                    'k': max_order,
+                    'Iteration': i + 1,
+                    'Approximator': approximator.__class__.__name__,
+                    'Budget': budget,
+                    'MSE': metrics['MSE'],
+                    'Prec10': metrics['Precision@10'],
+                    'Runtime': elapsed_time,
+                }
+
+                df_results.loc[current_df_index] = row
+                current_df_index += 1
+
+                print(f"Runtime: {elapsed_time:.2f} seconds")
+        
+            print()
+
+    def se(x):
+        return x.std(ddof=1) / np.sqrt(x.count())
+
+    agg_funcs = {
+        'MSE': ['mean', 'std', 'min', 'max', se],
+        'Prec10': ['mean', 'std', 'min', 'max', se],
+        'Runtime': ['mean', 'std', 'min', 'max', se],
+    }
+
+    # perform aggregation
+    df_summary = (
+        df_results
+        .groupby(['Game', 'n', 'k', 'Approximator', 'Budget'], dropna=False)
+        .agg(agg_funcs)
+    )
+
+    # flatten MultiIndex columns
+    df_summary.columns = [
+        f"{metric}_{stat}"
+        for metric, stat in df_summary.columns
+    ]
+
+    df_summary['Iterations'] = df_results.groupby(['Game', 'n', 'k', 'Approximator', 'Budget'], dropna=False).size()
+    df_summary.reset_index(inplace=True)
+
+    return df_summary
+
+def benchmark_runtime_soum_varying_k():
+    print("===============")
+    print("Benchmark: runtime_soum_varying_k")
+    print("===============")
+
+    _benchmark_runtime_varying_k(
+        max_order_steps=[1, 2, 3, 4, 5],
+        budget=10_000,
+        game_name='SOUM',
+        game_n_player_id=0,
+        game_config_id=4,
+        game_precomputed=False,
+        iterations=10,
+    ).to_csv('results/runtime_soum_varying_k.csv', index=False)
 
 
 def benchmark_permutationiq_variants(
@@ -635,6 +777,9 @@ def command_benchmark(config: str):
 
     if config == "all" or config == "runtime_soum_varying_n":
         benchmark_runtime_soum_varying_n()
+
+    if config == "all" or config == "runtime_soum_varying_k":
+        benchmark_runtime_soum_varying_k()
 
 
 
