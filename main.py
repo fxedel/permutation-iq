@@ -1,6 +1,8 @@
 import math
 import sys
 import time
+import signal
+from contextlib import contextmanager
 
 import numpy as np
 import pandas as pd
@@ -8,20 +10,46 @@ import shapiq
 
 import permutationiq
 
+class TimeoutException(Exception): pass
+
+# copied from https://stackoverflow.com/a/601168/2796524
+# timeout must be given in full seconds; timeout of zero or less raises timeout immediately
+@contextmanager
+def time_limit(timeout_secs: int):
+    if timeout_secs <= 0:
+        raise TimeoutException("Timed out!")
+
+    def signal_handler(signum, frame):
+        raise TimeoutException("Timed out!")
+    signal.signal(signal.SIGALRM, signal_handler)
+    signal.alarm(timeout_secs)
+    try:
+        yield
+    finally:
+        signal.alarm(0)
+
+
 def command_debug():
     start_time = time.time()
-    game = shapiq.load_game_data(
-        game_class=shapiq.GAME_NAME_TO_CLASS_MAPPING['AdultCensusLocalXAI'],
-        configuration={
-            'model_name': 'random_forest',
-            'imputer': 'marginal'
-        },
-        iteration=1,
+    # game = shapiq.load_game_data(
+    #     game_class=shapiq.GAME_NAME_TO_CLASS_MAPPING['AdultCensusLocalXAI'],
+    #     configuration={
+    #         'model_name': 'random_forest',
+    #         'imputer': 'marginal'
+    #     },
+    #     iteration=1,
+    # )
+    game = shapiq.games.benchmark.SOUM(
+        n = 10,
+        n_basis_games = 150,
+        min_interaction_size = 1,
+        max_interaction_size = 2,
+        random_state = 1,
     )
     print(f"--- Loaded game in {time.time() - start_time} seconds ---")
 
-    budget = 1000
-    max_order = 3
+    budget = 10000
+    max_order = 2
 
     start_time = time.time()
     exact_computer = shapiq.ExactComputer(n_players=game.n_players, game=game)
@@ -44,8 +72,8 @@ def command_debug():
     start_time = time.time()
     approximator = permutationiq.PermutationIQ(n=game.n_players, max_order=max_order, index="SII")
     approx_values = approximator(budget=budget, game=game)
-    print("PermtationIQ values:", approx_values)
-    print(f"--- Computed PermtationIQ values in {time.time() - start_time} seconds ---")
+    print("PermutationIQ values:", approx_values)
+    print(f"--- Computed PermutationIQ values in {time.time() - start_time} seconds ---")
 
 
 def benchmark_approximators(
@@ -268,6 +296,135 @@ def benchmark_approximators_datasetvaluation_californiahousing():
     ).to_csv('results/approximators_datasetvaluation_californiahousing.csv', index=False)
 
 
+def _benchmark_runtime_soum_varying_n(
+    max_order: int,
+    budget: int,
+    n_steps=[10, 15, 30, 50, 75, 100],
+    n_basis_games: int = 150,
+    iterations: int = 50,
+    random_state: int = 1,
+    time_limit_secs: int = 3600,
+) -> pd.DataFrame:
+    index = "SII"
+
+    shapiq.games.benchmark.SOUM
+
+    df_results = pd.DataFrame(
+        columns=['Game', 'k', 'n', 'Iteration', 'Approximator', 'Variant', 'Budget', 'MSE', 'Prec10', 'Runtime']
+    )
+    current_df_index = 0
+
+    timeouted_approximators = set()
+
+    for n in n_steps:
+        print(f"--- n = {n} ---")
+
+        approximators = {
+            shapiq.PermutationSamplingSII: shapiq.PermutationSamplingSII(n=n, max_order=max_order, index=index, random_state=random_state),
+            shapiq.SHAPIQ: shapiq.SHAPIQ(n=n, max_order=max_order, index=index, random_state=random_state),
+            shapiq.SVARMIQ: shapiq.SVARMIQ(n=n, max_order=max_order, index=index, random_state=random_state),
+            shapiq.KernelSHAPIQ: shapiq.KernelSHAPIQ(n=n, max_order=max_order, index=index, random_state=random_state),
+            permutationiq.PermutationIQ: permutationiq.PermutationIQ(n=n, max_order=max_order, index=index, random_state=random_state),
+        }
+
+        for i in range(iterations):
+            print(f"--- Iteration {i + 1}/{iterations} ---")
+
+            game = shapiq.games.benchmark.SOUM(
+                n = n,
+                n_basis_games = n_basis_games,
+                min_interaction_size = 1,
+                max_interaction_size = n,
+                random_state = random_state + n * 2 + i * 3, # since 2 and 3 are primes, this should give different seeds for different n and i
+            )
+
+            start_time = time.time()
+            exact_values = game.exact_values(index, order=max_order)
+            print(f"Computed exact values in {time.time() - start_time} seconds")
+
+            for (approximator_class, approximator) in approximators.items():
+                if approximator_class in timeouted_approximators:
+                    print(f"--- Approximator: {approximator_class.__name__} skipped due to previous timeout ---")
+                    continue
+
+                print(f"--- Approximator: {approximator_class.__name__} ---")
+
+                try:
+                    start_time = time.time()
+                    with time_limit(time_limit_secs):
+                        approx_values = approximator.approximate(budget=budget, game=game)
+                    elapsed_time = time.time() - start_time
+
+                except TimeoutException:
+                    elapsed_time = time.time() - start_time
+                    print(f"Timed out after {elapsed_time} seconds, approximator {approximator_class.__name__} will be skipped for further iterations.")
+                    timeouted_approximators.add(approximator_class)
+                    continue
+
+                metrics = shapiq.benchmark.metrics.get_all_metrics(
+                    ground_truth=exact_values.get_n_order(max_order),
+                    estimated=approx_values.get_n_order(max_order),
+                )
+
+                row = {
+                    'Game': 'SOUM',
+                    'n': n,
+                    'k': max_order,
+                    'Iteration': i + 1,
+                    'Approximator': approximator.__class__.__name__,
+                    'Budget': budget,
+                    'MSE': metrics['MSE'],
+                    'Prec10': metrics['Precision@10'],
+                    'Runtime': elapsed_time,
+                }
+
+                df_results.loc[current_df_index] = row
+                current_df_index += 1
+
+                print(f"Runtime: {elapsed_time:.2f} seconds")
+        
+            print()
+
+    def se(x):
+        return x.std(ddof=1) / np.sqrt(x.count())
+
+    agg_funcs = {
+        'MSE': ['mean', 'std', 'min', 'max', se],
+        'Prec10': ['mean', 'std', 'min', 'max', se],
+        'Runtime': ['mean', 'std', 'min', 'max', se],
+    }
+
+    # perform aggregation
+    df_summary = (
+        df_results
+        .groupby(['Game', 'n', 'k', 'Approximator', 'Budget'], dropna=False)
+        .agg(agg_funcs)
+    )
+
+    # flatten MultiIndex columns
+    df_summary.columns = [
+        f"{metric}_{stat}"
+        for metric, stat in df_summary.columns
+    ]
+
+    df_summary.reset_index(inplace=True)
+
+    return df_summary
+
+def benchmark_runtime_soum_varying_n():
+    print("===============")
+    print("Benchmark: runtime_soum_varying_n")
+    print("===============")
+
+    _benchmark_runtime_soum_varying_n(
+        max_order=2,
+        budget=10_000,
+        n_steps=[30],
+        # n_steps=[15, 30, 50, 75, 100],
+        iterations=2,
+    ).to_csv('results/runtime_soum_varying_n.csv', index=False)
+
+
 def benchmark_permutationiq_variants(
     min_order: int,
     max_order: int,
@@ -440,7 +597,7 @@ def benchmark_permutationiq_variants_soum():
         game_config_id=4,
         game_precomputed=False,
         iterations=50,
-    ).to_csv('results/permutationiq_variants_soug.csv', index=False)
+    ).to_csv('results/permutationiq_variants_soum.csv', index=False)
 
 
 def command_benchmark(config: str):
@@ -467,6 +624,9 @@ def command_benchmark(config: str):
         benchmark_permutationiq_variants_globalexplanation_adultcensus()
     if config == "all" or config == "permutationiq_variants_soum":
         benchmark_permutationiq_variants_soum()
+
+    if config == "all" or config == "runtime_soum_varying_n":
+        benchmark_runtime_soum_varying_n()
 
 
 
