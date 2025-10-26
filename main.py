@@ -429,8 +429,8 @@ def benchmark_runtime_soum_varying_n():
     _benchmark_runtime_soum_varying_n(
         max_order=2,
         budget=10_000,
-        n_steps=[15, 30, 50, 75, 100],
-        iterations=2,
+        n_steps=[15, 30, 50, 70, 85, 100],
+        iterations=30,
     ).to_csv('results/runtime_soum_varying_n.csv', index=False)
 
 
@@ -571,7 +571,7 @@ def benchmark_runtime_soum_varying_k():
         game_n_player_id=0,
         game_config_id=4,
         game_precomputed=False,
-        iterations=10,
+        iterations=30,
     ).to_csv('results/runtime_soum_varying_k.csv', index=False)
 
 
