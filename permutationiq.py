@@ -105,52 +105,53 @@ class PermutationIQ(shapiq.approximator.Approximator):
 
         iterations = (budget-used_budget) // self.n
 
-        coalitions_base = np.tri(self.n, self.n, k=0, dtype=bool)
-        coalitions = np.empty((iterations * self.n, self.n), dtype=bool)
-        permutations = []
+        if iterations > 0:
+            coalitions_base = np.tri(self.n, self.n, k=0, dtype=bool)
+            coalitions = np.empty((iterations * self.n, self.n), dtype=bool)
+            permutations = []
 
-        for j in range(iterations):
-            perm = players.copy()
-            self._rng.shuffle(perm)
-            permutations.append(perm)
+            for j in range(iterations):
+                perm = players.copy()
+                self._rng.shuffle(perm)
+                permutations.append(perm)
 
-            coalitions[j*self.n:(j+1)*self.n] = coalitions_base[:, np.argsort(perm)]
+                coalitions[j*self.n:(j+1)*self.n] = coalitions_base[:, np.argsort(perm)]
 
-        coalition_values = game(coalitions)
-        used_budget += len(coalition_values)
-        if used_budget > budget:
-            raise RuntimeError('Exceeded budget!') # this shouldn't happen
+            coalition_values = game(coalitions)
+            used_budget += len(coalition_values)
+            if used_budget > budget:
+                raise RuntimeError('Exceeded budget!') # this shouldn't happen
 
-        for j in range(iterations):
-            perm = permutations[j]
-            iteration_coalitions = coalitions[j*self.n:(j+1)*self.n]
-            iteration_coalition_values = coalition_values[j*self.n:(j+1)*self.n]
+            for j in range(iterations):
+                perm = permutations[j]
+                iteration_coalitions = coalitions[j*self.n:(j+1)*self.n]
+                iteration_coalition_values = coalition_values[j*self.n:(j+1)*self.n]
 
-            prev_value = empty_value
+                prev_value = empty_value
 
-            for (i, (player, coalition, coalition_value)) in enumerate(zip(perm, iteration_coalitions, iteration_coalition_values)):
-                marginal_contribution = coalition_value - prev_value
-                prev_value = coalition_value
+                for (i, (player, coalition, coalition_value)) in enumerate(zip(perm, iteration_coalitions, iteration_coalition_values)):
+                    marginal_contribution = coalition_value - prev_value
+                    prev_value = coalition_value
 
-                sample_probability = (1 / self.n) * (1 / math.comb(self.n - 1, i))
+                    sample_probability = (1 / self.n) * (1 / math.comb(self.n - 1, i))
 
-                for group, group_estimate in player_group_estimates[player].items():
-                    k = len(group)
+                    for group, group_estimate in player_group_estimates[player].items():
+                        k = len(group)
 
-                    group_subset_len = 0
-                    for x in group:
-                        if coalition[x] and x != player:
-                            group_subset_len += 1
+                        group_subset_len = 0
+                        for x in group:
+                            if coalition[x] and x != player:
+                                group_subset_len += 1
 
-                    basis_coalition_len = i - group_subset_len
+                        basis_coalition_len = i - group_subset_len
 
-                    sign = 1 if (k - group_subset_len - 1) % 2 == 0 else -1
-                    weight = shapley_weight(n = self.n, k = k, l = basis_coalition_len)
+                        sign = 1 if (k - group_subset_len - 1) % 2 == 0 else -1
+                        weight = shapley_weight(n = self.n, k = k, l = basis_coalition_len)
 
-                    group_estimate.update(sign * weight/sample_probability * marginal_contribution)
+                        group_estimate.update(sign * weight/sample_probability * marginal_contribution)
 
-                if used_budget >= budget:
-                    break
+                    if used_budget >= budget:
+                        break
 
         group_player_estimates = {
             group: {
