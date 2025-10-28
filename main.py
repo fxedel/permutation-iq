@@ -233,6 +233,20 @@ def benchmark_approximators_localexplanation_adultcensus():
         iterations=50,
     ).to_csv('results/approximators_localexplanation_adultcensus.csv', index=False)
 
+def benchmark_approximators_localexplanation_bikesharing():
+    print("===============")
+    print("Benchmark: approximators_localexplanation_bikesharing")
+    print("===============")
+
+    benchmark_approximators(
+        max_order=4,
+        budget_steps=[13, 50, 100, 200, 350, 500, 750, 1_000],
+        game_name='BikeSharingLocalXAI',
+        game_n_player_id=0,
+        game_config_id=3,
+        iterations=50,
+    ).to_csv('results/approximators_localexplanation_bikesharing.csv', index=False)
+
 def benchmark_approximators_globalexplanation_adultcensus():
     print("===============")
     print("Benchmark: approximators_globalexplanation_adultcensus")
@@ -303,8 +317,50 @@ def benchmark_approximators_datasetvaluation_californiahousing():
         iterations=50,
     ).to_csv('results/approximators_datasetvaluation_californiahousing.csv', index=False)
 
+def benchmark_approximators_ensembleselection_bikesharing():
+    print("===============")
+    print("Benchmark: approximators_ensembleselection_bikesharing")
+    print("===============")
 
-def _benchmark_runtime_soum_varying_n(
+    benchmark_approximators(
+        max_order=4,
+        budget_steps=[11, 50, 100, 200, 350, 500, 750, 1_000],
+        game_name='CaliforniaHousingEnsembleSelection',
+        game_n_player_id=0,
+        game_config_id=1,
+        iterations=50,
+    ).to_csv('results/approximators_ensembleselection_bikesharing.csv', index=False)
+
+def benchmark_approximators_soum_n30():
+    print("===============")
+    print("Benchmark: approximators_soum_n30")
+    print("===============")
+
+    benchmark_approximators(
+        max_order=4,
+        budget_steps=[31, 50, 100, 250, 500, 750, 1_000, 2_000, 3_500, 5_000],
+        game_name='SOUM',
+        game_n_player_id=1,
+        game_config_id=6,
+        iterations=50,
+    ).to_csv('results/approximators_soum_n30.csv', index=False)
+
+def benchmark_approximators_soum_n50():
+    print("===============")
+    print("Benchmark: approximators_soum_n50")
+    print("===============")
+
+    benchmark_approximators(
+        max_order=4,
+        budget_steps=[51, 50, 100, 250, 500, 750, 1_000, 2_000, 3_500, 5_000],
+        game_name='SOUM',
+        game_n_player_id=2,
+        game_config_id=6,
+        iterations=50,
+    ).to_csv('results/approximators_soum_n50.csv', index=False)
+
+
+def _benchmark_runtime_varying_n_soum(
     max_order: int,
     budget: int,
     n_steps=[10, 15, 30, 50, 75, 100],
@@ -421,17 +477,41 @@ def _benchmark_runtime_soum_varying_n(
 
     return df_summary
 
-def benchmark_runtime_soum_varying_n():
+def benchmark_runtime_varying_n_soum_k2():
     print("===============")
-    print("Benchmark: runtime_soum_varying_n")
+    print("Benchmark: runtime_varying_n_soum_k2")
     print("===============")
 
-    _benchmark_runtime_soum_varying_n(
+    _benchmark_runtime_varying_n_soum(
         max_order=2,
         budget=10_000,
         n_steps=[15, 30, 50, 70, 85, 100],
         iterations=30,
-    ).to_csv('results/runtime_soum_varying_n.csv', index=False)
+    ).to_csv('results/runtime_varying_n_soum_k2.csv', index=False)
+
+def benchmark_runtime_varying_n_soum_k3():
+    print("===============")
+    print("Benchmark: runtime_varying_n_soum_k3")
+    print("===============")
+
+    _benchmark_runtime_varying_n_soum(
+        max_order=3,
+        budget=10_000,
+        n_steps=[15, 30, 50, 70, 85, 100],
+        iterations=30,
+    ).to_csv('results/runtime_varying_n_soum_k3.csv', index=False)
+
+def benchmark_runtime_varying_n_soum_k4():
+    print("===============")
+    print("Benchmark: runtime_varying_n_soum_k4")
+    print("===============")
+
+    _benchmark_runtime_varying_n_soum(
+        max_order=4,
+        budget=10_000,
+        n_steps=[15, 30, 50, 70, 85, 100],
+        iterations=30,
+    ).to_csv('results/runtime_varying_n_soum_k4.csv', index=False)
 
 
 def _benchmark_runtime_varying_k(
@@ -559,9 +639,9 @@ def _benchmark_runtime_varying_k(
 
     return df_summary
 
-def benchmark_runtime_soum_varying_k():
+def benchmark_runtime_varying_k_soum():
     print("===============")
-    print("Benchmark: runtime_soum_varying_k")
+    print("Benchmark: runtime_varying_k_soum")
     print("===============")
 
     _benchmark_runtime_varying_k(
@@ -572,7 +652,22 @@ def benchmark_runtime_soum_varying_k():
         game_config_id=4,
         game_precomputed=False,
         iterations=30,
-    ).to_csv('results/runtime_soum_varying_k.csv', index=False)
+    ).to_csv('results/runtime_varying_k_soum.csv', index=False)
+
+def benchmark_runtime_varying_k_localexplanation_adultcensus():
+    print("===============")
+    print("Benchmark: runtime_varying_k_localexplanation_adultcensus")
+    print("===============")
+
+    _benchmark_runtime_varying_k(
+        max_order_steps=[1, 2, 3, 4, 5],
+        budget=10_000,
+        game_name='AdultCensusLocalXAI',
+        game_n_player_id=0,
+        game_config_id=3,
+        game_precomputed=True,
+        iterations=30,
+    ).to_csv('results/runtime_varying_k_localexplanation_adultcensus.csv', index=False)
 
 
 def benchmark_permutationiq_variants(
@@ -755,6 +850,8 @@ def command_benchmark(config: str):
         benchmark_approximators_development()
     if config == "all" or config == "approximators_localexplanation_adultcensus":
         benchmark_approximators_localexplanation_adultcensus()
+    if config == "all" or config == "approximators_localexplanation_bikesharing":
+        benchmark_approximators_localexplanation_bikesharing()
     if config == "all" or config == "approximators_globalexplanation_adultcensus":
         benchmark_approximators_globalexplanation_adultcensus()
     if config == "all" or config == "approximators_imageclassifier_n14":
@@ -765,6 +862,12 @@ def command_benchmark(config: str):
         benchmark_approximators_unsupervisedfeatureimportance_adultcensus()
     if config == "all" or config == "approximators_datasetvaluation_californiahousing":
         benchmark_approximators_datasetvaluation_californiahousing()
+    if config == "all" or config == "approximators_ensembleselection_bikesharing":
+        benchmark_approximators_ensembleselection_bikesharing()
+    if config == "all" or config == "approximators_soum_n30":
+        benchmark_approximators_soum_n30()
+    if config == "all" or config == "approximators_soum_n50":
+        benchmark_approximators_soum_n50()
 
     if config == "all" or config == "permutationiq_variants_development":
         benchmark_permutationiq_variants_development()
@@ -775,11 +878,17 @@ def command_benchmark(config: str):
     if config == "all" or config == "permutationiq_variants_soum":
         benchmark_permutationiq_variants_soum()
 
-    if config == "all" or config == "runtime_soum_varying_n":
-        benchmark_runtime_soum_varying_n()
+    if config == "all" or config == "runtime_varying_n_soum_k2":
+        benchmark_runtime_varying_n_soum_k2()
+    if config == "all" or config == "runtime_varying_n_soum_k3":
+        benchmark_runtime_varying_n_soum_k3()
+    if config == "all" or config == "runtime_varying_n_soum_k4":
+        benchmark_runtime_varying_n_soum_k4()
 
-    if config == "all" or config == "runtime_soum_varying_k":
-        benchmark_runtime_soum_varying_k()
+    if config == "all" or config == "runtime_varying_k_soum":
+        benchmark_runtime_varying_k_soum()
+    if config == "all" or config == "runtime_varying_k_localexplanation_adultcensus":
+        benchmark_runtime_varying_k_localexplanation_adultcensus()
 
 
 
