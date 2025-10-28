@@ -1,0 +1,3473 @@
+Starting job at Sun Oct 26 23:14:00 CET 2025
+/var/slurmd-serial/job4967722/slurm_script: line 34: git: command not found
+Git commit: 
+System information:
+NAME="SLES"
+VERSION="15-SP6"
+VERSION_ID="15.6"
+PRETTY_NAME="SUSE Linux Enterprise Server 15 SP6"
+ID="sles"
+ID_LIKE="suse"
+ANSI_COLOR="0;32"
+CPE_NAME="cpe:/o:suse:sles:15:sp6"
+DOCUMENTATION_URL="https://documentation.suse.com/"
+Linux 6.4.0-150600.23.25-default #1 SMP PREEMPT_DYNAMIC Tue Oct  1 10:54:01 UTC 2024 (ea7c56d) x86_64 x86_64 x86_64 GNU/Linux
+Resolved 35 packages in 2ms
+Audited 33 packages in 6ms
+Run main.py at Sun Oct 26 23:14:00 CET 2025
+===============
+Benchmark: approximators_imageclassifier_n16
+===============
+n = 16
+Game configuration: {'model_name': 'vit_16_patches'}
+--- Iteration 1/50 ---
+Computed exact values in 236.2124993801117 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.01 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.02 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.05 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.91 seconds
+Budget: 3500, Runtime: 1.54 seconds
+Budget: 5000, Runtime: 2.18 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 8.76 seconds
+Budget: 50, Runtime: 11.07 seconds
+Budget: 100, Runtime: 12.65 seconds
+Budget: 250, Runtime: 16.93 seconds
+Budget: 500, Runtime: 23.35 seconds
+Budget: 750, Runtime: 30.55 seconds
+Budget: 1000, Runtime: 36.74 seconds
+Budget: 2000, Runtime: 123.33 seconds
+Budget: 3500, Runtime: 200.77 seconds
+Budget: 5000, Runtime: 276.84 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.53 seconds
+Budget: 50, Runtime: 0.96 seconds
+Budget: 100, Runtime: 1.76 seconds
+Budget: 250, Runtime: 3.93 seconds
+Budget: 500, Runtime: 7.48 seconds
+Budget: 750, Runtime: 10.95 seconds
+Budget: 1000, Runtime: 14.16 seconds
+Budget: 2000, Runtime: 19.58 seconds
+Budget: 3500, Runtime: 20.04 seconds
+Budget: 5000, Runtime: 21.15 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.93 seconds
+Budget: 500, Runtime: 0.46 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.91 seconds
+Budget: 2000, Runtime: 1.80 seconds
+Budget: 3500, Runtime: 3.16 seconds
+Budget: 5000, Runtime: 4.56 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.36 seconds
+Budget: 50, Runtime: 0.40 seconds
+Budget: 100, Runtime: 0.33 seconds
+Budget: 250, Runtime: 0.60 seconds
+Budget: 500, Runtime: 0.88 seconds
+Budget: 750, Runtime: 1.18 seconds
+Budget: 1000, Runtime: 1.32 seconds
+Budget: 2000, Runtime: 2.49 seconds
+Budget: 3500, Runtime: 4.13 seconds
+Budget: 5000, Runtime: 5.55 seconds
+
+--- Iteration 2/50 ---
+Computed exact values in 239.7500901222229 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.02 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.34 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.54 seconds
+Budget: 5000, Runtime: 2.20 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.75 seconds
+Budget: 50, Runtime: 10.98 seconds
+Budget: 100, Runtime: 12.26 seconds
+Budget: 250, Runtime: 16.60 seconds
+Budget: 500, Runtime: 22.83 seconds
+Budget: 750, Runtime: 29.79 seconds
+Budget: 1000, Runtime: 36.15 seconds
+Budget: 2000, Runtime: 121.43 seconds
+Budget: 3500, Runtime: 197.60 seconds
+Budget: 5000, Runtime: 276.03 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.45 seconds
+Budget: 50, Runtime: 0.98 seconds
+Budget: 100, Runtime: 1.74 seconds
+Budget: 250, Runtime: 3.90 seconds
+Budget: 500, Runtime: 7.53 seconds
+Budget: 750, Runtime: 10.95 seconds
+Budget: 1000, Runtime: 14.15 seconds
+Budget: 2000, Runtime: 19.51 seconds
+Budget: 3500, Runtime: 20.03 seconds
+Budget: 5000, Runtime: 20.65 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.26 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.46 seconds
+Budget: 750, Runtime: 0.69 seconds
+Budget: 1000, Runtime: 0.93 seconds
+Budget: 2000, Runtime: 1.81 seconds
+Budget: 3500, Runtime: 3.14 seconds
+Budget: 5000, Runtime: 4.52 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.27 seconds
+Budget: 50, Runtime: 0.35 seconds
+Budget: 100, Runtime: 0.31 seconds
+Budget: 250, Runtime: 0.54 seconds
+Budget: 500, Runtime: 0.92 seconds
+Budget: 750, Runtime: 1.09 seconds
+Budget: 1000, Runtime: 1.39 seconds
+Budget: 2000, Runtime: 2.27 seconds
+Budget: 3500, Runtime: 3.90 seconds
+Budget: 5000, Runtime: 5.42 seconds
+
+--- Iteration 3/50 ---
+Computed exact values in 235.88302540779114 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.03 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.02 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.19 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 8.66 seconds
+Budget: 50, Runtime: 11.00 seconds
+Budget: 100, Runtime: 12.41 seconds
+Budget: 250, Runtime: 16.44 seconds
+Budget: 500, Runtime: 22.83 seconds
+Budget: 750, Runtime: 29.76 seconds
+Budget: 1000, Runtime: 36.21 seconds
+Budget: 2000, Runtime: 121.95 seconds
+Budget: 3500, Runtime: 201.77 seconds
+Budget: 5000, Runtime: 281.62 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.52 seconds
+Budget: 50, Runtime: 0.96 seconds
+Budget: 100, Runtime: 1.73 seconds
+Budget: 250, Runtime: 3.88 seconds
+Budget: 500, Runtime: 7.47 seconds
+Budget: 750, Runtime: 10.92 seconds
+Budget: 1000, Runtime: 14.16 seconds
+Budget: 2000, Runtime: 19.45 seconds
+Budget: 3500, Runtime: 20.10 seconds
+Budget: 5000, Runtime: 20.80 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.91 seconds
+Budget: 2000, Runtime: 2.03 seconds
+Budget: 3500, Runtime: 3.13 seconds
+Budget: 5000, Runtime: 4.51 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.28 seconds
+Budget: 50, Runtime: 0.25 seconds
+Budget: 100, Runtime: 0.40 seconds
+Budget: 250, Runtime: 0.56 seconds
+Budget: 500, Runtime: 0.74 seconds
+Budget: 750, Runtime: 1.07 seconds
+Budget: 1000, Runtime: 1.34 seconds
+Budget: 2000, Runtime: 2.40 seconds
+Budget: 3500, Runtime: 3.81 seconds
+Budget: 5000, Runtime: 5.50 seconds
+
+--- Iteration 4/50 ---
+Computed exact values in 236.08084154129028 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.17 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 8.65 seconds
+Budget: 50, Runtime: 11.01 seconds
+Budget: 100, Runtime: 12.29 seconds
+Budget: 250, Runtime: 16.41 seconds
+Budget: 500, Runtime: 23.10 seconds
+Budget: 750, Runtime: 30.21 seconds
+Budget: 1000, Runtime: 36.63 seconds
+Budget: 2000, Runtime: 120.77 seconds
+Budget: 3500, Runtime: 195.38 seconds
+Budget: 5000, Runtime: 272.12 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.42 seconds
+Budget: 50, Runtime: 1.07 seconds
+Budget: 100, Runtime: 1.74 seconds
+Budget: 250, Runtime: 3.93 seconds
+Budget: 500, Runtime: 7.53 seconds
+Budget: 750, Runtime: 10.93 seconds
+Budget: 1000, Runtime: 14.19 seconds
+Budget: 2000, Runtime: 19.51 seconds
+Budget: 3500, Runtime: 20.29 seconds
+Budget: 5000, Runtime: 20.65 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.78 seconds
+Budget: 1000, Runtime: 0.92 seconds
+Budget: 2000, Runtime: 1.82 seconds
+Budget: 3500, Runtime: 3.19 seconds
+Budget: 5000, Runtime: 4.59 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.30 seconds
+Budget: 50, Runtime: 0.25 seconds
+Budget: 100, Runtime: 0.40 seconds
+Budget: 250, Runtime: 0.57 seconds
+Budget: 500, Runtime: 0.85 seconds
+Budget: 750, Runtime: 1.15 seconds
+Budget: 1000, Runtime: 1.28 seconds
+Budget: 2000, Runtime: 2.43 seconds
+Budget: 3500, Runtime: 3.96 seconds
+Budget: 5000, Runtime: 5.58 seconds
+
+--- Iteration 5/50 ---
+Computed exact values in 235.95148491859436 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.88 seconds
+Budget: 3500, Runtime: 1.52 seconds
+Budget: 5000, Runtime: 2.17 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 8.64 seconds
+Budget: 50, Runtime: 10.98 seconds
+Budget: 100, Runtime: 12.31 seconds
+Budget: 250, Runtime: 16.55 seconds
+Budget: 500, Runtime: 22.70 seconds
+Budget: 750, Runtime: 29.66 seconds
+Budget: 1000, Runtime: 35.96 seconds
+Budget: 2000, Runtime: 120.90 seconds
+Budget: 3500, Runtime: 194.58 seconds
+Budget: 5000, Runtime: 271.28 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.44 seconds
+Budget: 50, Runtime: 0.93 seconds
+Budget: 100, Runtime: 1.72 seconds
+Budget: 250, Runtime: 3.92 seconds
+Budget: 500, Runtime: 7.53 seconds
+Budget: 750, Runtime: 10.92 seconds
+Budget: 1000, Runtime: 14.15 seconds
+Budget: 2000, Runtime: 19.46 seconds
+Budget: 3500, Runtime: 20.09 seconds
+Budget: 5000, Runtime: 20.66 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.19 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.91 seconds
+Budget: 2000, Runtime: 1.79 seconds
+Budget: 3500, Runtime: 3.14 seconds
+Budget: 5000, Runtime: 4.53 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.26 seconds
+Budget: 50, Runtime: 0.32 seconds
+Budget: 100, Runtime: 0.39 seconds
+Budget: 250, Runtime: 0.44 seconds
+Budget: 500, Runtime: 0.81 seconds
+Budget: 750, Runtime: 0.99 seconds
+Budget: 1000, Runtime: 1.32 seconds
+Budget: 2000, Runtime: 2.29 seconds
+Budget: 3500, Runtime: 3.82 seconds
+Budget: 5000, Runtime: 5.24 seconds
+
+--- Iteration 6/50 ---
+Computed exact values in 240.01691579818726 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.16 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.17 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.83 seconds
+Budget: 50, Runtime: 11.15 seconds
+Budget: 100, Runtime: 12.38 seconds
+Budget: 250, Runtime: 16.63 seconds
+Budget: 500, Runtime: 23.09 seconds
+Budget: 750, Runtime: 29.78 seconds
+Budget: 1000, Runtime: 35.98 seconds
+Budget: 2000, Runtime: 120.94 seconds
+Budget: 3500, Runtime: 194.69 seconds
+Budget: 5000, Runtime: 271.42 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.42 seconds
+Budget: 50, Runtime: 0.95 seconds
+Budget: 100, Runtime: 1.72 seconds
+Budget: 250, Runtime: 3.87 seconds
+Budget: 500, Runtime: 7.46 seconds
+Budget: 750, Runtime: 10.94 seconds
+Budget: 1000, Runtime: 14.20 seconds
+Budget: 2000, Runtime: 19.62 seconds
+Budget: 3500, Runtime: 20.27 seconds
+Budget: 5000, Runtime: 20.75 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.17 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.48 seconds
+Budget: 750, Runtime: 0.69 seconds
+Budget: 1000, Runtime: 0.93 seconds
+Budget: 2000, Runtime: 1.82 seconds
+Budget: 3500, Runtime: 3.19 seconds
+Budget: 5000, Runtime: 4.70 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.19 seconds
+Budget: 50, Runtime: 0.35 seconds
+Budget: 100, Runtime: 0.41 seconds
+Budget: 250, Runtime: 0.58 seconds
+Budget: 500, Runtime: 0.76 seconds
+Budget: 750, Runtime: 1.11 seconds
+Budget: 1000, Runtime: 1.41 seconds
+Budget: 2000, Runtime: 2.37 seconds
+Budget: 3500, Runtime: 4.10 seconds
+Budget: 5000, Runtime: 5.66 seconds
+
+--- Iteration 7/50 ---
+Computed exact values in 235.85397219657898 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.88 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.18 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 8.70 seconds
+Budget: 50, Runtime: 11.07 seconds
+Budget: 100, Runtime: 12.29 seconds
+Budget: 250, Runtime: 16.59 seconds
+Budget: 500, Runtime: 22.91 seconds
+Budget: 750, Runtime: 29.89 seconds
+Budget: 1000, Runtime: 36.13 seconds
+Budget: 2000, Runtime: 120.78 seconds
+Budget: 3500, Runtime: 197.03 seconds
+Budget: 5000, Runtime: 270.54 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.44 seconds
+Budget: 50, Runtime: 0.95 seconds
+Budget: 100, Runtime: 1.73 seconds
+Budget: 250, Runtime: 3.91 seconds
+Budget: 500, Runtime: 7.45 seconds
+Budget: 750, Runtime: 10.86 seconds
+Budget: 1000, Runtime: 14.20 seconds
+Budget: 2000, Runtime: 19.58 seconds
+Budget: 3500, Runtime: 20.11 seconds
+Budget: 5000, Runtime: 20.77 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.69 seconds
+Budget: 1000, Runtime: 1.02 seconds
+Budget: 2000, Runtime: 1.81 seconds
+Budget: 3500, Runtime: 3.19 seconds
+Budget: 5000, Runtime: 4.55 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.27 seconds
+Budget: 50, Runtime: 0.24 seconds
+Budget: 100, Runtime: 0.37 seconds
+Budget: 250, Runtime: 0.54 seconds
+Budget: 500, Runtime: 0.84 seconds
+Budget: 750, Runtime: 0.97 seconds
+Budget: 1000, Runtime: 1.32 seconds
+Budget: 2000, Runtime: 2.44 seconds
+Budget: 3500, Runtime: 3.80 seconds
+Budget: 5000, Runtime: 5.37 seconds
+
+--- Iteration 8/50 ---
+Computed exact values in 235.98861384391785 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.54 seconds
+Budget: 5000, Runtime: 2.17 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 8.63 seconds
+Budget: 50, Runtime: 11.09 seconds
+Budget: 100, Runtime: 12.31 seconds
+Budget: 250, Runtime: 16.38 seconds
+Budget: 500, Runtime: 22.99 seconds
+Budget: 750, Runtime: 30.21 seconds
+Budget: 1000, Runtime: 36.55 seconds
+Budget: 2000, Runtime: 121.22 seconds
+Budget: 3500, Runtime: 194.57 seconds
+Budget: 5000, Runtime: 272.52 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.42 seconds
+Budget: 50, Runtime: 0.93 seconds
+Budget: 100, Runtime: 1.72 seconds
+Budget: 250, Runtime: 3.91 seconds
+Budget: 500, Runtime: 7.47 seconds
+Budget: 750, Runtime: 10.93 seconds
+Budget: 1000, Runtime: 14.15 seconds
+Budget: 2000, Runtime: 19.98 seconds
+Budget: 3500, Runtime: 20.10 seconds
+Budget: 5000, Runtime: 20.78 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.33 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.69 seconds
+Budget: 1000, Runtime: 0.92 seconds
+Budget: 2000, Runtime: 1.82 seconds
+Budget: 3500, Runtime: 3.18 seconds
+Budget: 5000, Runtime: 4.56 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.28 seconds
+Budget: 50, Runtime: 0.35 seconds
+Budget: 100, Runtime: 0.30 seconds
+Budget: 250, Runtime: 0.55 seconds
+Budget: 500, Runtime: 0.84 seconds
+Budget: 750, Runtime: 1.11 seconds
+Budget: 1000, Runtime: 1.41 seconds
+Budget: 2000, Runtime: 2.35 seconds
+Budget: 3500, Runtime: 4.12 seconds
+Budget: 5000, Runtime: 5.79 seconds
+
+--- Iteration 9/50 ---
+Computed exact values in 236.1265881061554 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.42 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.52 seconds
+Budget: 5000, Runtime: 2.17 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.79 seconds
+Budget: 50, Runtime: 11.04 seconds
+Budget: 100, Runtime: 12.28 seconds
+Budget: 250, Runtime: 16.59 seconds
+Budget: 500, Runtime: 22.87 seconds
+Budget: 750, Runtime: 29.71 seconds
+Budget: 1000, Runtime: 36.51 seconds
+Budget: 2000, Runtime: 121.69 seconds
+Budget: 3500, Runtime: 195.52 seconds
+Budget: 5000, Runtime: 270.57 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.42 seconds
+Budget: 50, Runtime: 0.95 seconds
+Budget: 100, Runtime: 1.72 seconds
+Budget: 250, Runtime: 3.90 seconds
+Budget: 500, Runtime: 7.49 seconds
+Budget: 750, Runtime: 10.86 seconds
+Budget: 1000, Runtime: 14.16 seconds
+Budget: 2000, Runtime: 19.50 seconds
+Budget: 3500, Runtime: 20.49 seconds
+Budget: 5000, Runtime: 21.26 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.91 seconds
+Budget: 2000, Runtime: 1.80 seconds
+Budget: 3500, Runtime: 3.14 seconds
+Budget: 5000, Runtime: 4.53 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.28 seconds
+Budget: 50, Runtime: 0.35 seconds
+Budget: 100, Runtime: 0.41 seconds
+Budget: 250, Runtime: 0.47 seconds
+Budget: 500, Runtime: 0.84 seconds
+Budget: 750, Runtime: 1.00 seconds
+Budget: 1000, Runtime: 1.37 seconds
+Budget: 2000, Runtime: 2.41 seconds
+Budget: 3500, Runtime: 3.99 seconds
+Budget: 5000, Runtime: 5.51 seconds
+
+--- Iteration 10/50 ---
+Computed exact values in 236.45261549949646 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.42 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.88 seconds
+Budget: 3500, Runtime: 1.54 seconds
+Budget: 5000, Runtime: 2.18 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 8.62 seconds
+Budget: 50, Runtime: 10.98 seconds
+Budget: 100, Runtime: 12.34 seconds
+Budget: 250, Runtime: 16.64 seconds
+Budget: 500, Runtime: 23.08 seconds
+Budget: 750, Runtime: 30.17 seconds
+Budget: 1000, Runtime: 36.47 seconds
+Budget: 2000, Runtime: 120.01 seconds
+Budget: 3500, Runtime: 195.40 seconds
+Budget: 5000, Runtime: 270.24 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.43 seconds
+Budget: 50, Runtime: 0.92 seconds
+Budget: 100, Runtime: 1.72 seconds
+Budget: 250, Runtime: 3.89 seconds
+Budget: 500, Runtime: 7.45 seconds
+Budget: 750, Runtime: 10.91 seconds
+Budget: 1000, Runtime: 14.16 seconds
+Budget: 2000, Runtime: 19.54 seconds
+Budget: 3500, Runtime: 20.09 seconds
+Budget: 5000, Runtime: 20.83 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.25 seconds
+Budget: 500, Runtime: 0.48 seconds
+Budget: 750, Runtime: 0.70 seconds
+Budget: 1000, Runtime: 0.92 seconds
+Budget: 2000, Runtime: 1.82 seconds
+Budget: 3500, Runtime: 3.19 seconds
+Budget: 5000, Runtime: 4.56 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.28 seconds
+Budget: 50, Runtime: 0.35 seconds
+Budget: 100, Runtime: 0.30 seconds
+Budget: 250, Runtime: 0.55 seconds
+Budget: 500, Runtime: 0.84 seconds
+Budget: 750, Runtime: 1.11 seconds
+Budget: 1000, Runtime: 1.27 seconds
+Budget: 2000, Runtime: 2.39 seconds
+Budget: 3500, Runtime: 3.88 seconds
+Budget: 5000, Runtime: 5.24 seconds
+
+--- Iteration 11/50 ---
+Computed exact values in 235.99158692359924 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.90 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.18 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.82 seconds
+Budget: 50, Runtime: 11.11 seconds
+Budget: 100, Runtime: 12.35 seconds
+Budget: 250, Runtime: 16.59 seconds
+Budget: 500, Runtime: 22.85 seconds
+Budget: 750, Runtime: 30.38 seconds
+Budget: 1000, Runtime: 36.25 seconds
+Budget: 2000, Runtime: 121.67 seconds
+Budget: 3500, Runtime: 195.02 seconds
+Budget: 5000, Runtime: 272.13 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.41 seconds
+Budget: 50, Runtime: 0.94 seconds
+Budget: 100, Runtime: 1.72 seconds
+Budget: 250, Runtime: 3.92 seconds
+Budget: 500, Runtime: 7.52 seconds
+Budget: 750, Runtime: 10.93 seconds
+Budget: 1000, Runtime: 14.18 seconds
+Budget: 2000, Runtime: 19.59 seconds
+Budget: 3500, Runtime: 20.02 seconds
+Budget: 5000, Runtime: 20.94 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.48 seconds
+Budget: 750, Runtime: 0.69 seconds
+Budget: 1000, Runtime: 0.93 seconds
+Budget: 2000, Runtime: 1.84 seconds
+Budget: 3500, Runtime: 3.20 seconds
+Budget: 5000, Runtime: 4.68 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.19 seconds
+Budget: 50, Runtime: 0.35 seconds
+Budget: 100, Runtime: 0.43 seconds
+Budget: 250, Runtime: 0.47 seconds
+Budget: 500, Runtime: 0.83 seconds
+Budget: 750, Runtime: 1.11 seconds
+Budget: 1000, Runtime: 1.40 seconds
+Budget: 2000, Runtime: 2.48 seconds
+Budget: 3500, Runtime: 3.90 seconds
+Budget: 5000, Runtime: 5.61 seconds
+
+--- Iteration 12/50 ---
+Computed exact values in 236.0604145526886 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.01 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.02 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.05 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.54 seconds
+Budget: 5000, Runtime: 2.18 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.78 seconds
+Budget: 50, Runtime: 11.02 seconds
+Budget: 100, Runtime: 12.32 seconds
+Budget: 250, Runtime: 16.65 seconds
+Budget: 500, Runtime: 22.88 seconds
+Budget: 750, Runtime: 29.67 seconds
+Budget: 1000, Runtime: 36.14 seconds
+Budget: 2000, Runtime: 121.40 seconds
+Budget: 3500, Runtime: 196.05 seconds
+Budget: 5000, Runtime: 272.72 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.41 seconds
+Budget: 50, Runtime: 0.92 seconds
+Budget: 100, Runtime: 1.73 seconds
+Budget: 250, Runtime: 3.86 seconds
+Budget: 500, Runtime: 7.55 seconds
+Budget: 750, Runtime: 11.06 seconds
+Budget: 1000, Runtime: 14.28 seconds
+Budget: 2000, Runtime: 19.51 seconds
+Budget: 3500, Runtime: 20.19 seconds
+Budget: 5000, Runtime: 20.81 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.69 seconds
+Budget: 1000, Runtime: 0.92 seconds
+Budget: 2000, Runtime: 1.81 seconds
+Budget: 3500, Runtime: 3.26 seconds
+Budget: 5000, Runtime: 4.60 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.19 seconds
+Budget: 50, Runtime: 0.34 seconds
+Budget: 100, Runtime: 0.41 seconds
+Budget: 250, Runtime: 0.58 seconds
+Budget: 500, Runtime: 0.76 seconds
+Budget: 750, Runtime: 1.11 seconds
+Budget: 1000, Runtime: 1.40 seconds
+Budget: 2000, Runtime: 2.45 seconds
+Budget: 3500, Runtime: 4.08 seconds
+Budget: 5000, Runtime: 5.53 seconds
+
+--- Iteration 13/50 ---
+Computed exact values in 236.00770163536072 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.88 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.19 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 8.71 seconds
+Budget: 50, Runtime: 11.05 seconds
+Budget: 100, Runtime: 12.30 seconds
+Budget: 250, Runtime: 16.63 seconds
+Budget: 500, Runtime: 22.84 seconds
+Budget: 750, Runtime: 30.16 seconds
+Budget: 1000, Runtime: 36.23 seconds
+Budget: 2000, Runtime: 122.42 seconds
+Budget: 3500, Runtime: 194.99 seconds
+Budget: 5000, Runtime: 271.83 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.43 seconds
+Budget: 50, Runtime: 0.92 seconds
+Budget: 100, Runtime: 1.69 seconds
+Budget: 250, Runtime: 3.88 seconds
+Budget: 500, Runtime: 7.50 seconds
+Budget: 750, Runtime: 10.94 seconds
+Budget: 1000, Runtime: 14.13 seconds
+Budget: 2000, Runtime: 19.52 seconds
+Budget: 3500, Runtime: 20.07 seconds
+Budget: 5000, Runtime: 20.75 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.32 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.69 seconds
+Budget: 1000, Runtime: 0.92 seconds
+Budget: 2000, Runtime: 1.83 seconds
+Budget: 3500, Runtime: 3.17 seconds
+Budget: 5000, Runtime: 4.55 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.28 seconds
+Budget: 50, Runtime: 0.34 seconds
+Budget: 100, Runtime: 0.29 seconds
+Budget: 250, Runtime: 0.53 seconds
+Budget: 500, Runtime: 0.80 seconds
+Budget: 750, Runtime: 1.07 seconds
+Budget: 1000, Runtime: 1.24 seconds
+Budget: 2000, Runtime: 2.32 seconds
+Budget: 3500, Runtime: 3.84 seconds
+Budget: 5000, Runtime: 5.35 seconds
+
+--- Iteration 14/50 ---
+Computed exact values in 235.90193486213684 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.34 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.90 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.17 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.73 seconds
+Budget: 50, Runtime: 10.99 seconds
+Budget: 100, Runtime: 12.32 seconds
+Budget: 250, Runtime: 16.53 seconds
+Budget: 500, Runtime: 22.82 seconds
+Budget: 750, Runtime: 30.12 seconds
+Budget: 1000, Runtime: 36.50 seconds
+Budget: 2000, Runtime: 123.52 seconds
+Budget: 3500, Runtime: 196.74 seconds
+Budget: 5000, Runtime: 273.97 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.42 seconds
+Budget: 50, Runtime: 0.93 seconds
+Budget: 100, Runtime: 1.71 seconds
+Budget: 250, Runtime: 3.90 seconds
+Budget: 500, Runtime: 7.44 seconds
+Budget: 750, Runtime: 10.99 seconds
+Budget: 1000, Runtime: 14.16 seconds
+Budget: 2000, Runtime: 19.85 seconds
+Budget: 3500, Runtime: 20.13 seconds
+Budget: 5000, Runtime: 21.35 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.17 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.69 seconds
+Budget: 1000, Runtime: 0.93 seconds
+Budget: 2000, Runtime: 1.83 seconds
+Budget: 3500, Runtime: 3.21 seconds
+Budget: 5000, Runtime: 4.73 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.20 seconds
+Budget: 50, Runtime: 0.36 seconds
+Budget: 100, Runtime: 0.44 seconds
+Budget: 250, Runtime: 0.48 seconds
+Budget: 500, Runtime: 0.86 seconds
+Budget: 750, Runtime: 1.16 seconds
+Budget: 1000, Runtime: 1.43 seconds
+Budget: 2000, Runtime: 2.34 seconds
+Budget: 3500, Runtime: 4.00 seconds
+Budget: 5000, Runtime: 5.55 seconds
+
+--- Iteration 15/50 ---
+Computed exact values in 236.63958859443665 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.88 seconds
+Budget: 3500, Runtime: 1.54 seconds
+Budget: 5000, Runtime: 2.19 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.84 seconds
+Budget: 50, Runtime: 11.07 seconds
+Budget: 100, Runtime: 12.32 seconds
+Budget: 250, Runtime: 16.64 seconds
+Budget: 500, Runtime: 23.08 seconds
+Budget: 750, Runtime: 30.22 seconds
+Budget: 1000, Runtime: 36.22 seconds
+Budget: 2000, Runtime: 122.71 seconds
+Budget: 3500, Runtime: 196.31 seconds
+Budget: 5000, Runtime: 271.71 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.41 seconds
+Budget: 50, Runtime: 0.93 seconds
+Budget: 100, Runtime: 1.73 seconds
+Budget: 250, Runtime: 3.94 seconds
+Budget: 500, Runtime: 7.42 seconds
+Budget: 750, Runtime: 10.99 seconds
+Budget: 1000, Runtime: 14.15 seconds
+Budget: 2000, Runtime: 19.64 seconds
+Budget: 3500, Runtime: 20.65 seconds
+Budget: 5000, Runtime: 21.07 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.91 seconds
+Budget: 2000, Runtime: 1.80 seconds
+Budget: 3500, Runtime: 3.15 seconds
+Budget: 5000, Runtime: 4.68 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.20 seconds
+Budget: 50, Runtime: 0.36 seconds
+Budget: 100, Runtime: 0.41 seconds
+Budget: 250, Runtime: 0.58 seconds
+Budget: 500, Runtime: 0.76 seconds
+Budget: 750, Runtime: 1.11 seconds
+Budget: 1000, Runtime: 1.38 seconds
+Budget: 2000, Runtime: 2.41 seconds
+Budget: 3500, Runtime: 3.89 seconds
+Budget: 5000, Runtime: 5.45 seconds
+
+--- Iteration 16/50 ---
+Computed exact values in 235.96880102157593 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.88 seconds
+Budget: 3500, Runtime: 1.54 seconds
+Budget: 5000, Runtime: 2.17 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 8.66 seconds
+Budget: 50, Runtime: 11.00 seconds
+Budget: 100, Runtime: 12.27 seconds
+Budget: 250, Runtime: 16.65 seconds
+Budget: 500, Runtime: 22.81 seconds
+Budget: 750, Runtime: 29.77 seconds
+Budget: 1000, Runtime: 36.29 seconds
+Budget: 2000, Runtime: 121.45 seconds
+Budget: 3500, Runtime: 196.01 seconds
+Budget: 5000, Runtime: 272.09 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.43 seconds
+Budget: 50, Runtime: 0.97 seconds
+Budget: 100, Runtime: 1.71 seconds
+Budget: 250, Runtime: 3.92 seconds
+Budget: 500, Runtime: 7.44 seconds
+Budget: 750, Runtime: 10.92 seconds
+Budget: 1000, Runtime: 14.11 seconds
+Budget: 2000, Runtime: 19.50 seconds
+Budget: 3500, Runtime: 20.20 seconds
+Budget: 5000, Runtime: 21.32 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.91 seconds
+Budget: 2000, Runtime: 1.79 seconds
+Budget: 3500, Runtime: 3.25 seconds
+Budget: 5000, Runtime: 4.58 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.19 seconds
+Budget: 50, Runtime: 0.34 seconds
+Budget: 100, Runtime: 0.40 seconds
+Budget: 250, Runtime: 0.60 seconds
+Budget: 500, Runtime: 0.77 seconds
+Budget: 750, Runtime: 1.11 seconds
+Budget: 1000, Runtime: 1.37 seconds
+Budget: 2000, Runtime: 2.47 seconds
+Budget: 3500, Runtime: 3.85 seconds
+Budget: 5000, Runtime: 5.60 seconds
+
+--- Iteration 17/50 ---
+Computed exact values in 236.08804988861084 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.88 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.17 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.88 seconds
+Budget: 50, Runtime: 11.06 seconds
+Budget: 100, Runtime: 12.32 seconds
+Budget: 250, Runtime: 16.59 seconds
+Budget: 500, Runtime: 22.88 seconds
+Budget: 750, Runtime: 29.84 seconds
+Budget: 1000, Runtime: 36.24 seconds
+Budget: 2000, Runtime: 121.37 seconds
+Budget: 3500, Runtime: 197.77 seconds
+Budget: 5000, Runtime: 271.65 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.42 seconds
+Budget: 50, Runtime: 0.93 seconds
+Budget: 100, Runtime: 1.72 seconds
+Budget: 250, Runtime: 3.88 seconds
+Budget: 500, Runtime: 7.45 seconds
+Budget: 750, Runtime: 10.91 seconds
+Budget: 1000, Runtime: 14.16 seconds
+Budget: 2000, Runtime: 19.50 seconds
+Budget: 3500, Runtime: 20.19 seconds
+Budget: 5000, Runtime: 20.66 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.55 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.91 seconds
+Budget: 2000, Runtime: 1.81 seconds
+Budget: 3500, Runtime: 3.14 seconds
+Budget: 5000, Runtime: 4.54 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.29 seconds
+Budget: 50, Runtime: 0.37 seconds
+Budget: 100, Runtime: 0.30 seconds
+Budget: 250, Runtime: 0.56 seconds
+Budget: 500, Runtime: 0.85 seconds
+Budget: 750, Runtime: 0.99 seconds
+Budget: 1000, Runtime: 1.34 seconds
+Budget: 2000, Runtime: 2.32 seconds
+Budget: 3500, Runtime: 3.76 seconds
+Budget: 5000, Runtime: 5.44 seconds
+
+--- Iteration 18/50 ---
+Computed exact values in 235.89545130729675 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.90 seconds
+Budget: 3500, Runtime: 1.52 seconds
+Budget: 5000, Runtime: 2.17 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 8.71 seconds
+Budget: 50, Runtime: 10.99 seconds
+Budget: 100, Runtime: 12.29 seconds
+Budget: 250, Runtime: 16.56 seconds
+Budget: 500, Runtime: 23.11 seconds
+Budget: 750, Runtime: 30.09 seconds
+Budget: 1000, Runtime: 36.72 seconds
+Budget: 2000, Runtime: 123.58 seconds
+Budget: 3500, Runtime: 197.31 seconds
+Budget: 5000, Runtime: 271.98 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.43 seconds
+Budget: 50, Runtime: 0.94 seconds
+Budget: 100, Runtime: 1.73 seconds
+Budget: 250, Runtime: 3.94 seconds
+Budget: 500, Runtime: 7.49 seconds
+Budget: 750, Runtime: 10.92 seconds
+Budget: 1000, Runtime: 14.20 seconds
+Budget: 2000, Runtime: 19.50 seconds
+Budget: 3500, Runtime: 20.13 seconds
+Budget: 5000, Runtime: 20.73 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.33 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.91 seconds
+Budget: 2000, Runtime: 1.80 seconds
+Budget: 3500, Runtime: 3.15 seconds
+Budget: 5000, Runtime: 4.55 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.27 seconds
+Budget: 50, Runtime: 0.34 seconds
+Budget: 100, Runtime: 0.31 seconds
+Budget: 250, Runtime: 0.53 seconds
+Budget: 500, Runtime: 0.80 seconds
+Budget: 750, Runtime: 1.08 seconds
+Budget: 1000, Runtime: 1.24 seconds
+Budget: 2000, Runtime: 2.33 seconds
+Budget: 3500, Runtime: 3.87 seconds
+Budget: 5000, Runtime: 5.30 seconds
+
+--- Iteration 19/50 ---
+Computed exact values in 237.45530200004578 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.88 seconds
+Budget: 3500, Runtime: 1.51 seconds
+Budget: 5000, Runtime: 2.18 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.83 seconds
+Budget: 50, Runtime: 11.10 seconds
+Budget: 100, Runtime: 12.38 seconds
+Budget: 250, Runtime: 16.71 seconds
+Budget: 500, Runtime: 22.94 seconds
+Budget: 750, Runtime: 30.21 seconds
+Budget: 1000, Runtime: 36.35 seconds
+Budget: 2000, Runtime: 121.99 seconds
+Budget: 3500, Runtime: 194.70 seconds
+Budget: 5000, Runtime: 274.20 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.42 seconds
+Budget: 50, Runtime: 0.93 seconds
+Budget: 100, Runtime: 1.73 seconds
+Budget: 250, Runtime: 3.95 seconds
+Budget: 500, Runtime: 7.41 seconds
+Budget: 750, Runtime: 11.00 seconds
+Budget: 1000, Runtime: 14.18 seconds
+Budget: 2000, Runtime: 19.55 seconds
+Budget: 3500, Runtime: 20.26 seconds
+Budget: 5000, Runtime: 21.08 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.16 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.91 seconds
+Budget: 2000, Runtime: 1.80 seconds
+Budget: 3500, Runtime: 3.15 seconds
+Budget: 5000, Runtime: 4.62 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.18 seconds
+Budget: 50, Runtime: 0.33 seconds
+Budget: 100, Runtime: 0.39 seconds
+Budget: 250, Runtime: 0.55 seconds
+Budget: 500, Runtime: 0.72 seconds
+Budget: 750, Runtime: 1.07 seconds
+Budget: 1000, Runtime: 1.34 seconds
+Budget: 2000, Runtime: 2.25 seconds
+Budget: 3500, Runtime: 3.84 seconds
+Budget: 5000, Runtime: 5.37 seconds
+
+--- Iteration 20/50 ---
+Computed exact values in 236.3270890712738 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.90 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.17 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.90 seconds
+Budget: 50, Runtime: 11.06 seconds
+Budget: 100, Runtime: 12.27 seconds
+Budget: 250, Runtime: 16.46 seconds
+Budget: 500, Runtime: 23.10 seconds
+Budget: 750, Runtime: 30.11 seconds
+Budget: 1000, Runtime: 36.72 seconds
+Budget: 2000, Runtime: 121.11 seconds
+Budget: 3500, Runtime: 195.89 seconds
+Budget: 5000, Runtime: 272.29 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.44 seconds
+Budget: 50, Runtime: 0.94 seconds
+Budget: 100, Runtime: 1.73 seconds
+Budget: 250, Runtime: 4.01 seconds
+Budget: 500, Runtime: 7.53 seconds
+Budget: 750, Runtime: 11.00 seconds
+Budget: 1000, Runtime: 14.24 seconds
+Budget: 2000, Runtime: 19.52 seconds
+Budget: 3500, Runtime: 20.14 seconds
+Budget: 5000, Runtime: 20.95 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.91 seconds
+Budget: 2000, Runtime: 1.90 seconds
+Budget: 3500, Runtime: 3.18 seconds
+Budget: 5000, Runtime: 4.61 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.30 seconds
+Budget: 50, Runtime: 0.26 seconds
+Budget: 100, Runtime: 0.41 seconds
+Budget: 250, Runtime: 0.60 seconds
+Budget: 500, Runtime: 0.87 seconds
+Budget: 750, Runtime: 1.00 seconds
+Budget: 1000, Runtime: 1.37 seconds
+Budget: 2000, Runtime: 2.42 seconds
+Budget: 3500, Runtime: 3.81 seconds
+Budget: 5000, Runtime: 5.47 seconds
+
+--- Iteration 21/50 ---
+Computed exact values in 236.21054220199585 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.19 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.82 seconds
+Budget: 50, Runtime: 11.02 seconds
+Budget: 100, Runtime: 12.33 seconds
+Budget: 250, Runtime: 16.53 seconds
+Budget: 500, Runtime: 22.82 seconds
+Budget: 750, Runtime: 29.90 seconds
+Budget: 1000, Runtime: 36.24 seconds
+Budget: 2000, Runtime: 121.34 seconds
+Budget: 3500, Runtime: 196.57 seconds
+Budget: 5000, Runtime: 272.33 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.43 seconds
+Budget: 50, Runtime: 0.94 seconds
+Budget: 100, Runtime: 1.74 seconds
+Budget: 250, Runtime: 3.90 seconds
+Budget: 500, Runtime: 7.47 seconds
+Budget: 750, Runtime: 10.92 seconds
+Budget: 1000, Runtime: 14.19 seconds
+Budget: 2000, Runtime: 19.79 seconds
+Budget: 3500, Runtime: 20.73 seconds
+Budget: 5000, Runtime: 20.78 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.46 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.90 seconds
+Budget: 2000, Runtime: 1.79 seconds
+Budget: 3500, Runtime: 3.11 seconds
+Budget: 5000, Runtime: 4.58 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.18 seconds
+Budget: 50, Runtime: 0.33 seconds
+Budget: 100, Runtime: 0.38 seconds
+Budget: 250, Runtime: 0.57 seconds
+Budget: 500, Runtime: 0.74 seconds
+Budget: 750, Runtime: 1.11 seconds
+Budget: 1000, Runtime: 1.38 seconds
+Budget: 2000, Runtime: 2.27 seconds
+Budget: 3500, Runtime: 3.81 seconds
+Budget: 5000, Runtime: 5.51 seconds
+
+--- Iteration 22/50 ---
+Computed exact values in 235.85144805908203 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.42 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.90 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.18 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.75 seconds
+Budget: 50, Runtime: 11.02 seconds
+Budget: 100, Runtime: 12.31 seconds
+Budget: 250, Runtime: 16.49 seconds
+Budget: 500, Runtime: 23.04 seconds
+Budget: 750, Runtime: 30.21 seconds
+Budget: 1000, Runtime: 36.84 seconds
+Budget: 2000, Runtime: 123.09 seconds
+Budget: 3500, Runtime: 194.62 seconds
+Budget: 5000, Runtime: 272.06 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.44 seconds
+Budget: 50, Runtime: 0.96 seconds
+Budget: 100, Runtime: 1.71 seconds
+Budget: 250, Runtime: 3.90 seconds
+Budget: 500, Runtime: 7.42 seconds
+Budget: 750, Runtime: 10.98 seconds
+Budget: 1000, Runtime: 14.28 seconds
+Budget: 2000, Runtime: 19.57 seconds
+Budget: 3500, Runtime: 20.63 seconds
+Budget: 5000, Runtime: 20.72 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.91 seconds
+Budget: 2000, Runtime: 1.78 seconds
+Budget: 3500, Runtime: 3.12 seconds
+Budget: 5000, Runtime: 4.64 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.19 seconds
+Budget: 50, Runtime: 0.34 seconds
+Budget: 100, Runtime: 0.39 seconds
+Budget: 250, Runtime: 0.56 seconds
+Budget: 500, Runtime: 0.73 seconds
+Budget: 750, Runtime: 1.09 seconds
+Budget: 1000, Runtime: 1.35 seconds
+Budget: 2000, Runtime: 2.30 seconds
+Budget: 3500, Runtime: 3.97 seconds
+Budget: 5000, Runtime: 5.38 seconds
+
+--- Iteration 23/50 ---
+Computed exact values in 235.9989001750946 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.88 seconds
+Budget: 3500, Runtime: 1.52 seconds
+Budget: 5000, Runtime: 2.19 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.80 seconds
+Budget: 50, Runtime: 11.10 seconds
+Budget: 100, Runtime: 12.29 seconds
+Budget: 250, Runtime: 16.55 seconds
+Budget: 500, Runtime: 22.84 seconds
+Budget: 750, Runtime: 29.69 seconds
+Budget: 1000, Runtime: 36.08 seconds
+Budget: 2000, Runtime: 121.13 seconds
+Budget: 3500, Runtime: 196.09 seconds
+Budget: 5000, Runtime: 272.36 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.42 seconds
+Budget: 50, Runtime: 0.95 seconds
+Budget: 100, Runtime: 1.72 seconds
+Budget: 250, Runtime: 3.90 seconds
+Budget: 500, Runtime: 7.45 seconds
+Budget: 750, Runtime: 11.01 seconds
+Budget: 1000, Runtime: 14.22 seconds
+Budget: 2000, Runtime: 19.68 seconds
+Budget: 3500, Runtime: 20.55 seconds
+Budget: 5000, Runtime: 20.82 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.46 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.90 seconds
+Budget: 2000, Runtime: 1.88 seconds
+Budget: 3500, Runtime: 3.15 seconds
+Budget: 5000, Runtime: 4.55 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.29 seconds
+Budget: 50, Runtime: 0.25 seconds
+Budget: 100, Runtime: 0.39 seconds
+Budget: 250, Runtime: 0.57 seconds
+Budget: 500, Runtime: 0.87 seconds
+Budget: 750, Runtime: 1.02 seconds
+Budget: 1000, Runtime: 1.33 seconds
+Budget: 2000, Runtime: 2.39 seconds
+Budget: 3500, Runtime: 3.84 seconds
+Budget: 5000, Runtime: 5.38 seconds
+
+--- Iteration 24/50 ---
+Computed exact values in 236.2784252166748 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.02 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.05 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.18 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.75 seconds
+Budget: 50, Runtime: 11.04 seconds
+Budget: 100, Runtime: 12.32 seconds
+Budget: 250, Runtime: 16.60 seconds
+Budget: 500, Runtime: 23.07 seconds
+Budget: 750, Runtime: 29.84 seconds
+Budget: 1000, Runtime: 35.94 seconds
+Budget: 2000, Runtime: 121.33 seconds
+Budget: 3500, Runtime: 196.13 seconds
+Budget: 5000, Runtime: 270.32 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.44 seconds
+Budget: 50, Runtime: 0.92 seconds
+Budget: 100, Runtime: 1.71 seconds
+Budget: 250, Runtime: 3.94 seconds
+Budget: 500, Runtime: 7.52 seconds
+Budget: 750, Runtime: 10.94 seconds
+Budget: 1000, Runtime: 14.16 seconds
+Budget: 2000, Runtime: 19.72 seconds
+Budget: 3500, Runtime: 20.28 seconds
+Budget: 5000, Runtime: 21.51 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.46 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.91 seconds
+Budget: 2000, Runtime: 1.79 seconds
+Budget: 3500, Runtime: 3.13 seconds
+Budget: 5000, Runtime: 4.63 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.19 seconds
+Budget: 50, Runtime: 0.34 seconds
+Budget: 100, Runtime: 0.41 seconds
+Budget: 250, Runtime: 0.62 seconds
+Budget: 500, Runtime: 0.76 seconds
+Budget: 750, Runtime: 1.12 seconds
+Budget: 1000, Runtime: 1.44 seconds
+Budget: 2000, Runtime: 2.36 seconds
+Budget: 3500, Runtime: 4.08 seconds
+Budget: 5000, Runtime: 5.53 seconds
+
+--- Iteration 25/50 ---
+Computed exact values in 236.79930639266968 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.14 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.19 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 7.55 seconds
+Budget: 50, Runtime: 10.97 seconds
+Budget: 100, Runtime: 12.28 seconds
+Budget: 250, Runtime: 16.53 seconds
+Budget: 500, Runtime: 22.73 seconds
+Budget: 750, Runtime: 29.49 seconds
+Budget: 1000, Runtime: 35.86 seconds
+Budget: 2000, Runtime: 120.29 seconds
+Budget: 3500, Runtime: 196.52 seconds
+Budget: 5000, Runtime: 274.59 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.41 seconds
+Budget: 50, Runtime: 0.94 seconds
+Budget: 100, Runtime: 1.70 seconds
+Budget: 250, Runtime: 3.93 seconds
+Budget: 500, Runtime: 7.45 seconds
+Budget: 750, Runtime: 10.96 seconds
+Budget: 1000, Runtime: 14.25 seconds
+Budget: 2000, Runtime: 19.65 seconds
+Budget: 3500, Runtime: 20.72 seconds
+Budget: 5000, Runtime: 20.85 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.90 seconds
+Budget: 2000, Runtime: 1.79 seconds
+Budget: 3500, Runtime: 3.12 seconds
+Budget: 5000, Runtime: 4.49 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.28 seconds
+Budget: 50, Runtime: 0.34 seconds
+Budget: 100, Runtime: 0.43 seconds
+Budget: 250, Runtime: 0.59 seconds
+Budget: 500, Runtime: 0.74 seconds
+Budget: 750, Runtime: 1.08 seconds
+Budget: 1000, Runtime: 1.25 seconds
+Budget: 2000, Runtime: 2.34 seconds
+Budget: 3500, Runtime: 3.96 seconds
+Budget: 5000, Runtime: 5.36 seconds
+
+--- Iteration 26/50 ---
+Computed exact values in 238.79586935043335 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.52 seconds
+Budget: 5000, Runtime: 2.17 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.78 seconds
+Budget: 50, Runtime: 10.99 seconds
+Budget: 100, Runtime: 12.35 seconds
+Budget: 250, Runtime: 16.55 seconds
+Budget: 500, Runtime: 22.83 seconds
+Budget: 750, Runtime: 29.59 seconds
+Budget: 1000, Runtime: 36.24 seconds
+Budget: 2000, Runtime: 120.88 seconds
+Budget: 3500, Runtime: 198.35 seconds
+Budget: 5000, Runtime: 273.81 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.42 seconds
+Budget: 50, Runtime: 0.95 seconds
+Budget: 100, Runtime: 1.73 seconds
+Budget: 250, Runtime: 3.94 seconds
+Budget: 500, Runtime: 7.52 seconds
+Budget: 750, Runtime: 10.91 seconds
+Budget: 1000, Runtime: 14.12 seconds
+Budget: 2000, Runtime: 19.44 seconds
+Budget: 3500, Runtime: 20.16 seconds
+Budget: 5000, Runtime: 20.75 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.46 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.90 seconds
+Budget: 2000, Runtime: 1.79 seconds
+Budget: 3500, Runtime: 3.12 seconds
+Budget: 5000, Runtime: 4.51 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.32 seconds
+Budget: 50, Runtime: 0.38 seconds
+Budget: 100, Runtime: 0.45 seconds
+Budget: 250, Runtime: 0.50 seconds
+Budget: 500, Runtime: 0.87 seconds
+Budget: 750, Runtime: 1.12 seconds
+Budget: 1000, Runtime: 1.41 seconds
+Budget: 2000, Runtime: 2.22 seconds
+Budget: 3500, Runtime: 3.84 seconds
+Budget: 5000, Runtime: 5.29 seconds
+
+--- Iteration 27/50 ---
+Computed exact values in 235.5922029018402 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.20 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 8.64 seconds
+Budget: 50, Runtime: 10.95 seconds
+Budget: 100, Runtime: 12.24 seconds
+Budget: 250, Runtime: 16.66 seconds
+Budget: 500, Runtime: 23.03 seconds
+Budget: 750, Runtime: 29.77 seconds
+Budget: 1000, Runtime: 36.23 seconds
+Budget: 2000, Runtime: 121.40 seconds
+Budget: 3500, Runtime: 196.16 seconds
+Budget: 5000, Runtime: 271.08 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.42 seconds
+Budget: 50, Runtime: 0.94 seconds
+Budget: 100, Runtime: 1.70 seconds
+Budget: 250, Runtime: 3.90 seconds
+Budget: 500, Runtime: 7.48 seconds
+Budget: 750, Runtime: 10.99 seconds
+Budget: 1000, Runtime: 14.30 seconds
+Budget: 2000, Runtime: 19.63 seconds
+Budget: 3500, Runtime: 20.09 seconds
+Budget: 5000, Runtime: 21.23 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.91 seconds
+Budget: 2000, Runtime: 1.79 seconds
+Budget: 3500, Runtime: 3.16 seconds
+Budget: 5000, Runtime: 4.54 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.33 seconds
+Budget: 50, Runtime: 0.39 seconds
+Budget: 100, Runtime: 0.46 seconds
+Budget: 250, Runtime: 0.48 seconds
+Budget: 500, Runtime: 0.86 seconds
+Budget: 750, Runtime: 1.20 seconds
+Budget: 1000, Runtime: 1.51 seconds
+Budget: 2000, Runtime: 2.41 seconds
+Budget: 3500, Runtime: 4.01 seconds
+Budget: 5000, Runtime: 5.53 seconds
+
+--- Iteration 28/50 ---
+Computed exact values in 235.65194416046143 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.88 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.17 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.74 seconds
+Budget: 50, Runtime: 10.96 seconds
+Budget: 100, Runtime: 12.26 seconds
+Budget: 250, Runtime: 16.42 seconds
+Budget: 500, Runtime: 22.80 seconds
+Budget: 750, Runtime: 30.01 seconds
+Budget: 1000, Runtime: 36.07 seconds
+Budget: 2000, Runtime: 120.78 seconds
+Budget: 3500, Runtime: 195.31 seconds
+Budget: 5000, Runtime: 268.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.43 seconds
+Budget: 50, Runtime: 0.95 seconds
+Budget: 100, Runtime: 1.72 seconds
+Budget: 250, Runtime: 3.91 seconds
+Budget: 500, Runtime: 7.51 seconds
+Budget: 750, Runtime: 10.96 seconds
+Budget: 1000, Runtime: 14.18 seconds
+Budget: 2000, Runtime: 19.50 seconds
+Budget: 3500, Runtime: 20.19 seconds
+Budget: 5000, Runtime: 20.76 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.91 seconds
+Budget: 2000, Runtime: 1.78 seconds
+Budget: 3500, Runtime: 3.12 seconds
+Budget: 5000, Runtime: 4.51 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.29 seconds
+Budget: 50, Runtime: 0.37 seconds
+Budget: 100, Runtime: 0.47 seconds
+Budget: 250, Runtime: 0.47 seconds
+Budget: 500, Runtime: 0.81 seconds
+Budget: 750, Runtime: 1.11 seconds
+Budget: 1000, Runtime: 1.28 seconds
+Budget: 2000, Runtime: 2.41 seconds
+Budget: 3500, Runtime: 3.97 seconds
+Budget: 5000, Runtime: 5.69 seconds
+
+--- Iteration 29/50 ---
+Computed exact values in 236.13559079170227 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.54 seconds
+Budget: 5000, Runtime: 2.19 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 8.66 seconds
+Budget: 50, Runtime: 11.04 seconds
+Budget: 100, Runtime: 12.41 seconds
+Budget: 250, Runtime: 16.47 seconds
+Budget: 500, Runtime: 22.84 seconds
+Budget: 750, Runtime: 29.87 seconds
+Budget: 1000, Runtime: 36.17 seconds
+Budget: 2000, Runtime: 120.98 seconds
+Budget: 3500, Runtime: 196.75 seconds
+Budget: 5000, Runtime: 274.21 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.40 seconds
+Budget: 50, Runtime: 0.95 seconds
+Budget: 100, Runtime: 1.73 seconds
+Budget: 250, Runtime: 3.94 seconds
+Budget: 500, Runtime: 7.45 seconds
+Budget: 750, Runtime: 10.95 seconds
+Budget: 1000, Runtime: 14.21 seconds
+Budget: 2000, Runtime: 19.44 seconds
+Budget: 3500, Runtime: 20.03 seconds
+Budget: 5000, Runtime: 20.67 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.46 seconds
+Budget: 750, Runtime: 0.67 seconds
+Budget: 1000, Runtime: 0.90 seconds
+Budget: 2000, Runtime: 1.78 seconds
+Budget: 3500, Runtime: 3.10 seconds
+Budget: 5000, Runtime: 4.47 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.27 seconds
+Budget: 50, Runtime: 0.34 seconds
+Budget: 100, Runtime: 0.29 seconds
+Budget: 250, Runtime: 0.52 seconds
+Budget: 500, Runtime: 0.80 seconds
+Budget: 750, Runtime: 1.04 seconds
+Budget: 1000, Runtime: 1.22 seconds
+Budget: 2000, Runtime: 2.24 seconds
+Budget: 3500, Runtime: 3.76 seconds
+Budget: 5000, Runtime: 5.17 seconds
+
+--- Iteration 30/50 ---
+Computed exact values in 236.11159658432007 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.88 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.18 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 8.64 seconds
+Budget: 50, Runtime: 10.99 seconds
+Budget: 100, Runtime: 12.37 seconds
+Budget: 250, Runtime: 16.49 seconds
+Budget: 500, Runtime: 22.90 seconds
+Budget: 750, Runtime: 29.70 seconds
+Budget: 1000, Runtime: 36.06 seconds
+Budget: 2000, Runtime: 121.61 seconds
+Budget: 3500, Runtime: 196.27 seconds
+Budget: 5000, Runtime: 272.11 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.42 seconds
+Budget: 50, Runtime: 0.95 seconds
+Budget: 100, Runtime: 1.70 seconds
+Budget: 250, Runtime: 3.94 seconds
+Budget: 500, Runtime: 7.45 seconds
+Budget: 750, Runtime: 10.99 seconds
+Budget: 1000, Runtime: 14.29 seconds
+Budget: 2000, Runtime: 19.51 seconds
+Budget: 3500, Runtime: 20.09 seconds
+Budget: 5000, Runtime: 20.71 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.46 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.90 seconds
+Budget: 2000, Runtime: 1.78 seconds
+Budget: 3500, Runtime: 3.11 seconds
+Budget: 5000, Runtime: 4.48 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.26 seconds
+Budget: 50, Runtime: 0.35 seconds
+Budget: 100, Runtime: 0.41 seconds
+Budget: 250, Runtime: 0.44 seconds
+Budget: 500, Runtime: 0.79 seconds
+Budget: 750, Runtime: 0.98 seconds
+Budget: 1000, Runtime: 1.36 seconds
+Budget: 2000, Runtime: 2.19 seconds
+Budget: 3500, Runtime: 3.88 seconds
+Budget: 5000, Runtime: 5.33 seconds
+
+--- Iteration 31/50 ---
+Computed exact values in 235.96752643585205 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.16 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.76 seconds
+Budget: 50, Runtime: 11.01 seconds
+Budget: 100, Runtime: 12.30 seconds
+Budget: 250, Runtime: 16.62 seconds
+Budget: 500, Runtime: 22.99 seconds
+Budget: 750, Runtime: 29.84 seconds
+Budget: 1000, Runtime: 36.25 seconds
+Budget: 2000, Runtime: 121.12 seconds
+Budget: 3500, Runtime: 195.11 seconds
+Budget: 5000, Runtime: 273.14 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.42 seconds
+Budget: 50, Runtime: 0.95 seconds
+Budget: 100, Runtime: 1.72 seconds
+Budget: 250, Runtime: 3.88 seconds
+Budget: 500, Runtime: 7.52 seconds
+Budget: 750, Runtime: 10.95 seconds
+Budget: 1000, Runtime: 14.22 seconds
+Budget: 2000, Runtime: 19.69 seconds
+Budget: 3500, Runtime: 20.11 seconds
+Budget: 5000, Runtime: 20.72 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.15 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.69 seconds
+Budget: 1000, Runtime: 0.92 seconds
+Budget: 2000, Runtime: 1.82 seconds
+Budget: 3500, Runtime: 3.16 seconds
+Budget: 5000, Runtime: 4.64 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.20 seconds
+Budget: 50, Runtime: 0.35 seconds
+Budget: 100, Runtime: 0.40 seconds
+Budget: 250, Runtime: 0.58 seconds
+Budget: 500, Runtime: 0.74 seconds
+Budget: 750, Runtime: 1.05 seconds
+Budget: 1000, Runtime: 1.31 seconds
+Budget: 2000, Runtime: 2.18 seconds
+Budget: 3500, Runtime: 3.75 seconds
+Budget: 5000, Runtime: 5.23 seconds
+
+--- Iteration 32/50 ---
+Computed exact values in 235.93296337127686 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.42 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.88 seconds
+Budget: 3500, Runtime: 1.52 seconds
+Budget: 5000, Runtime: 2.19 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.79 seconds
+Budget: 50, Runtime: 10.98 seconds
+Budget: 100, Runtime: 12.29 seconds
+Budget: 250, Runtime: 16.61 seconds
+Budget: 500, Runtime: 23.16 seconds
+Budget: 750, Runtime: 30.11 seconds
+Budget: 1000, Runtime: 36.66 seconds
+Budget: 2000, Runtime: 123.22 seconds
+Budget: 3500, Runtime: 195.30 seconds
+Budget: 5000, Runtime: 272.57 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.42 seconds
+Budget: 50, Runtime: 0.95 seconds
+Budget: 100, Runtime: 1.75 seconds
+Budget: 250, Runtime: 3.98 seconds
+Budget: 500, Runtime: 7.45 seconds
+Budget: 750, Runtime: 10.90 seconds
+Budget: 1000, Runtime: 14.17 seconds
+Budget: 2000, Runtime: 19.48 seconds
+Budget: 3500, Runtime: 20.21 seconds
+Budget: 5000, Runtime: 20.67 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 1.02 seconds
+Budget: 2000, Runtime: 1.81 seconds
+Budget: 3500, Runtime: 3.17 seconds
+Budget: 5000, Runtime: 4.56 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.28 seconds
+Budget: 50, Runtime: 0.24 seconds
+Budget: 100, Runtime: 0.39 seconds
+Budget: 250, Runtime: 0.55 seconds
+Budget: 500, Runtime: 0.86 seconds
+Budget: 750, Runtime: 1.00 seconds
+Budget: 1000, Runtime: 1.37 seconds
+Budget: 2000, Runtime: 2.42 seconds
+Budget: 3500, Runtime: 3.81 seconds
+Budget: 5000, Runtime: 5.51 seconds
+
+--- Iteration 33/50 ---
+Computed exact values in 235.77409505844116 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.42 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.88 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.21 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.79 seconds
+Budget: 50, Runtime: 11.02 seconds
+Budget: 100, Runtime: 12.31 seconds
+Budget: 250, Runtime: 16.33 seconds
+Budget: 500, Runtime: 22.95 seconds
+Budget: 750, Runtime: 29.97 seconds
+Budget: 1000, Runtime: 36.34 seconds
+Budget: 2000, Runtime: 122.37 seconds
+Budget: 3500, Runtime: 195.53 seconds
+Budget: 5000, Runtime: 276.18 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.41 seconds
+Budget: 50, Runtime: 0.92 seconds
+Budget: 100, Runtime: 1.69 seconds
+Budget: 250, Runtime: 3.90 seconds
+Budget: 500, Runtime: 7.45 seconds
+Budget: 750, Runtime: 10.91 seconds
+Budget: 1000, Runtime: 14.19 seconds
+Budget: 2000, Runtime: 19.62 seconds
+Budget: 3500, Runtime: 20.18 seconds
+Budget: 5000, Runtime: 21.39 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.33 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.70 seconds
+Budget: 1000, Runtime: 0.93 seconds
+Budget: 2000, Runtime: 1.82 seconds
+Budget: 3500, Runtime: 3.15 seconds
+Budget: 5000, Runtime: 4.52 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.26 seconds
+Budget: 50, Runtime: 0.34 seconds
+Budget: 100, Runtime: 0.29 seconds
+Budget: 250, Runtime: 0.53 seconds
+Budget: 500, Runtime: 0.79 seconds
+Budget: 750, Runtime: 1.10 seconds
+Budget: 1000, Runtime: 1.40 seconds
+Budget: 2000, Runtime: 2.20 seconds
+Budget: 3500, Runtime: 3.96 seconds
+Budget: 5000, Runtime: 5.34 seconds
+
+--- Iteration 34/50 ---
+Computed exact values in 235.64060974121094 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.52 seconds
+Budget: 5000, Runtime: 2.18 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 8.67 seconds
+Budget: 50, Runtime: 10.99 seconds
+Budget: 100, Runtime: 12.28 seconds
+Budget: 250, Runtime: 16.65 seconds
+Budget: 500, Runtime: 23.09 seconds
+Budget: 750, Runtime: 30.06 seconds
+Budget: 1000, Runtime: 36.67 seconds
+Budget: 2000, Runtime: 122.65 seconds
+Budget: 3500, Runtime: 197.44 seconds
+Budget: 5000, Runtime: 272.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.42 seconds
+Budget: 50, Runtime: 0.96 seconds
+Budget: 100, Runtime: 1.73 seconds
+Budget: 250, Runtime: 3.89 seconds
+Budget: 500, Runtime: 7.48 seconds
+Budget: 750, Runtime: 10.89 seconds
+Budget: 1000, Runtime: 14.17 seconds
+Budget: 2000, Runtime: 19.66 seconds
+Budget: 3500, Runtime: 20.09 seconds
+Budget: 5000, Runtime: 20.64 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.46 seconds
+Budget: 750, Runtime: 0.67 seconds
+Budget: 1000, Runtime: 0.90 seconds
+Budget: 2000, Runtime: 1.78 seconds
+Budget: 3500, Runtime: 3.11 seconds
+Budget: 5000, Runtime: 4.48 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.27 seconds
+Budget: 50, Runtime: 0.33 seconds
+Budget: 100, Runtime: 0.39 seconds
+Budget: 250, Runtime: 0.43 seconds
+Budget: 500, Runtime: 0.78 seconds
+Budget: 750, Runtime: 0.93 seconds
+Budget: 1000, Runtime: 1.29 seconds
+Budget: 2000, Runtime: 2.19 seconds
+Budget: 3500, Runtime: 3.69 seconds
+Budget: 5000, Runtime: 5.10 seconds
+
+--- Iteration 35/50 ---
+Computed exact values in 235.69573974609375 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.88 seconds
+Budget: 3500, Runtime: 1.54 seconds
+Budget: 5000, Runtime: 2.17 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.76 seconds
+Budget: 50, Runtime: 10.96 seconds
+Budget: 100, Runtime: 12.33 seconds
+Budget: 250, Runtime: 16.60 seconds
+Budget: 500, Runtime: 23.10 seconds
+Budget: 750, Runtime: 30.07 seconds
+Budget: 1000, Runtime: 36.69 seconds
+Budget: 2000, Runtime: 120.16 seconds
+Budget: 3500, Runtime: 195.76 seconds
+Budget: 5000, Runtime: 270.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.41 seconds
+Budget: 50, Runtime: 0.95 seconds
+Budget: 100, Runtime: 1.69 seconds
+Budget: 250, Runtime: 3.91 seconds
+Budget: 500, Runtime: 7.52 seconds
+Budget: 750, Runtime: 10.96 seconds
+Budget: 1000, Runtime: 14.13 seconds
+Budget: 2000, Runtime: 19.60 seconds
+Budget: 3500, Runtime: 20.05 seconds
+Budget: 5000, Runtime: 20.79 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.91 seconds
+Budget: 2000, Runtime: 1.79 seconds
+Budget: 3500, Runtime: 3.12 seconds
+Budget: 5000, Runtime: 4.52 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.32 seconds
+Budget: 50, Runtime: 0.38 seconds
+Budget: 100, Runtime: 0.34 seconds
+Budget: 250, Runtime: 0.60 seconds
+Budget: 500, Runtime: 0.88 seconds
+Budget: 750, Runtime: 1.15 seconds
+Budget: 1000, Runtime: 1.29 seconds
+Budget: 2000, Runtime: 2.34 seconds
+Budget: 3500, Runtime: 3.92 seconds
+Budget: 5000, Runtime: 5.43 seconds
+
+--- Iteration 36/50 ---
+Computed exact values in 236.0087583065033 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.02 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.05 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.19 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 8.77 seconds
+Budget: 50, Runtime: 11.03 seconds
+Budget: 100, Runtime: 12.32 seconds
+Budget: 250, Runtime: 16.65 seconds
+Budget: 500, Runtime: 22.79 seconds
+Budget: 750, Runtime: 29.60 seconds
+Budget: 1000, Runtime: 35.94 seconds
+Budget: 2000, Runtime: 120.57 seconds
+Budget: 3500, Runtime: 196.47 seconds
+Budget: 5000, Runtime: 272.69 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.42 seconds
+Budget: 50, Runtime: 0.95 seconds
+Budget: 100, Runtime: 1.75 seconds
+Budget: 250, Runtime: 3.90 seconds
+Budget: 500, Runtime: 7.41 seconds
+Budget: 750, Runtime: 10.91 seconds
+Budget: 1000, Runtime: 14.22 seconds
+Budget: 2000, Runtime: 19.45 seconds
+Budget: 3500, Runtime: 20.11 seconds
+Budget: 5000, Runtime: 21.08 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.48 seconds
+Budget: 750, Runtime: 0.69 seconds
+Budget: 1000, Runtime: 0.92 seconds
+Budget: 2000, Runtime: 1.83 seconds
+Budget: 3500, Runtime: 3.17 seconds
+Budget: 5000, Runtime: 4.65 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.19 seconds
+Budget: 50, Runtime: 0.36 seconds
+Budget: 100, Runtime: 0.43 seconds
+Budget: 250, Runtime: 0.47 seconds
+Budget: 500, Runtime: 0.85 seconds
+Budget: 750, Runtime: 1.10 seconds
+Budget: 1000, Runtime: 1.39 seconds
+Budget: 2000, Runtime: 2.48 seconds
+Budget: 3500, Runtime: 3.76 seconds
+Budget: 5000, Runtime: 5.29 seconds
+
+--- Iteration 37/50 ---
+Computed exact values in 236.62778067588806 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.88 seconds
+Budget: 3500, Runtime: 1.52 seconds
+Budget: 5000, Runtime: 2.18 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.77 seconds
+Budget: 50, Runtime: 11.00 seconds
+Budget: 100, Runtime: 12.39 seconds
+Budget: 250, Runtime: 16.65 seconds
+Budget: 500, Runtime: 22.87 seconds
+Budget: 750, Runtime: 29.78 seconds
+Budget: 1000, Runtime: 36.10 seconds
+Budget: 2000, Runtime: 120.96 seconds
+Budget: 3500, Runtime: 197.04 seconds
+Budget: 5000, Runtime: 272.56 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.43 seconds
+Budget: 50, Runtime: 0.91 seconds
+Budget: 100, Runtime: 1.72 seconds
+Budget: 250, Runtime: 3.96 seconds
+Budget: 500, Runtime: 7.45 seconds
+Budget: 750, Runtime: 10.98 seconds
+Budget: 1000, Runtime: 14.17 seconds
+Budget: 2000, Runtime: 19.70 seconds
+Budget: 3500, Runtime: 20.31 seconds
+Budget: 5000, Runtime: 20.90 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.46 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.90 seconds
+Budget: 2000, Runtime: 1.78 seconds
+Budget: 3500, Runtime: 3.19 seconds
+Budget: 5000, Runtime: 4.57 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.19 seconds
+Budget: 50, Runtime: 0.33 seconds
+Budget: 100, Runtime: 0.39 seconds
+Budget: 250, Runtime: 0.55 seconds
+Budget: 500, Runtime: 0.71 seconds
+Budget: 750, Runtime: 1.07 seconds
+Budget: 1000, Runtime: 1.35 seconds
+Budget: 2000, Runtime: 2.32 seconds
+Budget: 3500, Runtime: 3.87 seconds
+Budget: 5000, Runtime: 5.25 seconds
+
+--- Iteration 38/50 ---
+Computed exact values in 236.0753574371338 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.88 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.17 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.84 seconds
+Budget: 50, Runtime: 11.10 seconds
+Budget: 100, Runtime: 12.37 seconds
+Budget: 250, Runtime: 16.76 seconds
+Budget: 500, Runtime: 22.98 seconds
+Budget: 750, Runtime: 29.79 seconds
+Budget: 1000, Runtime: 36.14 seconds
+Budget: 2000, Runtime: 121.13 seconds
+Budget: 3500, Runtime: 195.62 seconds
+Budget: 5000, Runtime: 269.95 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.43 seconds
+Budget: 50, Runtime: 0.94 seconds
+Budget: 100, Runtime: 1.70 seconds
+Budget: 250, Runtime: 3.95 seconds
+Budget: 500, Runtime: 7.55 seconds
+Budget: 750, Runtime: 10.98 seconds
+Budget: 1000, Runtime: 14.19 seconds
+Budget: 2000, Runtime: 19.78 seconds
+Budget: 3500, Runtime: 20.26 seconds
+Budget: 5000, Runtime: 21.49 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.32 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.91 seconds
+Budget: 2000, Runtime: 1.79 seconds
+Budget: 3500, Runtime: 3.14 seconds
+Budget: 5000, Runtime: 4.52 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.26 seconds
+Budget: 50, Runtime: 0.34 seconds
+Budget: 100, Runtime: 0.29 seconds
+Budget: 250, Runtime: 0.52 seconds
+Budget: 500, Runtime: 0.82 seconds
+Budget: 750, Runtime: 1.10 seconds
+Budget: 1000, Runtime: 1.24 seconds
+Budget: 2000, Runtime: 2.27 seconds
+Budget: 3500, Runtime: 3.71 seconds
+Budget: 5000, Runtime: 5.10 seconds
+
+--- Iteration 39/50 ---
+Computed exact values in 235.7441053390503 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.55 seconds
+Budget: 5000, Runtime: 2.19 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.77 seconds
+Budget: 50, Runtime: 11.00 seconds
+Budget: 100, Runtime: 12.43 seconds
+Budget: 250, Runtime: 16.59 seconds
+Budget: 500, Runtime: 22.89 seconds
+Budget: 750, Runtime: 29.81 seconds
+Budget: 1000, Runtime: 36.17 seconds
+Budget: 2000, Runtime: 121.17 seconds
+Budget: 3500, Runtime: 195.87 seconds
+Budget: 5000, Runtime: 274.30 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.42 seconds
+Budget: 50, Runtime: 0.94 seconds
+Budget: 100, Runtime: 1.72 seconds
+Budget: 250, Runtime: 3.86 seconds
+Budget: 500, Runtime: 7.51 seconds
+Budget: 750, Runtime: 10.99 seconds
+Budget: 1000, Runtime: 14.26 seconds
+Budget: 2000, Runtime: 19.65 seconds
+Budget: 3500, Runtime: 20.59 seconds
+Budget: 5000, Runtime: 21.45 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.15 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.48 seconds
+Budget: 750, Runtime: 0.69 seconds
+Budget: 1000, Runtime: 0.92 seconds
+Budget: 2000, Runtime: 1.82 seconds
+Budget: 3500, Runtime: 3.17 seconds
+Budget: 5000, Runtime: 4.62 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.19 seconds
+Budget: 50, Runtime: 0.33 seconds
+Budget: 100, Runtime: 0.40 seconds
+Budget: 250, Runtime: 0.46 seconds
+Budget: 500, Runtime: 0.84 seconds
+Budget: 750, Runtime: 1.07 seconds
+Budget: 1000, Runtime: 1.35 seconds
+Budget: 2000, Runtime: 2.28 seconds
+Budget: 3500, Runtime: 3.84 seconds
+Budget: 5000, Runtime: 5.41 seconds
+
+--- Iteration 40/50 ---
+Computed exact values in 235.7601900100708 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.17 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.76 seconds
+Budget: 50, Runtime: 11.10 seconds
+Budget: 100, Runtime: 12.28 seconds
+Budget: 250, Runtime: 16.67 seconds
+Budget: 500, Runtime: 22.78 seconds
+Budget: 750, Runtime: 29.62 seconds
+Budget: 1000, Runtime: 35.89 seconds
+Budget: 2000, Runtime: 120.32 seconds
+Budget: 3500, Runtime: 195.74 seconds
+Budget: 5000, Runtime: 271.81 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.44 seconds
+Budget: 50, Runtime: 0.92 seconds
+Budget: 100, Runtime: 1.73 seconds
+Budget: 250, Runtime: 3.90 seconds
+Budget: 500, Runtime: 7.45 seconds
+Budget: 750, Runtime: 10.91 seconds
+Budget: 1000, Runtime: 14.19 seconds
+Budget: 2000, Runtime: 19.58 seconds
+Budget: 3500, Runtime: 20.40 seconds
+Budget: 5000, Runtime: 20.87 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.46 seconds
+Budget: 750, Runtime: 0.67 seconds
+Budget: 1000, Runtime: 0.90 seconds
+Budget: 2000, Runtime: 1.78 seconds
+Budget: 3500, Runtime: 3.12 seconds
+Budget: 5000, Runtime: 4.63 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.18 seconds
+Budget: 50, Runtime: 0.33 seconds
+Budget: 100, Runtime: 0.39 seconds
+Budget: 250, Runtime: 0.55 seconds
+Budget: 500, Runtime: 0.71 seconds
+Budget: 750, Runtime: 1.10 seconds
+Budget: 1000, Runtime: 1.33 seconds
+Budget: 2000, Runtime: 2.32 seconds
+Budget: 3500, Runtime: 3.69 seconds
+Budget: 5000, Runtime: 5.18 seconds
+
+--- Iteration 41/50 ---
+Computed exact values in 236.01875495910645 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.19 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.77 seconds
+Budget: 50, Runtime: 11.03 seconds
+Budget: 100, Runtime: 12.30 seconds
+Budget: 250, Runtime: 16.53 seconds
+Budget: 500, Runtime: 22.77 seconds
+Budget: 750, Runtime: 29.55 seconds
+Budget: 1000, Runtime: 35.77 seconds
+Budget: 2000, Runtime: 121.46 seconds
+Budget: 3500, Runtime: 194.10 seconds
+Budget: 5000, Runtime: 273.78 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.46 seconds
+Budget: 50, Runtime: 0.95 seconds
+Budget: 100, Runtime: 1.72 seconds
+Budget: 250, Runtime: 3.91 seconds
+Budget: 500, Runtime: 7.50 seconds
+Budget: 750, Runtime: 10.95 seconds
+Budget: 1000, Runtime: 14.26 seconds
+Budget: 2000, Runtime: 19.58 seconds
+Budget: 3500, Runtime: 21.07 seconds
+Budget: 5000, Runtime: 21.19 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.46 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.90 seconds
+Budget: 2000, Runtime: 1.90 seconds
+Budget: 3500, Runtime: 3.17 seconds
+Budget: 5000, Runtime: 4.61 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.30 seconds
+Budget: 50, Runtime: 0.26 seconds
+Budget: 100, Runtime: 0.41 seconds
+Budget: 250, Runtime: 0.60 seconds
+Budget: 500, Runtime: 0.76 seconds
+Budget: 750, Runtime: 1.09 seconds
+Budget: 1000, Runtime: 1.37 seconds
+Budget: 2000, Runtime: 2.40 seconds
+Budget: 3500, Runtime: 3.81 seconds
+Budget: 5000, Runtime: 5.42 seconds
+
+--- Iteration 42/50 ---
+Computed exact values in 236.70762610435486 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.14 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.52 seconds
+Budget: 5000, Runtime: 2.17 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.80 seconds
+Budget: 50, Runtime: 11.01 seconds
+Budget: 100, Runtime: 12.33 seconds
+Budget: 250, Runtime: 16.82 seconds
+Budget: 500, Runtime: 23.21 seconds
+Budget: 750, Runtime: 29.80 seconds
+Budget: 1000, Runtime: 36.12 seconds
+Budget: 2000, Runtime: 120.78 seconds
+Budget: 3500, Runtime: 199.87 seconds
+Budget: 5000, Runtime: 274.84 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.90 seconds
+Budget: 50, Runtime: 0.93 seconds
+Budget: 100, Runtime: 1.74 seconds
+Budget: 250, Runtime: 3.96 seconds
+Budget: 500, Runtime: 7.59 seconds
+Budget: 750, Runtime: 10.98 seconds
+Budget: 1000, Runtime: 14.31 seconds
+Budget: 2000, Runtime: 20.55 seconds
+Budget: 3500, Runtime: 20.36 seconds
+Budget: 5000, Runtime: 21.05 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.10 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 1.41 seconds
+Budget: 750, Runtime: 0.69 seconds
+Budget: 1000, Runtime: 0.92 seconds
+Budget: 2000, Runtime: 1.83 seconds
+Budget: 3500, Runtime: 3.19 seconds
+Budget: 5000, Runtime: 4.67 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.30 seconds
+Budget: 50, Runtime: 0.38 seconds
+Budget: 100, Runtime: 0.31 seconds
+Budget: 250, Runtime: 0.57 seconds
+Budget: 500, Runtime: 0.86 seconds
+Budget: 750, Runtime: 0.99 seconds
+Budget: 1000, Runtime: 1.34 seconds
+Budget: 2000, Runtime: 2.39 seconds
+Budget: 3500, Runtime: 3.83 seconds
+Budget: 5000, Runtime: 5.45 seconds
+
+--- Iteration 43/50 ---
+Computed exact values in 238.3658630847931 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.01 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.42 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.88 seconds
+Budget: 3500, Runtime: 1.52 seconds
+Budget: 5000, Runtime: 2.16 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.85 seconds
+Budget: 50, Runtime: 10.99 seconds
+Budget: 100, Runtime: 12.31 seconds
+Budget: 250, Runtime: 16.51 seconds
+Budget: 500, Runtime: 22.80 seconds
+Budget: 750, Runtime: 29.75 seconds
+Budget: 1000, Runtime: 36.14 seconds
+Budget: 2000, Runtime: 122.94 seconds
+Budget: 3500, Runtime: 197.08 seconds
+Budget: 5000, Runtime: 275.06 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.90 seconds
+Budget: 50, Runtime: 0.94 seconds
+Budget: 100, Runtime: 1.73 seconds
+Budget: 250, Runtime: 3.93 seconds
+Budget: 500, Runtime: 7.53 seconds
+Budget: 750, Runtime: 10.98 seconds
+Budget: 1000, Runtime: 14.27 seconds
+Budget: 2000, Runtime: 19.54 seconds
+Budget: 3500, Runtime: 20.70 seconds
+Budget: 5000, Runtime: 21.75 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.34 seconds
+Budget: 500, Runtime: 0.48 seconds
+Budget: 750, Runtime: 0.70 seconds
+Budget: 1000, Runtime: 0.93 seconds
+Budget: 2000, Runtime: 1.86 seconds
+Budget: 3500, Runtime: 3.24 seconds
+Budget: 5000, Runtime: 4.62 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.30 seconds
+Budget: 50, Runtime: 0.36 seconds
+Budget: 100, Runtime: 0.31 seconds
+Budget: 250, Runtime: 0.56 seconds
+Budget: 500, Runtime: 0.85 seconds
+Budget: 750, Runtime: 1.13 seconds
+Budget: 1000, Runtime: 1.28 seconds
+Budget: 2000, Runtime: 2.38 seconds
+Budget: 3500, Runtime: 3.93 seconds
+Budget: 5000, Runtime: 5.45 seconds
+
+--- Iteration 44/50 ---
+Computed exact values in 236.2904577255249 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.01 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.88 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.19 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.75 seconds
+Budget: 50, Runtime: 10.96 seconds
+Budget: 100, Runtime: 12.27 seconds
+Budget: 250, Runtime: 16.49 seconds
+Budget: 500, Runtime: 23.02 seconds
+Budget: 750, Runtime: 29.78 seconds
+Budget: 1000, Runtime: 36.15 seconds
+Budget: 2000, Runtime: 120.26 seconds
+Budget: 3500, Runtime: 195.85 seconds
+Budget: 5000, Runtime: 276.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.77 seconds
+Budget: 50, Runtime: 0.97 seconds
+Budget: 100, Runtime: 1.74 seconds
+Budget: 250, Runtime: 3.92 seconds
+Budget: 500, Runtime: 7.55 seconds
+Budget: 750, Runtime: 11.05 seconds
+Budget: 1000, Runtime: 14.31 seconds
+Budget: 2000, Runtime: 19.89 seconds
+Budget: 3500, Runtime: 21.59 seconds
+Budget: 5000, Runtime: 21.35 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 1.40 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.25 seconds
+Budget: 500, Runtime: 0.48 seconds
+Budget: 750, Runtime: 0.70 seconds
+Budget: 1000, Runtime: 0.94 seconds
+Budget: 2000, Runtime: 1.85 seconds
+Budget: 3500, Runtime: 3.69 seconds
+Budget: 5000, Runtime: 4.81 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.20 seconds
+Budget: 50, Runtime: 0.35 seconds
+Budget: 100, Runtime: 0.42 seconds
+Budget: 250, Runtime: 0.58 seconds
+Budget: 500, Runtime: 0.76 seconds
+Budget: 750, Runtime: 1.11 seconds
+Budget: 1000, Runtime: 1.39 seconds
+Budget: 2000, Runtime: 2.34 seconds
+Budget: 3500, Runtime: 4.04 seconds
+Budget: 5000, Runtime: 5.66 seconds
+
+--- Iteration 45/50 ---
+Computed exact values in 242.19406986236572 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.04 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.19 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.87 seconds
+Budget: 50, Runtime: 11.28 seconds
+Budget: 100, Runtime: 12.46 seconds
+Budget: 250, Runtime: 16.67 seconds
+Budget: 500, Runtime: 23.66 seconds
+Budget: 750, Runtime: 29.76 seconds
+Budget: 1000, Runtime: 36.56 seconds
+Budget: 2000, Runtime: 122.39 seconds
+Budget: 3500, Runtime: 195.07 seconds
+Budget: 5000, Runtime: 273.42 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.69 seconds
+Budget: 50, Runtime: 0.96 seconds
+Budget: 100, Runtime: 1.77 seconds
+Budget: 250, Runtime: 3.97 seconds
+Budget: 500, Runtime: 7.61 seconds
+Budget: 750, Runtime: 11.03 seconds
+Budget: 1000, Runtime: 14.30 seconds
+Budget: 2000, Runtime: 19.67 seconds
+Budget: 3500, Runtime: 20.77 seconds
+Budget: 5000, Runtime: 21.25 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.12 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 2.23 seconds
+Budget: 2000, Runtime: 1.85 seconds
+Budget: 3500, Runtime: 3.24 seconds
+Budget: 5000, Runtime: 4.71 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.33 seconds
+Budget: 50, Runtime: 0.26 seconds
+Budget: 100, Runtime: 0.43 seconds
+Budget: 250, Runtime: 0.63 seconds
+Budget: 500, Runtime: 0.96 seconds
+Budget: 750, Runtime: 1.08 seconds
+Budget: 1000, Runtime: 1.49 seconds
+Budget: 2000, Runtime: 2.53 seconds
+Budget: 3500, Runtime: 4.05 seconds
+Budget: 5000, Runtime: 5.67 seconds
+
+--- Iteration 46/50 ---
+Computed exact values in 237.1684193611145 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.01 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.16 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.19 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 7.72 seconds
+Budget: 50, Runtime: 11.12 seconds
+Budget: 100, Runtime: 12.53 seconds
+Budget: 250, Runtime: 16.69 seconds
+Budget: 500, Runtime: 22.98 seconds
+Budget: 750, Runtime: 29.74 seconds
+Budget: 1000, Runtime: 36.23 seconds
+Budget: 2000, Runtime: 121.13 seconds
+Budget: 3500, Runtime: 199.36 seconds
+Budget: 5000, Runtime: 276.23 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.43 seconds
+Budget: 50, Runtime: 0.95 seconds
+Budget: 100, Runtime: 1.70 seconds
+Budget: 250, Runtime: 3.89 seconds
+Budget: 500, Runtime: 7.51 seconds
+Budget: 750, Runtime: 11.05 seconds
+Budget: 1000, Runtime: 14.30 seconds
+Budget: 2000, Runtime: 19.72 seconds
+Budget: 3500, Runtime: 20.71 seconds
+Budget: 5000, Runtime: 20.98 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.33 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.91 seconds
+Budget: 2000, Runtime: 1.81 seconds
+Budget: 3500, Runtime: 3.15 seconds
+Budget: 5000, Runtime: 4.56 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.32 seconds
+Budget: 50, Runtime: 0.38 seconds
+Budget: 100, Runtime: 0.32 seconds
+Budget: 250, Runtime: 0.57 seconds
+Budget: 500, Runtime: 0.87 seconds
+Budget: 750, Runtime: 1.15 seconds
+Budget: 1000, Runtime: 1.26 seconds
+Budget: 2000, Runtime: 2.42 seconds
+Budget: 3500, Runtime: 4.01 seconds
+Budget: 5000, Runtime: 5.42 seconds
+
+--- Iteration 47/50 ---
+Computed exact values in 236.28921604156494 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.02 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.14 seconds
+Budget: 100, Runtime: 0.16 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.88 seconds
+Budget: 3500, Runtime: 1.54 seconds
+Budget: 5000, Runtime: 2.19 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.96 seconds
+Budget: 50, Runtime: 11.24 seconds
+Budget: 100, Runtime: 12.57 seconds
+Budget: 250, Runtime: 16.70 seconds
+Budget: 500, Runtime: 23.26 seconds
+Budget: 750, Runtime: 30.42 seconds
+Budget: 1000, Runtime: 36.94 seconds
+Budget: 2000, Runtime: 121.48 seconds
+Budget: 3500, Runtime: 196.60 seconds
+Budget: 5000, Runtime: 271.40 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.72 seconds
+Budget: 50, Runtime: 0.97 seconds
+Budget: 100, Runtime: 1.75 seconds
+Budget: 250, Runtime: 3.97 seconds
+Budget: 500, Runtime: 7.56 seconds
+Budget: 750, Runtime: 11.05 seconds
+Budget: 1000, Runtime: 14.32 seconds
+Budget: 2000, Runtime: 19.75 seconds
+Budget: 3500, Runtime: 20.83 seconds
+Budget: 5000, Runtime: 21.59 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 1.54 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.47 seconds
+Budget: 750, Runtime: 0.68 seconds
+Budget: 1000, Runtime: 0.91 seconds
+Budget: 2000, Runtime: 1.80 seconds
+Budget: 3500, Runtime: 3.18 seconds
+Budget: 5000, Runtime: 4.63 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.19 seconds
+Budget: 50, Runtime: 0.33 seconds
+Budget: 100, Runtime: 0.39 seconds
+Budget: 250, Runtime: 0.56 seconds
+Budget: 500, Runtime: 0.77 seconds
+Budget: 750, Runtime: 1.07 seconds
+Budget: 1000, Runtime: 1.33 seconds
+Budget: 2000, Runtime: 2.28 seconds
+Budget: 3500, Runtime: 3.93 seconds
+Budget: 5000, Runtime: 5.51 seconds
+
+--- Iteration 48/50 ---
+Computed exact values in 235.99008893966675 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.01 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.16 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.54 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.53 seconds
+Budget: 5000, Runtime: 2.19 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 8.74 seconds
+Budget: 50, Runtime: 11.11 seconds
+Budget: 100, Runtime: 12.37 seconds
+Budget: 250, Runtime: 16.72 seconds
+Budget: 500, Runtime: 23.16 seconds
+Budget: 750, Runtime: 30.34 seconds
+Budget: 1000, Runtime: 36.79 seconds
+Budget: 2000, Runtime: 121.33 seconds
+Budget: 3500, Runtime: 196.71 seconds
+Budget: 5000, Runtime: 272.74 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.65 seconds
+Budget: 50, Runtime: 0.97 seconds
+Budget: 100, Runtime: 1.74 seconds
+Budget: 250, Runtime: 3.90 seconds
+Budget: 500, Runtime: 7.45 seconds
+Budget: 750, Runtime: 10.95 seconds
+Budget: 1000, Runtime: 14.26 seconds
+Budget: 2000, Runtime: 19.74 seconds
+Budget: 3500, Runtime: 20.44 seconds
+Budget: 5000, Runtime: 21.27 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.09 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.24 seconds
+Budget: 500, Runtime: 0.46 seconds
+Budget: 750, Runtime: 0.67 seconds
+Budget: 1000, Runtime: 2.47 seconds
+Budget: 2000, Runtime: 1.84 seconds
+Budget: 3500, Runtime: 3.19 seconds
+Budget: 5000, Runtime: 4.54 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.30 seconds
+Budget: 50, Runtime: 0.26 seconds
+Budget: 100, Runtime: 0.40 seconds
+Budget: 250, Runtime: 0.55 seconds
+Budget: 500, Runtime: 0.88 seconds
+Budget: 750, Runtime: 0.99 seconds
+Budget: 1000, Runtime: 1.37 seconds
+Budget: 2000, Runtime: 2.30 seconds
+Budget: 3500, Runtime: 3.72 seconds
+Budget: 5000, Runtime: 5.32 seconds
+
+--- Iteration 49/50 ---
+Computed exact values in 236.31560492515564 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.13 seconds
+Budget: 100, Runtime: 0.15 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.54 seconds
+Budget: 5000, Runtime: 2.19 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.93 seconds
+Budget: 50, Runtime: 11.25 seconds
+Budget: 100, Runtime: 12.44 seconds
+Budget: 250, Runtime: 16.70 seconds
+Budget: 500, Runtime: 23.08 seconds
+Budget: 750, Runtime: 29.92 seconds
+Budget: 1000, Runtime: 36.36 seconds
+Budget: 2000, Runtime: 121.09 seconds
+Budget: 3500, Runtime: 195.11 seconds
+Budget: 5000, Runtime: 273.91 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.73 seconds
+Budget: 50, Runtime: 0.98 seconds
+Budget: 100, Runtime: 1.77 seconds
+Budget: 250, Runtime: 3.97 seconds
+Budget: 500, Runtime: 7.66 seconds
+Budget: 750, Runtime: 11.07 seconds
+Budget: 1000, Runtime: 14.40 seconds
+Budget: 2000, Runtime: 20.32 seconds
+Budget: 3500, Runtime: 20.94 seconds
+Budget: 5000, Runtime: 21.70 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.07 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 1.90 seconds
+Budget: 500, Runtime: 0.48 seconds
+Budget: 750, Runtime: 0.71 seconds
+Budget: 1000, Runtime: 0.94 seconds
+Budget: 2000, Runtime: 1.88 seconds
+Budget: 3500, Runtime: 3.31 seconds
+Budget: 5000, Runtime: 4.78 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 0.36 seconds
+Budget: 50, Runtime: 0.44 seconds
+Budget: 100, Runtime: 0.36 seconds
+Budget: 250, Runtime: 0.63 seconds
+Budget: 500, Runtime: 0.93 seconds
+Budget: 750, Runtime: 1.21 seconds
+Budget: 1000, Runtime: 1.53 seconds
+Budget: 2000, Runtime: 2.39 seconds
+Budget: 3500, Runtime: 3.98 seconds
+Budget: 5000, Runtime: 5.60 seconds
+
+--- Iteration 50/50 ---
+Computed exact values in 236.11465692520142 seconds
+--- Approximator: PermutationSamplingSII ---
+Budget: 16, Runtime: 0.00 seconds
+Budget: 50, Runtime: 0.00 seconds
+Budget: 100, Runtime: 0.00 seconds
+Budget: 250, Runtime: 0.00 seconds
+Budget: 500, Runtime: 0.00 seconds
+Budget: 750, Runtime: 0.00 seconds
+Budget: 1000, Runtime: 0.01 seconds
+Budget: 2000, Runtime: 0.01 seconds
+Budget: 3500, Runtime: 0.03 seconds
+Budget: 5000, Runtime: 0.04 seconds
+--- Approximator: SHAPIQ ---
+Budget: 16, Runtime: 0.12 seconds
+Budget: 50, Runtime: 0.14 seconds
+Budget: 100, Runtime: 0.16 seconds
+Budget: 250, Runtime: 0.22 seconds
+Budget: 500, Runtime: 0.33 seconds
+Budget: 750, Runtime: 0.43 seconds
+Budget: 1000, Runtime: 0.55 seconds
+Budget: 2000, Runtime: 0.89 seconds
+Budget: 3500, Runtime: 1.54 seconds
+Budget: 5000, Runtime: 2.20 seconds
+--- Approximator: SVARMIQ ---
+Budget: 16, Runtime: 9.96 seconds
+Budget: 50, Runtime: 11.23 seconds
+Budget: 100, Runtime: 12.50 seconds
+Budget: 250, Runtime: 16.59 seconds
+Budget: 500, Runtime: 23.20 seconds
+Budget: 750, Runtime: 30.12 seconds
+Budget: 1000, Runtime: 36.31 seconds
+Budget: 2000, Runtime: 122.80 seconds
+Budget: 3500, Runtime: 197.80 seconds
+Budget: 5000, Runtime: 272.37 seconds
+--- Approximator: KernelSHAPIQ ---
+Budget: 16, Runtime: 0.67 seconds
+Budget: 50, Runtime: 0.95 seconds
+Budget: 100, Runtime: 1.72 seconds
+Budget: 250, Runtime: 3.92 seconds
+Budget: 500, Runtime: 7.48 seconds
+Budget: 750, Runtime: 10.94 seconds
+Budget: 1000, Runtime: 14.21 seconds
+Budget: 2000, Runtime: 19.94 seconds
+Budget: 3500, Runtime: 20.45 seconds
+Budget: 5000, Runtime: 21.57 seconds
+--- Approximator: PermutationIQ ---
+Budget: 16, Runtime: 0.02 seconds
+Budget: 50, Runtime: 0.09 seconds
+Budget: 100, Runtime: 0.11 seconds
+Budget: 250, Runtime: 0.23 seconds
+Budget: 500, Runtime: 0.46 seconds
+Budget: 750, Runtime: 0.67 seconds
+Budget: 1000, Runtime: 0.90 seconds
+Budget: 2000, Runtime: 1.77 seconds
+Budget: 3500, Runtime: 3.09 seconds
+Budget: 5000, Runtime: 4.45 seconds
+--- Approximator: PermutationIQStratified ---
+Budget: 16, Runtime: 1.55 seconds
+Budget: 50, Runtime: 0.35 seconds
+Budget: 100, Runtime: 0.42 seconds
+Budget: 250, Runtime: 0.48 seconds
+Budget: 500, Runtime: 0.83 seconds
+Budget: 750, Runtime: 0.98 seconds
+Budget: 1000, Runtime: 1.35 seconds
+Budget: 2000, Runtime: 2.31 seconds
+Budget: 3500, Runtime: 3.82 seconds
+Budget: 5000, Runtime: 5.44 seconds
+
+Ending job at Mon Oct 27 14:37:54 CET 2025 (runtime: 55434s)

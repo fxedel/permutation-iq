@@ -1,0 +1,2278 @@
+Starting job at Sun Oct 26 22:52:44 CET 2025
+/var/slurmd-serial/job4967715/slurm_script: line 34: git: command not found
+Git commit: 
+System information:
+NAME="SLES"
+VERSION="15-SP6"
+VERSION_ID="15.6"
+PRETTY_NAME="SUSE Linux Enterprise Server 15 SP6"
+ID="sles"
+ID_LIKE="suse"
+ANSI_COLOR="0;32"
+CPE_NAME="cpe:/o:suse:sles:15:sp6"
+DOCUMENTATION_URL="https://documentation.suse.com/"
+Linux 6.4.0-150600.23.25-default #1 SMP PREEMPT_DYNAMIC Tue Oct  1 10:54:01 UTC 2024 (ea7c56d) x86_64 x86_64 x86_64 GNU/Linux
+Resolved 35 packages in 4ms
+Audited 33 packages in 36ms
+Run main.py at Sun Oct 26 22:52:44 CET 2025
+===============
+Benchmark: runtime_soum_varying_k
+===============
+n = 15
+Game configuration: {'n': 15, 'n_basis_games': 150, 'min_interaction_size': 1, 'max_interaction_size': 15}
+--- k = 1 ---
+--- Iteration 1/30 ---
+Computed exact values in 0.001260995864868164 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.75 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.73 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.21 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 2/30 ---
+Computed exact values in 0.0012047290802001953 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.75 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.73 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.21 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 3/30 ---
+Computed exact values in 0.0012090206146240234 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.75 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.26 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.72 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.21 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 4/30 ---
+Computed exact values in 0.0012161731719970703 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.75 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.73 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.21 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 5/30 ---
+Computed exact values in 0.0011448860168457031 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.75 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.26 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.72 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.21 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 6/30 ---
+Computed exact values in 0.0011487007141113281 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.74 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.72 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.21 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 7/30 ---
+Computed exact values in 0.0011799335479736328 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.74 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.72 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.21 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 8/30 ---
+Computed exact values in 0.0011751651763916016 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.75 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.72 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.22 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 9/30 ---
+Computed exact values in 0.0012049674987792969 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.74 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.26 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.72 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.22 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 10/30 ---
+Computed exact values in 0.0011439323425292969 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.74 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.73 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.22 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 11/30 ---
+Computed exact values in 0.00011324882507324219 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.75 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.72 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.21 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 12/30 ---
+Computed exact values in 0.00012087821960449219 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.75 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.26 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.72 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.21 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 13/30 ---
+Computed exact values in 0.00011563301086425781 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.74 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.25 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.71 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.22 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 14/30 ---
+Computed exact values in 0.00011491775512695312 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.75 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.72 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.21 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 15/30 ---
+Computed exact values in 0.00011324882507324219 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.75 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.72 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.21 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 16/30 ---
+Computed exact values in 0.00011229515075683594 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.74 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.72 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.22 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 17/30 ---
+Computed exact values in 0.00011277198791503906 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.75 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.72 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.22 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 18/30 ---
+Computed exact values in 0.000110626220703125 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.74 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.26 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.72 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.22 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 19/30 ---
+Computed exact values in 0.00011539459228515625 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.75 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.74 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.22 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 20/30 ---
+Computed exact values in 0.00011396408081054688 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.75 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.28 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.73 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.22 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 21/30 ---
+Computed exact values in 0.00011682510375976562 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.76 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.72 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.21 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.22 seconds
+
+--- Iteration 22/30 ---
+Computed exact values in 0.00011444091796875 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.74 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.73 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.21 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.22 seconds
+
+--- Iteration 23/30 ---
+Computed exact values in 0.00011730194091796875 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.75 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.72 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.21 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 24/30 ---
+Computed exact values in 0.00011539459228515625 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.75 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.73 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.21 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 25/30 ---
+Computed exact values in 0.00011444091796875 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.75 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.73 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.21 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 26/30 ---
+Computed exact values in 0.00011301040649414062 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.74 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.72 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.21 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 27/30 ---
+Computed exact values in 0.00011324882507324219 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.75 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.73 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.21 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 28/30 ---
+Computed exact values in 0.00011348724365234375 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.75 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.72 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.21 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 29/30 ---
+Computed exact values in 0.00011444091796875 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.74 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.26 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.72 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.21 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- Iteration 30/30 ---
+Computed exact values in 0.0001125335693359375 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.47 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.75 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1.27 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.73 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.22 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.21 seconds
+
+--- k = 2 ---
+--- Iteration 1/30 ---
+Computed exact values in 0.003937959671020508 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.92 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.41 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.79 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 2/30 ---
+Computed exact values in 0.0039501190185546875 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.93 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.42 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.79 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 3/30 ---
+Computed exact values in 0.004246234893798828 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.93 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.44 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.80 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.43 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 4/30 ---
+Computed exact values in 0.004591464996337891 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.93 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.41 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.79 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 5/30 ---
+Computed exact values in 0.0041751861572265625 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.93 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.40 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.79 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.41 seconds
+
+--- Iteration 6/30 ---
+Computed exact values in 0.004293918609619141 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.92 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.41 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.78 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 7/30 ---
+Computed exact values in 0.004369258880615234 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.93 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.40 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.79 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.43 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 8/30 ---
+Computed exact values in 0.004449129104614258 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.93 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.38 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.78 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 9/30 ---
+Computed exact values in 0.004625082015991211 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.94 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.42 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.78 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 10/30 ---
+Computed exact values in 0.003736734390258789 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.92 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.41 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.79 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 11/30 ---
+Computed exact values in 0.0003437995910644531 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.93 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.40 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.79 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 12/30 ---
+Computed exact values in 0.0003457069396972656 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.93 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.40 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.78 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 13/30 ---
+Computed exact values in 0.0003845691680908203 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.93 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.43 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.78 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 14/30 ---
+Computed exact values in 0.0003371238708496094 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.93 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.41 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.78 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.43 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 15/30 ---
+Computed exact values in 0.000400543212890625 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.93 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.39 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.79 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 16/30 ---
+Computed exact values in 0.0004286766052246094 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.92 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.44 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.79 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 17/30 ---
+Computed exact values in 0.0003695487976074219 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.94 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.46 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.80 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.43 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 18/30 ---
+Computed exact values in 0.0003707408905029297 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.94 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.43 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.79 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.43 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 19/30 ---
+Computed exact values in 0.0003829002380371094 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.92 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.41 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.78 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 20/30 ---
+Computed exact values in 0.00039505958557128906 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.93 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.39 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.79 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 21/30 ---
+Computed exact values in 0.0003361701965332031 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.92 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.42 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.78 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.50 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 22/30 ---
+Computed exact values in 0.0003483295440673828 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.92 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.45 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.79 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.43 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.41 seconds
+
+--- Iteration 23/30 ---
+Computed exact values in 0.00038743019104003906 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.92 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.42 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.79 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.43 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 24/30 ---
+Computed exact values in 0.00034689903259277344 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.92 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.41 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.79 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 25/30 ---
+Computed exact values in 0.0004019737243652344 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.93 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.41 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.79 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.43 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 26/30 ---
+Computed exact values in 0.0004379749298095703 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.92 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.43 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.78 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.43 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 27/30 ---
+Computed exact values in 0.0003733634948730469 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.94 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.42 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.78 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 28/30 ---
+Computed exact values in 0.00036597251892089844 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.94 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.40 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.78 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 29/30 ---
+Computed exact values in 0.0003936290740966797 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.94 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.42 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.78 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- Iteration 30/30 ---
+Computed exact values in 0.00040984153747558594 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.33 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 0.94 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 8.42 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 0.78 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 0.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 0.42 seconds
+
+--- k = 3 ---
+--- Iteration 1/30 ---
+Computed exact values in 0.014407634735107422 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.69 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 69.09 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.99 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.89 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.85 seconds
+
+--- Iteration 2/30 ---
+Computed exact values in 0.01400899887084961 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.28 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.69 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.97 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.99 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.89 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.85 seconds
+
+--- Iteration 3/30 ---
+Computed exact values in 0.014670610427856445 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.28 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.71 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 69.01 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.99 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.98 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.85 seconds
+
+--- Iteration 4/30 ---
+Computed exact values in 0.016416311264038086 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.70 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.85 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.99 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.88 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.85 seconds
+
+--- Iteration 5/30 ---
+Computed exact values in 0.013845682144165039 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.71 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 69.03 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.99 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.88 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.83 seconds
+
+--- Iteration 6/30 ---
+Computed exact values in 0.015444040298461914 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.71 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.91 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.99 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.90 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.81 seconds
+
+--- Iteration 7/30 ---
+Computed exact values in 0.015610694885253906 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.70 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.88 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.99 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.88 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.81 seconds
+
+--- Iteration 8/30 ---
+Computed exact values in 0.015297889709472656 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.70 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.79 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.98 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.89 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.90 seconds
+
+--- Iteration 9/30 ---
+Computed exact values in 0.015723228454589844 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.69 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.77 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.97 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.86 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.81 seconds
+
+--- Iteration 10/30 ---
+Computed exact values in 0.012362003326416016 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.71 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.78 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.97 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.89 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.81 seconds
+
+--- Iteration 11/30 ---
+Computed exact values in 0.0014111995697021484 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.28 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.70 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.81 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.98 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.88 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.89 seconds
+
+--- Iteration 12/30 ---
+Computed exact values in 0.0014111995697021484 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.28 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.69 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.97 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.98 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.87 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.83 seconds
+
+--- Iteration 13/30 ---
+Computed exact values in 0.001443624496459961 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.69 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.78 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.97 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.90 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.81 seconds
+
+--- Iteration 14/30 ---
+Computed exact values in 0.001425027847290039 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.28 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.71 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.76 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.97 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.83 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.90 seconds
+
+--- Iteration 15/30 ---
+Computed exact values in 0.0015482902526855469 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.72 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.80 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.98 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.90 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.82 seconds
+
+--- Iteration 16/30 ---
+Computed exact values in 0.0015439987182617188 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.69 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 69.04 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.97 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.89 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.82 seconds
+
+--- Iteration 17/30 ---
+Computed exact values in 0.0014824867248535156 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.72 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.92 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.99 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.89 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.92 seconds
+
+--- Iteration 18/30 ---
+Computed exact values in 0.0014412403106689453 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.28 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.70 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.87 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.98 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.85 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.83 seconds
+
+--- Iteration 19/30 ---
+Computed exact values in 0.0015130043029785156 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.70 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.94 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.98 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.88 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.83 seconds
+
+--- Iteration 20/30 ---
+Computed exact values in 0.001514434814453125 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.28 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.70 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.87 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.99 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.87 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.90 seconds
+
+--- Iteration 21/30 ---
+Computed exact values in 0.001398324966430664 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.71 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.89 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.98 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.89 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.82 seconds
+
+--- Iteration 22/30 ---
+Computed exact values in 0.0014052391052246094 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.28 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.70 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.73 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.98 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.89 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.81 seconds
+
+--- Iteration 23/30 ---
+Computed exact values in 0.0014743804931640625 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.70 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.71 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.98 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.89 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.89 seconds
+
+--- Iteration 24/30 ---
+Computed exact values in 0.0013720989227294922 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.69 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.84 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.98 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.89 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.82 seconds
+
+--- Iteration 25/30 ---
+Computed exact values in 0.0015172958374023438 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.71 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.73 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.99 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.88 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.81 seconds
+
+--- Iteration 26/30 ---
+Computed exact values in 0.0015511512756347656 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.70 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.76 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.97 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.89 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.90 seconds
+
+--- Iteration 27/30 ---
+Computed exact values in 0.001489877700805664 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.71 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 69.12 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.98 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.88 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.82 seconds
+
+--- Iteration 28/30 ---
+Computed exact values in 0.001421213150024414 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.70 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.90 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.99 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.88 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.82 seconds
+
+--- Iteration 29/30 ---
+Computed exact values in 0.0014925003051757812 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.28 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.70 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 69.00 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.99 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.85 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.92 seconds
+
+--- Iteration 30/30 ---
+Computed exact values in 0.0014815330505371094 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.27 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 1.70 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 68.89 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 1.99 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 1.88 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 1.81 seconds
+
+--- k = 4 ---
+--- Iteration 1/30 ---
+Computed exact values in 0.039801836013793945 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.00 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 427.05 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.11 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.90 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.03 seconds
+
+--- Iteration 2/30 ---
+Computed exact values in 0.03992199897766113 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.01 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 427.45 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.11 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.87 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.46 seconds
+
+--- Iteration 3/30 ---
+Computed exact values in 0.043068885803222656 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.01 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 428.33 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.19 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 8.01 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.67 seconds
+
+--- Iteration 4/30 ---
+Computed exact values in 0.04834938049316406 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.28 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.04 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 430.36 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.14 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.95 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.37 seconds
+
+--- Iteration 5/30 ---
+Computed exact values in 0.037606000900268555 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.02 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 427.94 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.19 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.94 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.22 seconds
+
+--- Iteration 6/30 ---
+Computed exact values in 0.04403209686279297 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.01 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 430.56 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.16 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.97 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.30 seconds
+
+--- Iteration 7/30 ---
+Computed exact values in 0.046005964279174805 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.02 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 430.77 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.24 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.90 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.44 seconds
+
+--- Iteration 8/30 ---
+Computed exact values in 0.1302030086517334 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.01 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 428.49 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.12 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.93 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.33 seconds
+
+--- Iteration 9/30 ---
+Computed exact values in 0.04577517509460449 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.01 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 428.30 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.20 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 8.01 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 9.33 seconds
+
+--- Iteration 10/30 ---
+Computed exact values in 0.034046173095703125 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.03 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 427.90 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.13 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.93 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.38 seconds
+
+--- Iteration 11/30 ---
+Computed exact values in 0.004912376403808594 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.03 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 428.64 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.16 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 8.00 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.86 seconds
+
+--- Iteration 12/30 ---
+Computed exact values in 0.004812717437744141 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.01 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 429.70 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.73 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.97 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.75 seconds
+
+--- Iteration 13/30 ---
+Computed exact values in 0.004954814910888672 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.01 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 429.94 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.13 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.93 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.59 seconds
+
+--- Iteration 14/30 ---
+Computed exact values in 0.0047299861907958984 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.02 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 428.14 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.08 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.82 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.15 seconds
+
+--- Iteration 15/30 ---
+Computed exact values in 0.004923343658447266 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.02 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 429.49 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.89 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.83 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 9.28 seconds
+
+--- Iteration 16/30 ---
+Computed exact values in 0.005054473876953125 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.02 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 428.78 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.09 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.87 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.58 seconds
+
+--- Iteration 17/30 ---
+Computed exact values in 0.005063533782958984 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.01 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 429.71 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.19 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.88 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.35 seconds
+
+--- Iteration 18/30 ---
+Computed exact values in 0.004784345626831055 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.00 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 430.98 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.20 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.87 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.70 seconds
+
+--- Iteration 19/30 ---
+Computed exact values in 0.004984140396118164 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.26 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.03 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 430.79 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.19 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.89 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.63 seconds
+
+--- Iteration 20/30 ---
+Computed exact values in 0.005055665969848633 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.03 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 427.77 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.18 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.85 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.17 seconds
+
+--- Iteration 21/30 ---
+Computed exact values in 0.004904985427856445 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.00 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 428.10 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.78 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.84 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.73 seconds
+
+--- Iteration 22/30 ---
+Computed exact values in 0.004813194274902344 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.26 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.00 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 430.07 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.90 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.96 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.62 seconds
+
+--- Iteration 23/30 ---
+Computed exact values in 0.0049915313720703125 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.02 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 428.78 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.23 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.85 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.36 seconds
+
+--- Iteration 24/30 ---
+Computed exact values in 0.004792213439941406 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.01 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 429.74 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.20 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.88 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.61 seconds
+
+--- Iteration 25/30 ---
+Computed exact values in 0.004978179931640625 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.02 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 429.66 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.24 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.92 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.59 seconds
+
+--- Iteration 26/30 ---
+Computed exact values in 0.005007505416870117 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.01 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 428.33 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.06 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.94 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.40 seconds
+
+--- Iteration 27/30 ---
+Computed exact values in 0.004946470260620117 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.00 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 427.31 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.05 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.94 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.51 seconds
+
+--- Iteration 28/30 ---
+Computed exact values in 0.0048711299896240234 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.01 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 429.15 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.09 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.96 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.59 seconds
+
+--- Iteration 29/30 ---
+Computed exact values in 0.005013942718505859 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 4.02 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 427.15 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.23 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.90 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.67 seconds
+
+--- Iteration 30/30 ---
+Computed exact values in 0.004860401153564453 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.25 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 3.98 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 424.55 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 15.13 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 7.91 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 8.33 seconds
+
+--- k = 5 ---
+--- Iteration 1/30 ---
+Computed exact values in 0.08737635612487793 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.98 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 2010.65 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.10 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.16 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.79 seconds
+
+--- Iteration 2/30 ---
+Computed exact values in 0.08922195434570312 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.97 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 2010.80 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 108.32 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.40 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.67 seconds
+
+--- Iteration 3/30 ---
+Computed exact values in 0.09345316886901855 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.82 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1976.93 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.64 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.02 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.13 seconds
+
+--- Iteration 4/30 ---
+Computed exact values in 0.10864043235778809 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.84 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1979.69 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.03 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.42 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.69 seconds
+
+--- Iteration 5/30 ---
+Computed exact values in 0.08322358131408691 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.80 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1969.84 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.36 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 24.88 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.55 seconds
+
+--- Iteration 6/30 ---
+Computed exact values in 0.09779763221740723 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.85 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1999.81 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.29 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.31 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.84 seconds
+
+--- Iteration 7/30 ---
+Computed exact values in 0.1020505428314209 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.83 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1979.77 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.55 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.31 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 28.30 seconds
+
+--- Iteration 8/30 ---
+Computed exact values in 0.09880423545837402 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.85 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1977.89 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 107.61 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.25 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.96 seconds
+
+--- Iteration 9/30 ---
+Computed exact values in 0.10067296028137207 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.84 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1981.01 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.31 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 24.92 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.32 seconds
+
+--- Iteration 10/30 ---
+Computed exact values in 0.07578372955322266 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.84 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1978.24 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.41 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.38 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 28.18 seconds
+
+--- Iteration 11/30 ---
+Computed exact values in 0.012906551361083984 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.84 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1982.70 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.87 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.03 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.00 seconds
+
+--- Iteration 12/30 ---
+Computed exact values in 0.012948989868164062 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.85 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1978.82 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.18 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.19 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.32 seconds
+
+--- Iteration 13/30 ---
+Computed exact values in 0.012973308563232422 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.83 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1977.73 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.52 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.14 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.88 seconds
+
+--- Iteration 14/30 ---
+Computed exact values in 0.012839794158935547 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.83 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1977.44 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 105.94 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.61 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 28.03 seconds
+
+--- Iteration 15/30 ---
+Computed exact values in 0.013004302978515625 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.86 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1977.81 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.38 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 24.97 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.12 seconds
+
+--- Iteration 16/30 ---
+Computed exact values in 0.012954235076904297 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.81 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1978.44 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 105.97 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 24.92 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.21 seconds
+
+--- Iteration 17/30 ---
+Computed exact values in 0.013024330139160156 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.80 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1976.41 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.02 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 24.88 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.40 seconds
+
+--- Iteration 18/30 ---
+Computed exact values in 0.012945413589477539 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.82 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1979.94 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.04 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 24.97 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.19 seconds
+
+--- Iteration 19/30 ---
+Computed exact values in 0.013348817825317383 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.85 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1979.00 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 105.99 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 24.90 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 26.86 seconds
+
+--- Iteration 20/30 ---
+Computed exact values in 0.013074874877929688 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.83 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1981.20 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 105.97 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.14 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.80 seconds
+
+--- Iteration 21/30 ---
+Computed exact values in 0.012726306915283203 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.85 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1974.76 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.61 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.18 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 28.26 seconds
+
+--- Iteration 22/30 ---
+Computed exact values in 0.012822151184082031 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.86 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1978.23 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.42 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.06 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.52 seconds
+
+--- Iteration 23/30 ---
+Computed exact values in 0.01308751106262207 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.83 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1976.29 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 107.25 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.01 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.63 seconds
+
+--- Iteration 24/30 ---
+Computed exact values in 0.012848854064941406 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.85 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1977.05 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.28 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.08 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.74 seconds
+
+--- Iteration 25/30 ---
+Computed exact values in 0.013164997100830078 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.90 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1983.24 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.33 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.05 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.95 seconds
+
+--- Iteration 26/30 ---
+Computed exact values in 0.012970209121704102 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.84 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1975.08 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.21 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.28 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.44 seconds
+
+--- Iteration 27/30 ---
+Computed exact values in 0.013018369674682617 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.82 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1975.30 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.49 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.05 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.37 seconds
+
+--- Iteration 28/30 ---
+Computed exact values in 0.013017892837524414 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.83 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1972.90 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 105.95 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 24.88 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.03 seconds
+
+--- Iteration 29/30 ---
+Computed exact values in 0.012896299362182617 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.81 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1974.97 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 106.40 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.23 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.80 seconds
+
+--- Iteration 30/30 ---
+Computed exact values in 0.013158798217773438 seconds
+--- Approximator: PermutationSamplingSII ---
+Runtime: 0.23 seconds
+--- Approximator: SHAPIQ ---
+Runtime: 8.82 seconds
+--- Approximator: SVARMIQ ---
+Runtime: 1978.88 seconds
+--- Approximator: KernelSHAPIQ ---
+Runtime: 105.98 seconds
+--- Approximator: PermutationIQ ---
+Runtime: 25.05 seconds
+--- Approximator: PermutationIQStratified ---
+Runtime: 27.11 seconds
+
+Ending job at Mon Oct 27 21:26:10 CET 2025 (runtime: 81206s)
