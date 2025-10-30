@@ -482,6 +482,13 @@ plot_approximators_mse_by_runtime("datasetvaluation_californiahousing", cost_per
 plot_approximators_mse_by_runtime("datasetvaluation_californiahousing", cost_per_budget = 500)
 plot_approximators_prec10_by_budget("datasetvaluation_californiahousing")
 
-plot_runtime_varying_k("soum")
-plot_runtime_varying_n("soum_k2")
+plot_approximators_mse_by_budget("ensembleselection_bikesharing")
+plot_approximators_mse_by_runtime("ensembleselection_bikesharing", cost_per_budget = 0)
+plot_approximators_mse_by_runtime("ensembleselection_bikesharing", cost_per_budget = 50)
+plot_approximators_mse_by_runtime("ensembleselection_bikesharing", cost_per_budget = 500)
+plot_approximators_prec10_by_budget("ensembleselection_bikesharing")
+
+# plot_runtime_varying_k("soum")
+plot_runtime_varying_k("localexplanation_adultcensus")
+# plot_runtime_varying_n("soum_k2")
 
