@@ -494,7 +494,8 @@ plot_approximators_mse_by_runtime("ensembleselection_bikesharing", cost_per_budg
 plot_approximators_mse_by_runtime("ensembleselection_bikesharing", cost_per_budget = 500)
 plot_approximators_prec10_by_budget("ensembleselection_bikesharing")
 
-# plot_runtime_varying_k("soum")
+plot_runtime_varying_k("soum")
 plot_runtime_varying_k("localexplanation_adultcensus")
-# plot_runtime_varying_n("soum_k2")
+plot_runtime_varying_n("soum_k2")
+plot_runtime_varying_n("soum_k3")
 
