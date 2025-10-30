@@ -452,6 +452,12 @@ plot_approximators_mse_by_runtime("localexplanation_adultcensus", cost_per_budge
 plot_approximators_mse_by_runtime("localexplanation_adultcensus", cost_per_budget = 500)
 plot_approximators_prec10_by_budget("localexplanation_adultcensus")
 
+plot_approximators_mse_by_budget("localexplanation_bikesharing")
+plot_approximators_mse_by_runtime("localexplanation_bikesharing", cost_per_budget = 0)
+plot_approximators_mse_by_runtime("localexplanation_bikesharing", cost_per_budget = 50)
+plot_approximators_mse_by_runtime("localexplanation_bikesharing", cost_per_budget = 500)
+plot_approximators_prec10_by_budget("localexplanation_bikesharing")
+
 plot_approximators_mse_by_budget("globalexplanation_adultcensus")
 plot_approximators_mse_by_runtime("globalexplanation_adultcensus", cost_per_budget = 0)
 plot_approximators_mse_by_runtime("globalexplanation_adultcensus", cost_per_budget = 50)
