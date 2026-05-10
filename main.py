@@ -847,7 +847,7 @@ def benchmark_permutationiq_variants_soum():
 
 def command_benchmark(config: str):
     if config == "all" or config == "approximators_development":
-        benchmark_approximators_development()
+        benchmark_approximators_development() # this is a simple, small setup to test the benchmarking pipeline
     if config == "all" or config == "approximators_localexplanation_adultcensus":
         benchmark_approximators_localexplanation_adultcensus()
     if config == "all" or config == "approximators_localexplanation_bikesharing":
