@@ -76,6 +76,8 @@ It is in the nature of Permutation-IQ that for a single interaction set K consis
 
 As the aggregation step is only the last step of the approximation process and computationally cheap, the aggregation strategy is not a configuration option of the approximator but all strategies are applied to the same set of sibling estimates, which allows for a direct comparison of the strategies. These estimates by aggregation strategy (called "variant" in the code) are returned by the `approximate_variants` function.
 
+`PermutationIQStratified` implements a stratified sampling variant of Permutation-IQ, where samples are stratified by coalition size. Note that this method is not included in the above-mentioned paper, but kept for future work.
+
 
 ## Benchmarking details
 
